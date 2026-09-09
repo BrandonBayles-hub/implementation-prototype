@@ -144,7 +144,11 @@
       <div style="height:8px"></div>
       To be explicit: <b>Go Live is self-service and stays.</b> <b>Flagging a property as 2.0 is not self-service</b> — it is internal, temporary, and belongs in one global place outside the client environment. Do not solve them in the same spot.
     </div>
-  </div>
+    <div class="callout warn">
+      <div class="t">Why we should not ask the client to pick the number</div>
+      Choosing the number does not change how the product works — every eligible number hits the same agent, the same IVR, the same texting. Our own advice is "use your outbound default," and we would talk a client out of anything else, so we have built a required question whose answer we already know. It is also not free: campaign approval is per-number, so a wrong pick breaks messaging silently (the Sweeny Clan failure). <b>Assign the number, tell them what we picked, let them change it in settings.</b>
+      <div style="height:8px"></div>
+      <b>The test:</b> name one case where two eligible numbers produce a different outcome for the resident. If there isn't one, it is a setting — not an activation step.
     </div>
     <div class="col">
 <div class="stack gap-12">

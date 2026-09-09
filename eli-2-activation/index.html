@@ -1,7 +1,6 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
+<html lang="en"><head>
+<meta charset="utf-8">
 <title>ELI 2.0 activation — start to finish</title>
 <style>
   :root {
@@ -29,9 +28,9 @@
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .page { width: 1680px; max-width: 100%; padding: 40px 44px 48px; }
-  @media (max-width: 1180px) { .cols { flex-direction: column; gap: 28px; } }
-  .cols { display: flex; gap: 44px; align-items: flex-start; }
+  .page { width: 1980px; max-width: 100%; padding: 40px 44px 48px; }
+  @media (max-width: 1400px) { .cols { flex-direction: column; gap: 28px; } }
+  .cols { display: flex; gap: 40px; align-items: flex-start; }
   .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
   h1 { font-size: 30px; line-height: 36px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
   h2 { font-size: 20px; line-height: 26px; font-weight: 600; margin: 0; }
@@ -107,7 +106,7 @@
   <h1>ELI 2.0 activation — start to finish</h1>
   <div class="cols" style="margin-top:26px">
     <div class="col">
-<div class="stack gap-12">
+      <div class="stack gap-12">
     <div class="row">
       <div class="step-n">1</div>
       <h2>Contract signed, then the property is flagged 2.0</h2>
@@ -150,8 +149,11 @@
       <div style="height:8px"></div>
       <b>The test:</b> name one case where two eligible numbers produce a different outcome for the resident. If there isn't one, it is a setting — not an activation step.
     </div>
+    
+    </div>
+    </div>
     <div class="col">
-<div class="stack gap-12">
+      <div class="stack gap-12">
     <div class="row">
       <div class="step-n">2</div>
       <h2>Client completes their prerequisites</h2>
@@ -168,16 +170,19 @@
       <div class="t">Colleen registration does not count</div>
       Roughly 600 properties are brand- and campaign-registered in Colleen but not in Entrata. Treat those as incomplete. This is the same failure that produced the Sweeny Clan number swap — the original number sat on a test sub-account with no valid messaging campaign.
     </div>
-  </div>
-<div class="stack gap-10">
+
+    </div>
+      <div class="stack gap-10">
     <div class="row">
       <div class="step-n">3</div>
       <h2>Client clicks Go Live</h2>
       <div class="tag"><span class="dot" style="background:var(--yellow)"></span><span class="small muted">Boundary</span></div>
     </div>
     <p class="sub">Turns on every contracted product for that property, or a single product via the arrow. This is the only moment the client acts on activation — and the boundary between the two buckets.</p>
-  </div>
-<div class="stack gap-12">
+    </div>
+    </div>
+    <div class="col">
+      <div class="stack gap-12">
     <div class="row">
       <div class="step-n">4</div>
       <h2>Backend automation fires</h2>
@@ -198,17 +203,19 @@
       <div class="li"><div class="li-n">11</div><div><p>1.0-live only: re-enable contact points and turn off Graph Messages</p><div class="li-note">Graph Messages must be off before the Super Agent number becomes outbound default.</div></div></div>
       <div class="li"><div class="li-n">12</div><div><p>Verify all Nexus configuration against the new number</p></div></div>
     </div>
-    <div class="callout neutral">Email integration does not re-run here. It was the gate, not a step.</div>
-  </div>
-<div class="stack gap-10">
+    <div class="callout neutral">Email integration does not re-run here. It was the gate, not a step.
+    </div>
+
+    </div>
+      <div class="stack gap-10">
     <div class="row">
       <div class="step-n">5</div>
       <h2>Property is live</h2>
       <div class="tag"><span class="dot" style="background:var(--gray)"></span><span class="small muted">Post-live</span></div>
     </div>
     <p class="sub">The client gets a notification describing what was turned on — not a task list. Settings remain editable. Implementation date is captured here, which is what billing keys off.</p>
-  </div>
+    </div>
     </div>
   </div>
-</body>
-</html>
+</div>
+</body></html>

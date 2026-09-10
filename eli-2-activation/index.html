@@ -80,6 +80,7 @@
   .check .xk { color: var(--text-4); font-weight: 700; flex-shrink: 0; font-size: 13px; padding-top: 1px; }
   .check p { font-size: 13.5px; line-height: 19px; }
   .check .note { margin-top: 1px; }
+  .check .q { color: var(--text-3); }
 
   /* decision cards */
   .card { border-radius: 8px; padding: 12px 14px; background: var(--warn-bg); border: 1px solid var(--warn-stroke); }
@@ -144,25 +145,25 @@
   <div class="gate">
     <div class="gate-label"><span class="dot" style="background:var(--green);width:7px;height:7px"></span>The line — button flips from disabled to enabled</div>
     <h2>Bare minimum for Go Live to be clickable</h2>
-    <div class="gate-sub">One question: <b>have we handed the client working keys?</b> If the left column is true, the button turns on — training and tuning can come later. Nothing in the right column may hold it down.</div>
+    <div class="gate-sub">One question: <b>have we handed the client working keys?</b> If the left column is true, the button turns on. Nothing on the right may hold it down.</div>
     <div class="gate-cols">
       <div class="panel">
         <div class="panel-h req">Required — all must be true</div>
-        <div class="check"><span class="mk">&#10003;</span><div><p>Contract in place, property flagged 2.0</p><div class="note">Otherwise it isn't on the list at all.</div></div></div>
-        <div class="check"><span class="mk">&#10003;</span><div><p>Brand approved on the Entrata Twilio account</p><div class="note">Company level. Colleen doesn't count.</div></div></div>
-        <div class="check"><span class="mk">&#10003;</span><div><p>Campaign approved for the number that becomes Super Agent</p><div class="note">Property level. Skip it and messaging fails silently — Sweeny Clan.</div></div></div>
-        <div class="check"><span class="mk">&#10003;</span><div><p>One eligible number on the property with voice + SMS</p><div class="note">That a number exists matters; which one does not.</div></div></div>
-        <div class="check"><span class="mk">&#10003;</span><div><p>Email authenticated — only if email is contracted</p><div class="note">Open: can SMS/voice-only properties go live without it?</div></div></div>
+        <div class="check"><span class="mk">&#10003;</span><p>Contract in place, property flagged 2.0 <span class="q">— else it isn't on the list</span></p></div>
+        <div class="check"><span class="mk">&#10003;</span><p>Brand approved on Entrata's Twilio account <span class="q">— Colleen doesn't count</span></p></div>
+        <div class="check"><span class="mk">&#10003;</span><p>Campaign approved for the Super Agent number <span class="q">— else messaging fails silently</span></p></div>
+        <div class="check"><span class="mk">&#10003;</span><p>One number on the property with voice + SMS <span class="q">— which one doesn't matter</span></p></div>
+        <div class="check"><span class="mk">&#10003;</span><p>Email authenticated <span class="q">— only if email is contracted (open)</span></p></div>
       </div>
       <div class="panel">
         <div class="panel-h not">Not required — never gate on these</div>
-        <div class="check"><span class="xk">&times;</span><div><p>Training or client education</p><div class="note">Real need, not a technical blocker.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Which number becomes Super Agent</p><div class="note">Property setting. Assign it, let them change it.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Custom IVR tree or recorded greeting</p><div class="note">Defaulted and validated on click.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Chatbot placement preferences</p><div class="note">On where contracted; they can turn it off.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Conversation history / memory migrated from 1.0</p><div class="note">Platform work, independent of activation.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Contact points, voice caching, domain agents, subdomain</p><div class="note">All backend, all fire on click — step 4.</div></div></div>
-        <div class="check"><span class="xk">&times;</span><div><p>Reclaiming the old 1.0 numbers</p><div class="note">Cleanup, not a prerequisite.</div></div></div>
+        <div class="check"><span class="xk">&times;</span><p>Training or client education</p></div>
+        <div class="check"><span class="xk">&times;</span><p>Which number becomes Super Agent <span class="q">— property setting</span></p></div>
+        <div class="check"><span class="xk">&times;</span><p>Custom IVR tree or greeting <span class="q">— defaulted on click</span></p></div>
+        <div class="check"><span class="xk">&times;</span><p>Chatbot placement preferences</p></div>
+        <div class="check"><span class="xk">&times;</span><p>1.0 conversation history or memory</p></div>
+        <div class="check"><span class="xk">&times;</span><p>Contact points, voice caching, domain agents, subdomain <span class="q">— all fire on click</span></p></div>
+        <div class="check"><span class="xk">&times;</span><p>Old 1.0 number cleanup</p></div>
       </div>
     </div>
   </div>

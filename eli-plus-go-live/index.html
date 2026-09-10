@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>ELI Plus Setup — Go Live prototype</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="demo">DEMO</div>
+    <div class="crumb">AI &amp; Agent Activation</div>
+    <div class="top-spacer"></div>
+    <a class="source-link" href="https://github.com/BrandonBayles-hub/implementation-prototype/tree/main/eli-plus-go-live">View source code ↗</a>
+  </header>
+
+  <div class="productbar">
+    <div class="brand">entrata</div>
+    <div class="company">Kestrel Residential</div>
+  </div>
+
+  <div class="shell">
+    <aside>
+      <div class="side-title"><span class="side-icon">↗</span> ELI+ Setup</div>
+      <div class="progress-label"><span>Overall Progress</span><strong>45%</strong></div>
+      <div class="progress"><span></span></div>
+
+      <div class="side-section">AI Settings</div>
+      <nav>
+        <button>▣ <span>Carrier Compliance</span></button>
+        <button>◇ <span>Privacy Policies</span><b>2</b></button>
+        <button>✉ <span>Email Integration</span><b>3</b></button>
+        <button>◉ <span>IVR Setup</span><b>2</b></button>
+        <button class="active">↗ <span>Go Live</span></button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="heading">
+        <h1>Go Live</h1>
+        <p>Launch products across individual properties or select multiple properties to batch publish.</p>
+      </section>
+
+      <section class="toolbar" aria-label="Property controls">
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search properties…" aria-label="Search properties">
+        </label>
+        <label class="filter-wrap">
+          <select id="statusFilter" aria-label="Filter by status">
+            <option value="all">All statuses (4)</option>
+            <option value="ready">Ready to go live (2)</option>
+            <option value="blocked">Needs setup (1)</option>
+            <option value="live">Live (1)</option>
+          </select>
+          <span aria-hidden="true">⌄</span>
+        </label>
+        <div class="toolbar-spacer"></div>
+        <div class="divider"></div>
+        <button id="batchButton" class="batch" disabled>↗ Go Live · Selected Properties</button>
+      </section>
+
+      <section class="table-card" aria-label="Go Live properties">
+        <div class="table-head row">
+          <div class="check-cell"><input id="selectAll" type="checkbox" aria-label="Select all ready properties"></div>
+          <div class="property-cell">Property</div>
+          <div class="status-cell">Status</div>
+          <div class="products-cell">Products</div>
+          <div class="action-cell">Action</div>
+        </div>
+        <div id="propertyRows"></div>
+        <div id="emptyState" hidden>No properties match these filters.</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

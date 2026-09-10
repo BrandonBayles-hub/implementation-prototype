@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
 <title>ELI 2.0 activation — start to finish</title>
 <style>
   :root {
@@ -27,251 +29,218 @@
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .page { width: 1900px; max-width: 100%; padding: 36px 40px 42px; }
+  .page { width: 1040px; max-width: 100%; margin: 0 auto; padding: 40px 32px 64px; }
 
-  h1 { font-size: 27px; line-height: 32px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
-  h2 { font-size: 18px; line-height: 24px; font-weight: 600; margin: 0; }
-  p { margin: 0; font-size: 14px; line-height: 20px; }
+  h1 { font-size: 28px; line-height: 34px; font-weight: 600; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: 19px; line-height: 25px; font-weight: 600; margin: 0; }
+  p { margin: 0; font-size: 15px; line-height: 22px; }
   .sub { color: var(--text-2); }
-  .note { font-size: 12.5px; line-height: 17px; color: var(--text-3); }
+  .note { font-size: 13px; line-height: 18px; color: var(--text-3); }
 
-  .row { display: flex; align-items: center; gap: 10px; }
-  .cols { display: flex; gap: 36px; align-items: flex-start; }
-  .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
-  @media (max-width: 1400px) { .cols { flex-direction: column; gap: 24px; } }
-  .stack { display: flex; flex-direction: column; gap: 10px; }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .step { display: flex; flex-direction: column; gap: 11px; margin-top: 34px; }
+  .step:first-of-type { margin-top: 26px; }
 
   .step-n {
-    width: 25px; height: 25px; border-radius: 999px; flex-shrink: 0;
+    width: 26px; height: 26px; border-radius: 999px; flex-shrink: 0;
     background: var(--fill); border: 1px solid var(--stroke-2);
     display: flex; align-items: center; justify-content: center;
-    font-size: 11.5px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
   }
-  .tag { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--text-3); }
+  .tag { display: flex; align-items: center; gap: 5px; font-size: 12.5px; color: var(--text-3); }
   .dot { width: 6px; height: 6px; border-radius: 999px; flex-shrink: 0; }
 
-  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
   .tbl { border: 1px solid var(--stroke); border-radius: 8px; overflow: hidden; }
-  th { text-align: left; font-weight: 600; font-size: 11.5px; color: var(--text-2);
-       padding: 7px 11px; background: #fafafa; border-bottom: 1px solid var(--stroke); }
-  td { padding: 8px 11px; border-bottom: 1px solid var(--stroke); vertical-align: top; line-height: 18px; }
+  th { text-align: left; font-weight: 600; font-size: 12px; color: var(--text-2);
+       padding: 8px 12px; background: #fafafa; border-bottom: 1px solid var(--stroke); }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--stroke); vertical-align: top; line-height: 19px; }
   tr:last-child td { border-bottom: none; }
 
-  .li { display: flex; gap: 10px; padding: 7px 0; border-top: 1px solid var(--stroke); }
+  .li { display: flex; gap: 12px; padding: 8px 0; border-top: 1px solid var(--stroke); }
   .li:first-child { border-top: none; }
-  .li-n { min-width: 16px; font-size: 11.5px; color: var(--text-4); font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .li-n { min-width: 18px; font-size: 12px; color: var(--text-4); font-variant-numeric: tabular-nums; padding-top: 3px; }
 
-  /* the line */
+  /* the gate */
   .gate { border: 2px solid var(--green); border-radius: 12px; background: var(--gate-bg);
-          padding: 18px 20px; margin: 28px 0; }
+          padding: 20px 22px; margin: 36px 0; }
   .gate-label { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 700;
                 letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
-  .gate h2 { font-size: 20px; line-height: 26px; }
-  .gate-sub { color: var(--text-2); font-size: 14px; line-height: 20px; margin-top: 4px; }
-  .gate-cols { display: flex; gap: 30px; margin-top: 16px; align-items: flex-start; }
-  .gate-cols > div { flex: 1 1 0; min-width: 0; }
-  .panel { background: #fff; border: 1px solid var(--stroke); border-radius: 8px; padding: 12px 14px; }
-  .panel-h { font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 6px; }
-  .panel-h.req { color: var(--green); }
-  .panel-h.not { color: var(--text-3); }
-  .check { display: flex; gap: 9px; padding: 6px 0; border-top: 1px solid var(--stroke); }
+  .gate h2 { font-size: 20px; line-height: 27px; }
+  .gate-sub { color: var(--text-2); font-size: 14.5px; line-height: 21px; margin-top: 5px; }
+  .panel { background: #fff; border: 1px solid var(--stroke); border-radius: 8px; padding: 13px 15px; margin-top: 16px; }
+  .panel-h { font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+             margin-bottom: 6px; color: var(--green); }
+  .check { display: flex; gap: 9px; padding: 7px 0; border-top: 1px solid var(--stroke); }
   .check:first-of-type { border-top: none; }
-  .check .mk { color: var(--green); font-weight: 700; flex-shrink: 0; font-size: 13px; padding-top: 1px; }
-  .check .xk { color: var(--text-4); font-weight: 700; flex-shrink: 0; font-size: 13px; padding-top: 1px; }
-  .check p { font-size: 13.5px; line-height: 19px; }
-  .check .note { margin-top: 1px; }
+  .check .mk { color: var(--green); font-weight: 700; flex-shrink: 0; font-size: 13px; padding-top: 2px; }
+  .check p { font-size: 14px; line-height: 20px; }
   .check .q { color: var(--text-3); }
 
   /* decision cards */
-  .card { border-radius: 8px; padding: 12px 14px; background: var(--warn-bg); border: 1px solid var(--warn-stroke); }
+  .card { border-radius: 8px; padding: 13px 15px; background: var(--warn-bg); border: 1px solid var(--warn-stroke);
+          margin-top: 14px; }
   .card.plain { background: var(--fill); border-color: var(--stroke); }
-  .card .t { font-weight: 600; font-size: 14px; line-height: 20px; margin-bottom: 6px; }
-  .card ul { margin: 0; padding-left: 16px; }
-  .card li { font-size: 13px; line-height: 19px; margin-top: 4px; color: var(--text-2); }
+  .card .t { font-weight: 600; font-size: 14.5px; line-height: 21px; margin-bottom: 6px; }
+  .card ul { margin: 0; padding-left: 17px; }
+  .card li { font-size: 13.5px; line-height: 20px; margin-top: 5px; color: var(--text-2); }
   .card li:first-child { margin-top: 0; }
   .card li b { color: var(--text); }
 
   .section-h { font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
-  hr { border: none; border-top: 1px solid var(--stroke); margin: 28px 0 20px; }
-  .inline-note { font-size: 12.5px; line-height: 18px; color: var(--text-3); background: var(--fill);
-                 border: 1px solid var(--stroke); border-radius: 8px; padding: 9px 12px; }
+  hr { border: none; border-top: 1px solid var(--stroke); margin: 40px 0 22px; }
+  .inline-note { font-size: 13px; line-height: 19px; color: var(--text-3); background: var(--fill);
+                 border: 1px solid var(--stroke); border-radius: 8px; padding: 10px 12px; }
 </style>
 </head>
 <body>
 <div class="page">
   <h1>ELI 2.0 activation — start to finish</h1>
 
-  <!-- ABOVE THE LINE -->
-  <div class="cols" style="margin-top:22px">
-    <div class="col">
-      <div class="stack">
-        <div class="row">
-          <div class="step-n">1</div>
-          <h2>Contract signed, then the property is flagged 2.0</h2>
-          <div class="tag"><span class="dot" style="background:var(--purple)"></span>Internal</div>
-        </div>
-        <p class="sub">Contract triggers the number purchase. The flag is what puts the property on the Go Live list. Client does nothing here.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>At contract</th><th>During rollout (today)</th><th>After product's cutoff</th></tr></thead>
-            <tbody>
-              <tr><td>Number purchase</td><td>Buy 7 per property — existing automation</td><td>Buy 1, or reuse outbound default</td></tr>
-              <tr><td>Go Live list</td><td>Only properties flagged 2.0 appear</td><td>Unchanged</td></tr>
-              <tr><td>Flag source</td><td>Written by rule, client or cutoff-date level</td><td>Unchanged</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="row">
+      <div class="step-n">1</div>
+      <h2>Contract signed, then the property is flagged 2.0</h2>
+      <div class="tag"><span class="dot" style="background:var(--purple)"></span>Internal</div>
     </div>
-
-    <div class="col">
-      <div class="stack">
-        <div class="row">
-          <div class="step-n">2</div>
-          <h2>Client completes what only the client can do</h2>
-          <div class="tag"><span class="dot" style="background:var(--blue)"></span>Client</div>
-        </div>
-        <p class="sub">The tabs already in the prototype. The only work requiring the client — and the only work holding the button down.</p>
-        <div>
-          <div class="li"><div class="li-n">1</div><div><p>Brand registration — company level</p><div class="note">Carrier Compliance tab. Entrata Twilio account, not Colleen.</div></div></div>
-          <div class="li"><div class="li-n">2</div><div><p>Campaign registration — property level</p><div class="note">Approved for the number that becomes Super Agent.</div></div></div>
-          <div class="li"><div class="li-n">3</div><div><p>Email integration — client authenticates</p><div class="note">The one step only the client can do. Gate only if email is contracted.</div></div></div>
-        </div>
-      </div>
+    <p class="sub">Contract triggers the number purchase. The flag is what puts the property on the Go Live list. Client does nothing here.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>At contract</th><th>During rollout (today)</th><th>After product's cutoff</th></tr></thead>
+        <tbody>
+          <tr><td>Number purchase</td><td>Buy 7 per property — existing automation</td><td>Buy 1, or reuse outbound default</td></tr>
+          <tr><td>Go Live list</td><td>Only properties flagged 2.0 appear</td><td>Unchanged</td></tr>
+          <tr><td>Flag source</td><td>Written by rule, client or cutoff-date level</td><td>Unchanged</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- THE LINE -->
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="row">
+      <div class="step-n">2</div>
+      <h2>Client completes what only the client can do</h2>
+      <div class="tag"><span class="dot" style="background:var(--blue)"></span>Client</div>
+    </div>
+    <p class="sub">The tabs already in the prototype. The only work requiring the client — and the only work holding the button down.</p>
+    <div>
+      <div class="li"><div class="li-n">1</div><div><p>Brand registration — company level</p><div class="note">Carrier Compliance tab. Entrata Twilio account, not Colleen.</div></div></div>
+      <div class="li"><div class="li-n">2</div><div><p>Campaign registration — property level</p><div class="note">Approved for the number that becomes Super Agent.</div></div></div>
+      <div class="li"><div class="li-n">3</div><div><p>Email integration — client authenticates</p><div class="note">The one step only the client can do. Gate only if email is contracted.</div></div></div>
+    </div>
+  </div>
+
+  <!-- THE GATE -->
   <div class="gate">
     <div class="gate-label"><span class="dot" style="background:var(--green);width:7px;height:7px"></span>The line — button flips from disabled to enabled</div>
-    <h2>Bare minimum for Go Live to be clickable</h2>
-    <div class="gate-sub">One question: <b>have we handed the client working keys?</b> If the left column is true, the button turns on. Nothing on the right may hold it down.</div>
-    <div class="gate-cols">
-      <div class="panel">
-        <div class="panel-h req">Required — all must be true</div>
-        <div class="check"><span class="mk">&#10003;</span><p>Contract in place, property flagged 2.0 <span class="q">— else it isn't on the list</span></p></div>
-        <div class="check"><span class="mk">&#10003;</span><p>Brand approved on Entrata's Twilio account <span class="q">— Colleen doesn't count</span></p></div>
-        <div class="check"><span class="mk">&#10003;</span><p>Campaign approved for the Super Agent number <span class="q">— else messaging fails silently</span></p></div>
-        <div class="check"><span class="mk">&#10003;</span><p>One number on the property with voice + SMS <span class="q">— which one doesn't matter</span></p></div>
-        <div class="check"><span class="mk">&#10003;</span><p>Email authenticated <span class="q">— only if email is contracted (open)</span></p></div>
-      </div>
-      <div class="panel">
-        <div class="panel-h not">Not required — never gate on these</div>
-        <div class="check"><span class="xk">&times;</span><p>Training or client education</p></div>
-        <div class="check"><span class="xk">&times;</span><p>Which number becomes Super Agent <span class="q">— property setting</span></p></div>
-        <div class="check"><span class="xk">&times;</span><p>Custom IVR tree or greeting <span class="q">— defaulted on click</span></p></div>
-        <div class="check"><span class="xk">&times;</span><p>Chatbot placement preferences</p></div>
-        <div class="check"><span class="xk">&times;</span><p>1.0 conversation history or memory</p></div>
-        <div class="check"><span class="xk">&times;</span><p>Contact points, voice caching, domain agents, subdomain <span class="q">— all fire on click</span></p></div>
-        <div class="check"><span class="xk">&times;</span><p>Old 1.0 number cleanup</p></div>
-      </div>
+    <h2>Product &amp; Engineering requirements for Go Live button to be active</h2>
+    <div class="gate-sub">One question: <b>have we handed the client working keys?</b> If all of these are true, the button turns on.</div>
+    <div class="panel">
+      <div class="panel-h">Required — all must be true</div>
+      <div class="check"><span class="mk">&#10003;</span><p>Contract in place, property flagged 2.0</p></div>
+      <div class="check"><span class="mk">&#10003;</span><p>Brand approved on Entrata's Twilio account <span class="q">— Colleen doesn't count</span></p></div>
+      <div class="check"><span class="mk">&#10003;</span><p>Campaign approved for the Super Agent number <span class="q">— else messaging fails silently</span></p></div>
+      <div class="check"><span class="mk">&#10003;</span><p>One number on the property with voice + SMS <span class="q">— which one doesn't matter</span></p></div>
+      <div class="check"><span class="mk">&#10003;</span><p>Email authenticated <span class="q">— only if email is contracted (open)</span></p></div>
     </div>
   </div>
 
-  <!-- BELOW THE LINE -->
-  <div class="cols">
-    <div class="col">
-      <div class="stack">
-        <div class="row">
-          <div class="step-n">3</div>
-          <h2>Client clicks Go Live</h2>
-          <div class="tag"><span class="dot" style="background:var(--yellow)"></span>Boundary</div>
-        </div>
-        <p class="sub">All contracted products for that property, or one via the arrow. The only moment the client acts on activation.</p>
-      </div>
-
-      <div class="stack">
-        <div class="row">
-          <div class="step-n">5</div>
-          <h2>Property is live</h2>
-          <div class="tag"><span class="dot" style="background:var(--gray)"></span>Post-live</div>
-        </div>
-        <p class="sub">Client gets a notification of what was turned on — not a task list. Settings stay editable, including the Super Agent number. Implementation date is captured here; billing keys off it.</p>
-      </div>
-
-      <div class="inline-note">Email integration does not re-run in step 4. It was the gate, not a step.</div>
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="row">
+      <div class="step-n">3</div>
+      <h2>Client clicks Go Live</h2>
+      <div class="tag"><span class="dot" style="background:var(--yellow)"></span>Boundary</div>
     </div>
+    <p class="sub">All contracted products for that property, or one via the arrow. The only moment the client acts on activation.</p>
+  </div>
 
-    <div class="col">
-      <div class="stack">
-        <div class="row">
-          <div class="step-n">4</div>
-          <h2>Backend automation fires</h2>
-          <div class="tag"><span class="dot" style="background:var(--green)"></span>Automated</div>
-        </div>
-        <p class="sub">What the sub-team checklists do by hand today — about two hours of cross-team coordination per client. No client involvement.</p>
-        <div class="cols" style="gap:26px">
-          <div style="flex:1 1 0;min-width:0">
-            <div class="li"><div class="li-n">1</div><div><p>Confirm contracted SKUs for the property</p></div></div>
-            <div class="li"><div class="li-n">2</div><div><p>Assign the Super Agent number</p><div class="note">Outbound default, or one already purchased. No second purchase.</div></div></div>
-            <div class="li"><div class="li-n">3</div><div><p>Verify it sits on the approved Entrata campaign</p><div class="note">Fail closed. This is the check Sweeny Clan was missing.</div></div></div>
-            <div class="li"><div class="li-n">4</div><div><p>Configure IVR tree + transfer-to-human number</p><div class="note">Validate the recording plays — bad file format broke Sweeny Clan.</div></div></div>
-            <div class="li"><div class="li-n">5</div><div><p>Attach voice agent; verify calls in/out and SMS</p></div></div>
-            <div class="li"><div class="li-n">6</div><div><p>Enable chatbot on prospect, resident, Homebody where contracted</p><div class="note">Homebody isn't universal — Westland yes, Inglewood and Solaire no.</div></div></div>
-          </div>
-          <div style="flex:1 1 0;min-width:0">
-            <div class="li"><div class="li-n">7</div><div><p>Resolve the client subdomain for MCP</p></div></div>
-            <div class="li"><div class="li-n">8</div><div><p>Refresh the contract cache</p></div></div>
-            <div class="li"><div class="li-n">9</div><div><p>Connect domain agents with voice and tone defaults</p></div></div>
-            <div class="li"><div class="li-n">10</div><div><p>Turn on voice caching for Leasing AI and Maintenance AI</p></div></div>
-            <div class="li"><div class="li-n">11</div><div><p>1.0-live only: re-enable contact points, turn off Graph Messages</p><div class="note">Graph Messages off before the new number becomes outbound default.</div></div></div>
-            <div class="li"><div class="li-n">12</div><div><p>Verify Nexus configuration against the new number</p></div></div>
-          </div>
-        </div>
-      </div>
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="row">
+      <div class="step-n">4</div>
+      <h2>Backend automation fires</h2>
+      <div class="tag"><span class="dot" style="background:var(--green)"></span>Automated</div>
     </div>
+    <p class="sub">What the sub-team checklists do by hand today — about two hours of cross-team coordination per client. No client involvement.</p>
+    <div>
+      <div class="li"><div class="li-n">1</div><div><p>Confirm contracted SKUs for the property</p></div></div>
+      <div class="li"><div class="li-n">2</div><div><p>Assign the Super Agent number</p><div class="note">Outbound default, or one already purchased. No second purchase.</div></div></div>
+      <div class="li"><div class="li-n">3</div><div><p>Verify it sits on the approved Entrata campaign</p><div class="note">Fail closed. This is the check Sweeny Clan was missing.</div></div></div>
+      <div class="li"><div class="li-n">4</div><div><p>Configure IVR tree + transfer-to-human number</p><div class="note">Validate the recording plays — bad file format broke Sweeny Clan.</div></div></div>
+      <div class="li"><div class="li-n">5</div><div><p>Attach voice agent; verify calls in/out and SMS</p></div></div>
+      <div class="li"><div class="li-n">6</div><div><p>Enable chatbot on prospect, resident, Homebody where contracted</p><div class="note">Homebody isn't universal — Westland yes, Inglewood and Solaire no.</div></div></div>
+      <div class="li"><div class="li-n">7</div><div><p>Resolve the client subdomain for MCP</p></div></div>
+      <div class="li"><div class="li-n">8</div><div><p>Refresh the contract cache</p></div></div>
+      <div class="li"><div class="li-n">9</div><div><p>Connect domain agents with voice and tone defaults</p></div></div>
+      <div class="li"><div class="li-n">10</div><div><p>Turn on voice caching for Leasing AI and Maintenance AI</p></div></div>
+      <div class="li"><div class="li-n">11</div><div><p>1.0-live only: re-enable contact points, turn off Graph Messages</p><div class="note">Graph Messages off before the new number becomes outbound default.</div></div></div>
+      <div class="li"><div class="li-n">12</div><div><p>Verify Nexus configuration against the new number</p></div></div>
+    </div>
+    <div class="inline-note">Email integration does not re-run here. It was the gate, not a step.</div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="row">
+      <div class="step-n">5</div>
+      <h2>Property is live</h2>
+      <div class="tag"><span class="dot" style="background:var(--gray)"></span>Post-live</div>
+    </div>
+    <p class="sub">Client gets a notification of what was turned on — not a task list. Settings stay editable, including the Super Agent number. Implementation date is captured here; billing keys off it.</p>
   </div>
 
   <hr>
 
   <!-- DECISIONS -->
   <div class="section-h">Decisions and open items</div>
-  <div class="cols" style="margin-top:14px;gap:28px">
-    <div class="col" style="gap:14px">
-      <div class="card">
-        <div class="t">Seven numbers is on purpose — until product sets a date</div>
-        <ul>
-          <li>2.0 needs one number; the contract automation buys seven. Leave it alone for now.</li>
-          <li><b>Mid-rollout:</b> properties going live today may still be 1.0 and need all seven.</li>
-          <li><b>Per-property sizing needs a human</b> to read each contract — slow, and wrong often enough to matter.</li>
-          <li><b>A late number is the expensive mistake.</b> Unused number = small monthly fee. Buying one later = carrier registration + campaign approval, days of waiting. That's the Sweeny Clan swap.</li>
-          <li>Dropping to one number is a calendar decision, not a 2.0 dependency.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="t">The 2.0 flag cannot live in OXP</div>
-        <ul>
-          <li><b>OXP is the client's environment.</b> Flagging there means an employee entering each client's env — JIT-restricted, not always granted. Every migration would start with an access request.</li>
-          <li><b>Client-by-client, property-by-property is the expensive version</b> of the same switch.</li>
-          <li><b>Recommendation: one internal tool, global across clients and properties</b> — Client Admin, Amplitude, or equivalent. Outside the client env.</li>
-          <li>Go Live stays self-service. The flag does not — it's internal and temporary, and disappears once everyone is on 2.0.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col" style="gap:14px">
-      <div class="card">
-        <div class="t">The number is a property setting, not an implementation gate</div>
-        <ul>
-          <li>The client may market it, publish it on signage, or point residents at it — so they must be able to see and change it in property settings.</li>
-          <li><b>But picking it changes nothing functionally.</b> Every eligible number reaches the same agent, IVR, and texting.</li>
-          <li><b>Phase 1: assign the best eligible number, show them what we picked, let them change it later.</b> It should not delay implementation or block Go Live.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="t">Colleen registration does not count</div>
-        <ul>
-          <li>~600 properties are brand- and campaign-registered in Colleen but not Entrata. Treat those as incomplete against the line.</li>
-          <li>Same failure as Sweeny Clan — the number sat on a test sub-account with no valid messaging campaign.</li>
-        </ul>
-      </div>
-      <div class="card plain">
-        <div class="t">Open: is IVR a client step or a backend step?</div>
-        <ul>
-          <li>Client tab today. If it's auto-built on click, drop the tab entirely.</li>
-          <li>Either way it stays off the line — a default IVR is enough to go live.</li>
-        </ul>
-      </div>
-    </div>
+
+  <div class="card">
+    <div class="t">Seven numbers is on purpose — until product sets a date</div>
+    <ul>
+      <li>2.0 needs one number; the contract automation buys seven. Leave it alone for now.</li>
+      <li><b>Mid-rollout:</b> properties going live today may still be 1.0 and need all seven.</li>
+      <li><b>Per-property sizing needs a human</b> to read each contract — slow, and wrong often enough to matter.</li>
+      <li><b>A late number is the expensive mistake.</b> Unused number = small monthly fee. Buying one later = carrier registration + campaign approval, days of waiting. That's the Sweeny Clan swap.</li>
+      <li>Dropping to one number is a calendar decision, not a 2.0 dependency.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="t">The 2.0 flag cannot live in OXP</div>
+    <ul>
+      <li><b>OXP is the client's environment.</b> Flagging there means an employee entering each client's env — JIT-restricted, not always granted. Every migration would start with an access request.</li>
+      <li><b>Client-by-client, property-by-property is the expensive version</b> of the same switch.</li>
+      <li><b>Recommendation: one internal tool, global across clients and properties</b> — Client Admin, Amplitude, or equivalent. Outside the client env.</li>
+      <li>Go Live stays self-service. The flag does not — it's internal and temporary, and disappears once everyone is on 2.0.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="t">The number is a property setting, not an implementation gate</div>
+    <ul>
+      <li>The client may market it, publish it on signage, or point residents at it — so they must be able to see and change it in property settings.</li>
+      <li><b>But picking it changes nothing functionally.</b> Every eligible number reaches the same agent, IVR, and texting.</li>
+      <li><b>Phase 1: assign the best eligible number, show them what we picked, let them change it later.</b> It should not delay implementation or block Go Live.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="t">Colleen registration does not count</div>
+    <ul>
+      <li>~600 properties are brand- and campaign-registered in Colleen but not Entrata. Treat those as incomplete against the line.</li>
+      <li>Same failure as Sweeny Clan — the number sat on a test sub-account with no valid messaging campaign.</li>
+    </ul>
+  </div>
+
+  <div class="card plain">
+    <div class="t">Open: is IVR a client step or a backend step?</div>
+    <ul>
+      <li>Client tab today. If it's auto-built on click, drop the tab entirely.</li>
+      <li>Either way it stays off the line — a default IVR is enough to go live.</li>
+    </ul>
   </div>
 </div>
 </body>

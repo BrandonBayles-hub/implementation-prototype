@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
 2:I[78616,[],"ClientSegmentRoot"]
-3:I[70053,["500","static/chunks/500-e2a7ab501ac40f90.js","409","static/chunks/409-601a28820994ea7e.js","734","static/chunks/734-e14891f51150f175.js","0","static/chunks/0-752e63e0cd8e89ee.js","537","static/chunks/537-0e36d3d97f1e9437.js","567","static/chunks/567-a6d34fbb0964d552.js","127","static/chunks/127-bcc203e32a9f7c1e.js","774","static/chunks/app/agent-studio/layout-d30bf2eca4e177eb.js"],"default"]
+3:I[51180,["411","static/chunks/411-2a889ce2d86531a1.js","453","static/chunks/453-1d438e2198e8ba9a.js","598","static/chunks/598-88a5fd0417650db7.js","189","static/chunks/189-5c7a6d48d5a95c35.js","343","static/chunks/343-76bf85ac21115f44.js","160","static/chunks/160-42bfa26c7b6c7d9e.js","555","static/chunks/555-056e85da08dcae80.js","774","static/chunks/app/agent-studio/layout-a702aa0efd162dfe.js"],"default"]
 4:I[57121,[],""]
-5:I[52579,["500","static/chunks/500-e2a7ab501ac40f90.js","409","static/chunks/409-601a28820994ea7e.js","942","static/chunks/app/agent-studio/error-67838700e73b42da.js"],"default"]
+5:I[52579,["411","static/chunks/411-2a889ce2d86531a1.js","942","static/chunks/app/agent-studio/error-b3cf8c092b021754.js"],"default"]
 6:I[74581,[],""]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@7"]}}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"-UJlX-AFisXUMPearTRL1"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@7"]}}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"9Atc8NslBGmvshVQpGDAK"}
 7:"$0:rsc:props:children:1:props:serverProvidedParams:params"

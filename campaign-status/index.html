@@ -89,11 +89,11 @@
         <div>
           <div class="eyebrow">ELI+ · A2P Registration</div>
           <h1>Campaign status tracker</h1>
-          <p class="lede">Live status for the properties Paige marked as submitted. This replaces manual spreadsheet checks and refreshes directly from Twilio every hour.</p>
+          <p class="lede">Status for the properties Paige marked as submitted. Twilio is queried every 15 minutes; this page shows the last published scan.</p>
         </div>
         <div class="freshness">
           <strong id="freshness-title">Loading current status…</strong>
-          <span id="freshness-detail">Checking the latest published scan.</span>
+          <span id="freshness-detail">Loading the last published scan.</span>
         </div>
       </header>
 
@@ -112,7 +112,7 @@
           <input id="search" type="search" placeholder="Search property, client, CID, property ID, or carrier reference…" />
           <select id="status"><option value="">All live statuses</option></select>
           <select id="client"><option value="">All clients</option></select>
-          <button id="refresh" type="button">Refresh data</button>
+          <button id="refresh" type="button">Reload last scan</button>
         </div>
         <div class="countline" id="countline">Loading campaigns…</div>
         <div class="table-wrap">
@@ -162,7 +162,7 @@
       }) : "—";
 
       async function load() {
-        $("freshness-title").textContent = "Refreshing status…";
+        $("freshness-title").textContent = "Reloading last scan…";
         const response = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error(`Status feed returned ${response.status}`);
         data = await response.json();
@@ -183,7 +183,7 @@
         $("missing").textContent = missing.toLocaleString();
         $("approved-sub").textContent = `${Math.round(approved / data.total * 100)}% approved`;
         $("freshness-title").textContent = `Last updated: ${dateText(data.generatedAt)}`;
-        $("freshness-detail").textContent = "Automatically refreshed from Twilio every hour.";
+        $("freshness-detail").textContent = "Twilio is queried every 15 minutes. This button reloads the last published scan — it does not call Twilio.";
         $("notice").innerHTML = `<span>●</span><div><strong>Resubmissions are matched by client and property ID.</strong> This follows the replacement services created during resubmission without exposing Twilio account identifiers. ${data.excludedCount.toLocaleString()} rows marked unimplemented or blank are outside the submitted cohort.</div>`;
 
         const statuses = [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort();
@@ -224,7 +224,7 @@
       ["search", "status", "client"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
       $("refresh").addEventListener("click", () => load().catch(showError));
       function showError(error) {
-        $("freshness-title").textContent = "Unable to refresh";
+        $("freshness-title").textContent = "Unable to reload last scan";
         $("freshness-detail").textContent = error.message;
       }
       load().catch(showError);

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T19:26:58.114986+00:00",
+  "generatedAt": "2026-09-14T20:37:23.870664+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 232,
-    "IN_PROGRESS": 310,
-    "FAILED": 30,
+    "VERIFIED": 252,
+    "IN_PROGRESS": 319,
+    "FAILED": 1,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -136,16 +136,11 @@
       "serviceName": "Entrata_13886_1140180",
       "serviceCreated": "2026-09-11T21:53:39Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:39Z",
       "dateUpdated": "2026-09-11T21:53:39Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -157,16 +152,11 @@
       "serviceName": "Entrata_13886_1151880",
       "serviceCreated": "2026-09-11T21:53:45Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:45Z",
       "dateUpdated": "2026-09-11T21:53:45Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -178,16 +168,11 @@
       "serviceName": "Entrata_13886_1110129",
       "serviceCreated": "2026-09-11T21:53:48Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:48Z",
       "dateUpdated": "2026-09-11T21:53:48Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -199,16 +184,11 @@
       "serviceName": "Entrata_13886_538952",
       "serviceCreated": "2026-09-11T21:53:51Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:51Z",
       "dateUpdated": "2026-09-11T21:53:51Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -220,16 +200,11 @@
       "serviceName": "Entrata_13886_719778",
       "serviceCreated": "2026-09-11T21:53:54Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:54Z",
       "dateUpdated": "2026-09-11T21:53:54Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -241,16 +216,11 @@
       "serviceName": "Entrata_13886_1078837",
       "serviceCreated": "2026-09-11T21:53:57Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:57Z",
       "dateUpdated": "2026-09-11T21:53:57Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -262,16 +232,11 @@
       "serviceName": "Entrata_13886_1209719",
       "serviceCreated": "2026-09-11T21:54:00Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:00Z",
       "dateUpdated": "2026-09-11T21:54:00Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -283,16 +248,11 @@
       "serviceName": "Entrata_13886_598332",
       "serviceCreated": "2026-09-11T21:53:59Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:59Z",
       "dateUpdated": "2026-09-11T21:53:59Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -304,16 +264,11 @@
       "serviceName": "Entrata_13886_505294",
       "serviceCreated": "2026-09-11T21:54:07Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:07Z",
       "dateUpdated": "2026-09-11T21:54:07Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -325,16 +280,11 @@
       "serviceName": "Entrata_13886_505295",
       "serviceCreated": "2026-09-11T21:54:15Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:15Z",
       "dateUpdated": "2026-09-11T21:54:15Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -346,16 +296,11 @@
       "serviceName": "Entrata_13886_503382",
       "serviceCreated": "2026-09-11T21:54:09Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:10Z",
       "dateUpdated": "2026-09-11T21:54:10Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -367,16 +312,11 @@
       "serviceName": "Entrata_13886_1314830",
       "serviceCreated": "2026-09-11T21:54:20Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:20Z",
       "dateUpdated": "2026-09-11T21:54:20Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -388,16 +328,11 @@
       "serviceName": "Entrata_13886_1162350",
       "serviceCreated": "2026-09-11T21:54:17Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:17Z",
       "dateUpdated": "2026-09-11T21:54:17Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -409,16 +344,11 @@
       "serviceName": "Entrata_13886_505300",
       "serviceCreated": "2026-09-11T21:54:29Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:29Z",
       "dateUpdated": "2026-09-11T21:54:29Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -430,16 +360,11 @@
       "serviceName": "Entrata_13886_956140",
       "serviceCreated": "2026-09-11T21:54:31Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:31Z",
       "dateUpdated": "2026-09-11T21:54:31Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -451,16 +376,11 @@
       "serviceName": "Entrata_13886_505983",
       "serviceCreated": "2026-09-11T21:54:33Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:33Z",
       "dateUpdated": "2026-09-11T21:54:33Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -472,16 +392,11 @@
       "serviceName": "Entrata_13886_1143785",
       "serviceCreated": "2026-09-11T21:54:36Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:36Z",
       "dateUpdated": "2026-09-11T21:54:36Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -493,16 +408,11 @@
       "serviceName": "Entrata_13886_719779",
       "serviceCreated": "2026-09-11T21:54:40Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:40Z",
       "dateUpdated": "2026-09-11T21:54:40Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -514,16 +424,11 @@
       "serviceName": "Entrata_13886_505299",
       "serviceCreated": "2026-09-11T21:54:38Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:38Z",
       "dateUpdated": "2026-09-11T21:54:38Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -556,16 +461,11 @@
       "serviceName": "Entrata_13886_505296",
       "serviceCreated": "2026-09-11T21:54:44Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:44Z",
       "dateUpdated": "2026-09-11T21:54:44Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -577,16 +477,11 @@
       "serviceName": "Entrata_13886_360270",
       "serviceCreated": "2026-09-11T21:54:46Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:46Z",
       "dateUpdated": "2026-09-11T21:54:46Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -598,16 +493,11 @@
       "serviceName": "Entrata_13886_100042063",
       "serviceCreated": "2026-09-11T21:54:48Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:48Z",
       "dateUpdated": "2026-09-11T21:54:48Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -619,16 +509,11 @@
       "serviceName": "Entrata_13886_505290",
       "serviceCreated": "2026-09-11T21:54:50Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:50Z",
       "dateUpdated": "2026-09-11T21:54:50Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -640,16 +525,11 @@
       "serviceName": "Entrata_13886_505287",
       "serviceCreated": "2026-09-11T21:54:54Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:54Z",
       "dateUpdated": "2026-09-11T21:54:54Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -661,16 +541,11 @@
       "serviceName": "Entrata_13886_1125667",
       "serviceCreated": "2026-09-11T21:54:56Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:57Z",
       "dateUpdated": "2026-09-11T21:54:57Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -682,16 +557,11 @@
       "serviceName": "Entrata_13886_360271",
       "serviceCreated": "2026-09-11T21:54:58Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:58Z",
       "dateUpdated": "2026-09-11T21:54:58Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -703,16 +573,11 @@
       "serviceName": "Entrata_13886_505984",
       "serviceCreated": "2026-09-11T21:55:00Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:55:00Z",
       "dateUpdated": "2026-09-11T21:55:00Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -724,16 +589,11 @@
       "serviceName": "Entrata_13886_505302",
       "serviceCreated": "2026-09-11T21:55:03Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:55:03Z",
       "dateUpdated": "2026-09-11T21:55:03Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Advanced Management Group",
@@ -745,16 +605,11 @@
       "serviceName": "Entrata_13886_505289",
       "serviceCreated": "2026-09-11T21:55:05Z",
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:55:06Z",
       "dateUpdated": "2026-09-11T21:55:06Z",
-      "errors": [
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        }
-      ]
+      "errors": []
     },
     {
       "company": "Aztex Management Group",
@@ -2318,8 +2173,8 @@
       "serviceName": "Entrata_101599_100108657",
       "serviceCreated": "2026-09-11T23:05:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CAQTWOM",
       "dateCreated": "2026-09-11T23:05:41Z",
       "dateUpdated": "2026-09-11T23:05:41Z",
       "errors": []
@@ -2366,8 +2221,8 @@
       "serviceName": "Entrata_101599_100108641",
       "serviceCreated": "2026-09-11T23:05:56Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C7C8623",
       "dateCreated": "2026-09-11T23:05:57Z",
       "dateUpdated": "2026-09-11T23:05:57Z",
       "errors": []
@@ -2494,8 +2349,8 @@
       "serviceName": "Entrata_101599_100124787",
       "serviceCreated": "2026-09-11T23:07:00Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CBKUUTE",
       "dateCreated": "2026-09-11T23:07:00Z",
       "dateUpdated": "2026-09-11T23:07:00Z",
       "errors": []
@@ -2606,8 +2461,8 @@
       "serviceName": "Entrata_101599_100108648",
       "serviceCreated": "2026-09-11T23:07:15Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CT4DC28",
       "dateCreated": "2026-09-11T23:07:15Z",
       "dateUpdated": "2026-09-11T23:07:15Z",
       "errors": []
@@ -2654,8 +2509,8 @@
       "serviceName": "Entrata_101599_100108634",
       "serviceCreated": "2026-09-11T23:07:21Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C25QK54",
       "dateCreated": "2026-09-11T23:07:21Z",
       "dateUpdated": "2026-09-11T23:07:21Z",
       "errors": []
@@ -2734,8 +2589,8 @@
       "serviceName": "Entrata_101599_100108635",
       "serviceCreated": "2026-09-11T23:07:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CLMNSZT",
       "dateCreated": "2026-09-11T23:07:32Z",
       "dateUpdated": "2026-09-11T23:07:32Z",
       "errors": []
@@ -2750,8 +2605,8 @@
       "serviceName": "Entrata_101599_100108633",
       "serviceCreated": "2026-09-11T23:07:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C95GGSA",
       "dateCreated": "2026-09-11T23:07:34Z",
       "dateUpdated": "2026-09-11T23:07:34Z",
       "errors": []
@@ -2782,8 +2637,8 @@
       "serviceName": "Entrata_101599_100108651",
       "serviceCreated": "2026-09-11T23:07:39Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXUWUIT",
       "dateCreated": "2026-09-11T23:07:39Z",
       "dateUpdated": "2026-09-11T23:07:39Z",
       "errors": []
@@ -2846,8 +2701,8 @@
       "serviceName": "Entrata_101599_100124792",
       "serviceCreated": "2026-09-11T23:07:46Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CRAKGBJ",
       "dateCreated": "2026-09-11T23:07:46Z",
       "dateUpdated": "2026-09-11T23:07:46Z",
       "errors": []
@@ -2862,8 +2717,8 @@
       "serviceName": "Entrata_101599_100108650",
       "serviceCreated": "2026-09-11T23:07:47Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C31AF93",
       "dateCreated": "2026-09-11T23:07:48Z",
       "dateUpdated": "2026-09-11T23:07:48Z",
       "errors": []
@@ -2894,8 +2749,8 @@
       "serviceName": "Entrata_101599_100108652",
       "serviceCreated": "2026-09-11T23:07:52Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CS25G6M",
       "dateCreated": "2026-09-11T23:07:52Z",
       "dateUpdated": "2026-09-11T23:07:52Z",
       "errors": []
@@ -5784,7 +5639,7 @@
       "serviceName": "Entrata_18735_100044542",
       "serviceCreated": "2026-09-11T20:16:01Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C1LQUSR",
       "dateCreated": "2026-09-11T20:16:01Z",
       "dateUpdated": "2026-09-11T20:16:01Z",
@@ -5816,8 +5671,8 @@
       "serviceName": "Entrata_18735_100028032",
       "serviceCreated": "2026-09-11T20:16:03Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C16INGJ",
       "dateCreated": "2026-09-11T20:16:04Z",
       "dateUpdated": "2026-09-11T20:16:04Z",
       "errors": []
@@ -5848,8 +5703,8 @@
       "serviceName": "Entrata_18735_1302968",
       "serviceCreated": "2026-09-11T20:16:06Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXSJUOM",
       "dateCreated": "2026-09-11T20:16:06Z",
       "dateUpdated": "2026-09-11T20:16:06Z",
       "errors": []
@@ -5880,8 +5735,8 @@
       "serviceName": "Entrata_18735_1198100",
       "serviceCreated": "2026-09-11T20:18:48Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CJL1W0E",
       "dateCreated": "2026-09-11T20:18:48Z",
       "dateUpdated": "2026-09-11T20:18:48Z",
       "errors": []
@@ -5912,7 +5767,7 @@
       "serviceName": "Entrata_18735_1198087",
       "serviceCreated": "2026-09-11T20:16:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C3U1I45",
       "dateCreated": "2026-09-11T20:16:13Z",
       "dateUpdated": "2026-09-11T20:16:13Z",
@@ -5960,8 +5815,8 @@
       "serviceName": "Entrata_18735_1198099",
       "serviceCreated": "2026-09-11T20:16:18Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CK2CPEY",
       "dateCreated": "2026-09-11T20:16:18Z",
       "dateUpdated": "2026-09-11T20:16:18Z",
       "errors": []
@@ -6024,8 +5879,8 @@
       "serviceName": "Entrata_18735_1198124",
       "serviceCreated": "2026-09-11T20:18:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C4D68FH",
       "dateCreated": "2026-09-11T20:18:40Z",
       "dateUpdated": "2026-09-11T20:18:40Z",
       "errors": []
@@ -6056,8 +5911,8 @@
       "serviceName": "Entrata_18735_100113634",
       "serviceCreated": "2026-09-11T20:18:38Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CN232DW",
       "dateCreated": "2026-09-11T20:18:38Z",
       "dateUpdated": "2026-09-11T20:18:38Z",
       "errors": []
@@ -6120,8 +5975,8 @@
       "serviceName": "Entrata_18735_100113636",
       "serviceCreated": "2026-09-11T20:18:36Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CHVEX5A",
       "dateCreated": "2026-09-11T20:18:36Z",
       "dateUpdated": "2026-09-11T20:18:36Z",
       "errors": []

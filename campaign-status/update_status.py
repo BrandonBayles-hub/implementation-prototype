@@ -17,8 +17,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-SOURCE_PATH = ROOT / "campaigns-source.json"
-OUTPUT_PATH = ROOT / "data.json"
+SOURCE_PATH = Path(os.environ.get("CAMPAIGN_SOURCE_PATH", ROOT / "campaigns-source.json"))
+OUTPUT_PATH = Path(os.environ.get("CAMPAIGN_OUTPUT_PATH", ROOT / "data.json"))
 MASTER_SID = os.environ["TWILIO_ACCOUNT_SID"]
 MASTER_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 
@@ -61,11 +61,6 @@ def subaccount_auth(account_sid: str) -> tuple[str, str]:
         MASTER_TOKEN,
     )
     return account_sid, account["auth_token"]
-
-
-def service_property_id(name: str) -> str | None:
-    match = re.search(r"Entrata_\d+_(\d+)(?:_|$)", name)
-    return match.group(1) if match else None
 
 
 def fetch_inventory(item: tuple[str, dict]) -> tuple[str, tuple[str, str], list[dict]]:
@@ -125,10 +120,11 @@ def main() -> None:
         cid = row["cid"]
         result = {**row}
         services = inventories.get(cid, [])
+        expected_name = f"Entrata_{cid}_{row['propertyId']}"
         exact = [
             service
             for service in services
-            if service_property_id(service.get("friendly_name") or "") == row["propertyId"]
+            if (service.get("friendly_name") or "") == expected_name
         ]
         candidates = exact
         if not candidates:

@@ -30,6 +30,18 @@ jobs:
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
         run: python campaign-status/update_status.py
 
+      - name: Validate complete cohort
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("campaign-status/data.json").read_text())
+          assert data["total"] == 575, f"Expected 575 campaigns, got {data['total']}"
+          assert not data.get("scanErrors"), f"Twilio account scans failed: {data['scanErrors']}"
+          assert sum(data["summary"].values()) == 575, "Status totals do not equal cohort"
+          PY
+
       - name: Publish refreshed data
         run: |
           git config user.name "campaign-status-bot"

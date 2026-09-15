@@ -43,8 +43,11 @@
       .card.missing .value { color: var(--missing); }
       .notice { display: flex; align-items: flex-start; gap: 10px; padding: 13px 15px; background: #fff9ed; border: 1px solid #f0d7a1; border-radius: 12px; color: #76530b; font-size: 13px; line-height: 1.45; margin-bottom: 18px; }
       .notice strong { color: #4e3607; }
+      .verdict { padding: 15px 17px; background: #f5f7ff; border: 1px solid #ccd5f3; border-radius: 12px; color: #344054; font-size: 13px; line-height: 1.5; margin-bottom: 18px; }
+      .verdict strong { color: #182230; }
+      .verdict-counts { margin-top: 7px; color: #475467; font-size: 12px; }
       .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 18px rgba(62, 47, 39, .05); }
-      .toolbar { display: grid; grid-template-columns: minmax(240px, 1fr) 180px 220px 220px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
+      .toolbar { display: grid; grid-template-columns: minmax(240px, 1fr) 160px 190px 210px 220px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
       input, select, button { font: inherit; }
       input, select { width: 100%; border: 1px solid #d8cec8; border-radius: 9px; background: #fff; padding: 10px 11px; color: var(--ink); outline: none; }
       input:focus, select:focus { border-color: #b97955; box-shadow: 0 0 0 3px rgba(185, 121, 85, .12); }
@@ -71,6 +74,12 @@
       .flag { display: block; color: var(--failed); font-size: 10px; font-weight: 750; margin-top: 3px; }
       .id { font: 10px ui-monospace, SFMono-Regular, Menlo, monospace; color: #6c5e55; white-space: nowrap; }
       .issue { max-width: 390px; color: #6d261e; line-height: 1.4; }
+      .action { min-width: 300px; max-width: 430px; line-height: 1.45; }
+      .action-owner { display: block; color: #344054; font-weight: 780; margin-bottom: 4px; }
+      .action-short { color: #475467; }
+      details { margin-top: 6px; }
+      summary { color: #175cd3; cursor: pointer; font-weight: 700; font-size: 11px; }
+      .action-detail { color: #475467; margin-top: 6px; padding: 8px 10px; background: #f8fafc; border-left: 3px solid #b2c2e8; border-radius: 4px; }
       .empty { padding: 56px; text-align: center; color: var(--muted); }
       footer { color: var(--muted); font-size: 11px; margin-top: 13px; display: flex; justify-content: space-between; gap: 16px; }
       @media (max-width: 1050px) {
@@ -109,12 +118,16 @@
       </section>
 
       <div class="notice" id="notice"><span>●</span><div><strong>Source reconciliation:</strong> Loading details…</div></div>
+      <div class="verdict" id="template-verdict">
+        <strong>Template A verdict:</strong> Loading failure evidence…
+      </div>
 
       <section class="panel">
         <div class="toolbar">
           <input id="search" type="search" placeholder="Search property, client, CID, property ID, or carrier reference…" />
           <select id="status"><option value="">All live statuses</option></select>
           <select id="client"><option value="">All clients</option></select>
+          <select id="action"><option value="">All action owners</option></select>
           <select id="source"><option value="">All cohort sources</option><option>Original property cohort</option><option>OXP submitted client list</option></select>
           <button id="refresh" type="button">Reload last scan</button>
         </div>
@@ -131,6 +144,7 @@
                 <th>Submitted / updated</th>
                 <th>Carrier reference</th>
                 <th>Issue</th>
+                <th>Action Item</th>
               </tr>
             </thead>
             <tbody id="rows"></tbody>
@@ -156,6 +170,19 @@
         if (["SERVICE_NOT_FOUND", "NO_CAMPAIGN"].includes(value)) return { label: "Needs investigation", css: "missing" };
         return { label: value.replaceAll("_", " "), css: "other" };
       };
+      const errorMeaning = (code) => ({
+        30882: "Public text-messaging Terms & Conditions could not be verified",
+        30886: "Submitted purpose statement was not acceptable",
+        30891: "Registered company website could not be verified",
+        30893: "Submitted example text message was not acceptable",
+        30896: "Submitted sign-up/consent description was not acceptable",
+        30907: "Submitted website did not match the registered business",
+        30908: "Public privacy policy could not be verified",
+        30909: "Public sign-up form could not be matched to our description",
+        30917: "Multiple sign-up routes were incomplete or unclear",
+        30921: "Website required a login and could not be reviewed",
+        30922: "Submitted website did not meet validation requirements",
+      })[Number(code)] || "Carrier rejection needs field-level review";
       const dateText = (value) => value ? new Date(value).toLocaleString("en-US", {
         timeZone: "UTC",
         month: "short",
@@ -191,22 +218,32 @@
         $("freshness-title").textContent = `Last updated: ${dateText(data.generatedAt)}`;
         $("freshness-detail").textContent = "Twilio is queried every 15 minutes. This button reloads the last published scan — it does not call Twilio.";
         $("notice").innerHTML = `<span>●</span><div><strong>${data.oxpClientCount.toLocaleString()} OXP Submitted clients reconciled.</strong> ${data.oxpClientsAlreadyInOriginalCohort.toLocaleString()} were already in the property cohort; ${data.oxpNetNewClientCount.toLocaleString()} are net-new. ${data.oxpNotOnOriginalMigrationCount.toLocaleString()} were marked as not on the original migration list. ${data.unmappedClients.length.toLocaleString()} could not be confidently mapped to a Twilio subaccount.</div>`;
+        const verdict = data.templateAVerdict || {};
+        const actionCounts = data.failureActionSummary || {};
+        const entrataFixable = Object.entries(actionCounts).filter(([name]) => name.startsWith("Entrata")).reduce((sum, [, count]) => sum + count, 0);
+        const clientBlocked = Object.entries(actionCounts).filter(([name]) => name.startsWith("Client")).reduce((sum, [, count]) => sum + count, 0);
+        const waiting = actionCounts["Twilio/Carrier — waiting"] || 0;
+        const unknown = actionCounts["Unknown — needs triage"] || 0;
+        $("template-verdict").innerHTML = `<strong>Template A is not a universal fix.</strong> ${Number(verdict.failedUsingTemplateA || 0).toLocaleString()} failed rows already use Template A. Of those, ${Number(verdict.knownWebsiteOrUrlPrimary || 0).toLocaleString()} primarily fail because the public or registered website cannot support what the reviewer must verify, ${Number(verdict.needsUrlTriage || 0).toLocaleString()} need an exact URL mismatch checked, and ${Number(verdict.contentErrorRows || 0).toLocaleString()} also have a submission-content rejection. The AMG evidence is especially clear: Ridge Falls kept the standard wording and still failed on AMG’s broken registered URL; rewritten AMG rows kept that failure and added sign-up rejections. Fix the underlying website or registered URL before changing locked copy.<div class="verdict-counts"><strong>All failed rows:</strong> Entrata-fixable ${entrataFixable.toLocaleString()} · Client-blocked ${clientBlocked.toLocaleString()} · Carrier waiting ${waiting.toLocaleString()} · Needs triage ${unknown.toLocaleString()}</div>`;
 
         const statuses = [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort();
         $("status").innerHTML = `<option value="">All live statuses</option>${statuses.map((value) => `<option>${esc(value)}</option>`).join("")}`;
         const clients = [...new Set(data.campaigns.map((row) => row.company))].sort();
         $("client").innerHTML = `<option value="">All clients</option>${clients.map((value) => `<option>${esc(value)}</option>`).join("")}`;
+        const actions = [...new Set(data.campaigns.map((row) => row.actionCategory).filter(Boolean))].sort();
+        $("action").innerHTML = `<option value="">All action owners</option>${actions.map((value) => `<option>${esc(value)}</option>`).join("")}`;
       }
 
       function render() {
         const query = $("search").value.trim().toLowerCase();
         const status = $("status").value;
         const client = $("client").value;
+        const action = $("action").value;
         const source = $("source").value;
         const filtered = data.campaigns.filter((row) => {
           const meta = statusMeta(row.liveStatus);
-          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId, ...(row.cohortOrigins || [])].join(" ").toLowerCase();
-          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client) && (!source || (row.cohortOrigins || []).includes(source));
+          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId, row.actionCategory, row.actionOwner, row.actionItem, row.actionDetail, ...(row.cohortOrigins || [])].join(" ").toLowerCase();
+          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client) && (!action || row.actionCategory === action) && (!source || (row.cohortOrigins || []).includes(source));
         });
         $("countline").textContent = `Showing ${filtered.length.toLocaleString()} of ${data.total.toLocaleString()} monitored properties`;
         $("empty").hidden = filtered.length > 0;
@@ -214,7 +251,7 @@
           const meta = statusMeta(row.liveStatus);
           const errors = row.errors || [];
           const issue = errors.length
-            ? errors.map((error) => `<strong>${esc(error.code || "Error")}</strong> ${esc(error.description || "")}`).join("<br>")
+            ? errors.map((error) => `${esc(errorMeaning(error.code))} <span class="meta">(carrier code ${esc(error.code || "unknown")})</span>`).join("<br>")
             : row.liveStatus === "SERVICE_NOT_FOUND" ? "No current Messaging Service matched this property ID." : "—";
           return `<tr>
             <td><span class="badge ${meta.css}">${esc(meta.label)}</span></td>
@@ -225,11 +262,12 @@
             <td>${dateText(row.dateUpdated || row.dateCreated)}</td>
             <td><div class="id">${row.tcrCampaignId ? `TCR ${esc(row.tcrCampaignId)}` : "Pending assignment"}</div></td>
             <td class="issue">${issue}</td>
+            <td class="action">${row.actionItem ? `<span class="action-owner">${esc(row.actionCategory)}</span><span class="action-short">${esc(row.actionItem)}</span><details><summary>Why this failed + exact steps</summary><div class="action-detail">${esc(row.actionDetail)}</div></details>` : "—"}</td>
           </tr>`;
         }).join("");
       }
 
-      ["search", "status", "client", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
+      ["search", "status", "client", "action", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
       $("refresh").addEventListener("click", () => load().catch(showError));
       function showError(error) {
         $("freshness-title").textContent = "Unable to reload last scan";

@@ -25,6 +25,183 @@ OUTPUT_PATH = Path(os.environ.get("CAMPAIGN_OUTPUT_PATH", ROOT / "data.json"))
 MASTER_SID = os.environ["TWILIO_ACCOUNT_SID"]
 MASTER_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 
+TEMPLATE_A_MARKER = "will be live post campaign approval"
+COPY_ERROR_CODES = {30886, 30893, 30896, 30909, 30917}
+
+
+def first_website(message_flow: str | None) -> str:
+    match = re.search(r"https?://[^\s)\"]+", message_flow or "")
+    return match.group(0).rstrip(".,") if match else "the website named in the submission"
+
+
+def action_for_campaign(campaign: dict, company: str) -> dict:
+    """Translate carrier failures into a short owner/action plus expandable detail."""
+    status = (campaign.get("campaign_status") or "UNKNOWN").upper()
+    if status in {"IN_PROGRESS", "PENDING", "PENDING_REVIEW"}:
+        return {
+            "actionCategory": "Twilio/Carrier — waiting",
+            "actionOwner": "Twilio/Carrier",
+            "actionItem": "Nothing to do — carrier review is still in progress.",
+            "actionDetail": (
+                "No correction is requested. The registration has been submitted and is waiting "
+                "for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+            ),
+        }
+    if status != "FAILED":
+        return {}
+
+    errors = campaign.get("errors") or []
+    codes = {
+        int(error.get("error_code"))
+        for error in errors
+        if isinstance(error, dict) and error.get("error_code")
+    }
+    website = first_website(campaign.get("message_flow"))
+
+    if company == "Advanced Management Group" and 30891 in codes:
+        detail = (
+            "Entrata registered AMG's company website as https://www.amgnevada.com, which the "
+            "reviewer could not open because its security certificate does not cover that address. "
+            "Correct the registered company-website field to https://amgnevada.com. For rows also "
+            "showing a sign-up rejection, compare the public form with the submitted sign-up "
+            "description and remove any claim about a phone field or consent checkbox that is not "
+            "actually visible. Follow the approved-template change process, then resubmit for a new "
+            "carrier review. The tracker data does not provide a reliable review-time estimate."
+        )
+        return {
+            "actionCategory": "Entrata — wrong URL registered",
+            "actionOwner": "Entrata",
+            "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+            "actionDetail": detail,
+        }
+
+    if company == "Aztex Management Group" and 30891 in codes:
+        detail = (
+            "Entrata registered https://www/aztexmgmt.com with a slash where the dot after 'www' "
+            "should be, so the reviewer reached no website. Correct the registered company-website "
+            "field to https://aztexmgmt.com. Aztex must also publish public Privacy Policy and Terms "
+            "pages that cover text messaging before approval is likely. Brownstone additionally has "
+            "rejected example messages: the approved-template owner must replace bracketed "
+            "fill-in-the-blank text with realistic examples. After all applicable fixes, Entrata "
+            "resubmits for carrier review. The tracker data does not provide a reliable review-time estimate."
+        )
+        return {
+            "actionCategory": "Entrata — wrong URL registered",
+            "actionOwner": "Entrata + client",
+            "actionItem": "Fix Aztex URL typo; client publishes Privacy + Terms pages; then resubmit.",
+            "actionDetail": detail,
+        }
+
+    if company == "Greystar Student Living" and 30908 in codes:
+        return {
+            "actionCategory": "Entrata — website publishing",
+            "actionOwner": "Entrata",
+            "actionItem": "Publish Greystar's existing privacy policy on Tropicana's public site; resubmit.",
+            "actionDetail": (
+                "The reviewer opened Tropicana's privacy-policy page expecting a real policy and found "
+                "placeholder content. Greystar already has a public policy at https://www.greystar.com/privacy. "
+                "Entrata should replace the placeholder with that approved policy or a working link to it, "
+                "remove the broken /privacy/us-policy link, confirm the page opens without a login, and then "
+                "resubmit for carrier review."
+            ),
+        }
+
+    if 30921 in codes:
+        return {
+            "actionCategory": "Client — website",
+            "actionOwner": "Client",
+            "actionItem": "Client must make its company website publicly viewable without a password.",
+            "actionDetail": (
+                "Please publish a company page that anyone can open without a username or password. "
+                "The page must show your legal business name, physical address, phone number, business "
+                "email, and a link to your privacy policy. The carrier reviewer reached a login screen "
+                "instead of public business information, so it could not verify the company. Send Paige "
+                "or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
+            ),
+        }
+
+    if 30908 in codes:
+        return {
+            "actionCategory": "Client — website",
+            "actionOwner": "Client",
+            "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+            "actionDetail": (
+                f"Please publish a Privacy Policy page linked from {website} that opens without a login. "
+                "It must explain what personal information is collected, how phone numbers are used for "
+                "text messages, that mobile information is not sold or shared with third parties for "
+                "marketing, expected message frequency, how to stop messages by replying STOP, how to get "
+                "help, and how to contact your company. The reviewer could not find a compliant policy. "
+                "Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
+            ),
+        }
+
+    if 30882 in codes:
+        return {
+            "actionCategory": "Client — website",
+            "actionOwner": "Client",
+            "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+            "actionDetail": (
+                f"Please publish a Terms & Conditions page linked from {website} that opens without a login. "
+                "It must name the company sending texts, describe the messages, state expected frequency, "
+                "say that message and data rates may apply, explain HELP and STOP, and link to the Privacy "
+                "Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon "
+                "the final public URL; Entrata will verify it and resubmit for carrier review."
+            ),
+        }
+
+    if 30907 in codes or 30922 in codes or 30891 in codes:
+        return {
+            "actionCategory": "Unknown — needs triage",
+            "actionOwner": "Entrata",
+            "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
+            "actionDetail": (
+                f"The reviewer checked {website} against the legal business registered for messaging and "
+                "could not validate that they belong together. Entrata must open the submitted site, compare "
+                "its business name and domain with the registered legal company, and check the exact website "
+                "stored in the business profile. If the submitted URL is wrong, replace it with the correct "
+                "public property URL; if the business profile is wrong, correct that profile through the "
+                "approved support path. The rejection does not identify which value is wrong, so do not guess. "
+                "After the values match and the site is public, resubmit for carrier review."
+            ),
+        }
+
+    if codes & COPY_ERROR_CODES:
+        parts = []
+        if 30893 in codes:
+            parts.append("replace bracketed placeholders in both example texts with realistic names and details")
+        if 30886 in codes:
+            parts.append("rewrite the submitted purpose so it plainly names the property and the messages sent")
+        if 30917 in codes:
+            parts.append("describe every sign-up route separately, including the exact consent shown in each")
+        if 30896 in codes or 30909 in codes:
+            parts.append(
+                f"compare the public sign-up form at {website} with the submitted description and describe only what is visible"
+            )
+        instruction = "; ".join(parts) or "review the rejected submission fields"
+        return {
+            "actionCategory": "Entrata — template/copy",
+            "actionOwner": "Entrata",
+            "actionItem": "Correct the rejected submission text to match the live sign-up experience; resubmit.",
+            "actionDetail": (
+                f"The reviewer expected our submitted wording and examples to match a real, public customer "
+                f"sign-up experience and rejected the content. Entrata must {instruction}. Do not edit the "
+                "locked template ad hoc: document the mismatch, obtain the approved-template owner's change, "
+                "apply it consistently, and then resubmit for carrier review. The tracker data does not "
+                "provide a reliable review-time estimate."
+            ),
+        }
+
+    return {
+        "actionCategory": "Unknown — needs triage",
+        "actionOwner": "Entrata",
+        "actionItem": "Needs triage — inspect the carrier's rejected fields before changing anything.",
+        "actionDetail": (
+            "The available rejection does not identify a safe correction. Entrata must open the read-only "
+            "carrier record, note every rejected field, compare each value with the public website and "
+            "registered business, and document the exact mismatch before choosing a fix. Do not guess or resubmit unchanged."
+        ),
+    }
+
 
 def normalize_name(value: str) -> str:
     value = value.casefold().replace("&", " and ")
@@ -224,6 +401,7 @@ def main() -> None:
                 or value.get("date_created")
                 or "",
             )
+            action = action_for_campaign(campaign, row["company"])
             errors = []
             for error in campaign.get("errors") or []:
                 if isinstance(error, dict):
@@ -243,6 +421,8 @@ def main() -> None:
                 "dateCreated": campaign.get("date_created"),
                 "dateUpdated": campaign.get("date_updated"),
                 "errors": errors,
+                "usesTemplateA": TEMPLATE_A_MARKER in (campaign.get("message_flow") or "").lower(),
+                **action,
             }
         except Exception as error:
             return {**result, "liveStatus": "LOOKUP_ERROR", "error": str(error)}
@@ -256,6 +436,11 @@ def main() -> None:
     campaigns.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     excluded.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     summary = Counter(row["liveStatus"] for row in campaigns)
+    failed = [row for row in campaigns if row["liveStatus"] == "FAILED"]
+    failure_action_summary = Counter(
+        row.get("actionCategory", "Unknown — needs triage") for row in failed
+    )
+    template_a_failed = [row for row in failed if row.get("usesTemplateA")]
     unmapped_clients = []
     for client, cid in oxp_mappings.items():
         if not cid:
@@ -298,6 +483,31 @@ def main() -> None:
         "unmappedClients": unmapped_clients,
         "excludedCount": len(excluded),
         "summary": dict(summary),
+        "failureActionSummary": dict(failure_action_summary),
+        "templateAVerdict": {
+            "failedUsingTemplateA": len(template_a_failed),
+            "knownWebsiteOrUrlPrimary": sum(
+                row.get("actionCategory")
+                in {
+                    "Client — website",
+                    "Entrata — website publishing",
+                    "Entrata — wrong URL registered",
+                }
+                for row in template_a_failed
+            ),
+            "needsUrlTriage": sum(
+                row.get("actionCategory") == "Unknown — needs triage"
+                for row in template_a_failed
+            ),
+            "contentErrorRows": sum(
+                any(
+                    int(error.get("code")) in COPY_ERROR_CODES
+                    for error in row.get("errors", [])
+                    if error.get("code")
+                )
+                for row in template_a_failed
+            ),
+        },
         "scanErrors": scan_errors,
         "campaigns": campaigns,
         "excluded": excluded,

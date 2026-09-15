@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:50:13.749017+00:00",
+  "generatedAt": "2026-09-15T14:05:15.286500+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -8,8 +8,8 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 281,
-    "IN_PROGRESS": 290,
-    "FAILED": 1,
+    "IN_PROGRESS": 288,
+    "FAILED": 3,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -1949,11 +1949,16 @@
       "serviceName": "Entrata_100130_100122289",
       "serviceCreated": "2026-09-14T17:21:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:21:35Z",
       "dateUpdated": "2026-09-14T17:21:35Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2029,11 +2034,16 @@
       "serviceName": "Entrata_100130_100062280",
       "serviceCreated": "2026-09-14T17:20:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:34Z",
       "dateUpdated": "2026-09-14T17:20:34Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "Broadway Management",

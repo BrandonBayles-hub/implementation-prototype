@@ -44,7 +44,7 @@
       .notice { display: flex; align-items: flex-start; gap: 10px; padding: 13px 15px; background: #fff9ed; border: 1px solid #f0d7a1; border-radius: 12px; color: #76530b; font-size: 13px; line-height: 1.45; margin-bottom: 18px; }
       .notice strong { color: #4e3607; }
       .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 18px rgba(62, 47, 39, .05); }
-      .toolbar { display: grid; grid-template-columns: minmax(240px, 1fr) 220px 260px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
+      .toolbar { display: grid; grid-template-columns: minmax(240px, 1fr) 180px 220px 220px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
       input, select, button { font: inherit; }
       input, select { width: 100%; border: 1px solid #d8cec8; border-radius: 9px; background: #fff; padding: 10px 11px; color: var(--ink); outline: none; }
       input:focus, select:focus { border-color: #b97955; box-shadow: 0 0 0 3px rgba(185, 121, 85, .12); }
@@ -66,6 +66,9 @@
       .badge.failed { color: var(--failed); background: var(--failed-bg); }
       .badge.missing { color: var(--missing); background: var(--missing-bg); }
       .badge.other { color: #525252; background: #efefef; }
+      .source { display: inline-block; border-radius: 6px; padding: 3px 6px; margin: 0 4px 4px 0; background: #f2efec; color: #594b43; font-size: 10px; font-weight: 700; }
+      .source.oxp { background: #e8f2ff; color: #175cd3; }
+      .flag { display: block; color: var(--failed); font-size: 10px; font-weight: 750; margin-top: 3px; }
       .id { font: 10px ui-monospace, SFMono-Regular, Menlo, monospace; color: #6c5e55; white-space: nowrap; }
       .issue { max-width: 390px; color: #6d261e; line-height: 1.4; }
       .empty { padding: 56px; text-align: center; color: var(--muted); }
@@ -89,7 +92,7 @@
         <div>
           <div class="eyebrow">ELI+ · A2P Registration</div>
           <h1>Campaign status tracker</h1>
-          <p class="lede">Status for the properties Paige marked as submitted. Twilio is queried every 15 minutes; this page shows the last published scan.</p>
+          <p class="lede">Status for the original submitted-property cohort plus properties found for Paige’s OXP Submitted client list. Twilio is queried every 15 minutes.</p>
         </div>
         <div class="freshness">
           <strong id="freshness-title">Loading current status…</strong>
@@ -98,7 +101,7 @@
       </header>
 
       <section class="summary">
-        <div class="card"><div class="label">Submitted cohort</div><div class="value" id="total">—</div><div class="sub">from Paige’s confirmed tab</div></div>
+        <div class="card"><div class="label">Monitored properties</div><div class="value" id="total">—</div><div class="sub" id="total-sub">original + OXP client expansion</div></div>
         <div class="card approved"><div class="label">Approved</div><div class="value" id="approved">—</div><div class="sub" id="approved-sub">—</div></div>
         <div class="card pending"><div class="label">Pending review</div><div class="value" id="pending">—</div><div class="sub">carrier review in progress</div></div>
         <div class="card failed"><div class="label">Failed</div><div class="value" id="failed">—</div><div class="sub">needs action</div></div>
@@ -112,6 +115,7 @@
           <input id="search" type="search" placeholder="Search property, client, CID, property ID, or carrier reference…" />
           <select id="status"><option value="">All live statuses</option></select>
           <select id="client"><option value="">All clients</option></select>
+          <select id="source"><option value="">All cohort sources</option><option>Original property cohort</option><option>OXP submitted client list</option></select>
           <button id="refresh" type="button">Reload last scan</button>
         </div>
         <div class="countline" id="countline">Loading campaigns…</div>
@@ -122,7 +126,8 @@
                 <th>Live status</th>
                 <th>Property</th>
                 <th>Client</th>
-                <th>Paige’s sheet</th>
+                <th>Cohort source</th>
+                <th>Sheet status</th>
                 <th>Submitted / updated</th>
                 <th>Carrier reference</th>
                 <th>Issue</th>
@@ -134,7 +139,7 @@
         </div>
       </section>
       <footer>
-        <span>Source: campaign_submission_candidates_revised_colleen_v5_with_prospect_portal</span>
+        <span>Sources: original 575-property cohort + Eli+ OXP Reconciliation</span>
         <span>Read-only Twilio reconciliation · no campaigns are changed by this tracker</span>
       </footer>
     </main>
@@ -177,6 +182,7 @@
         const failed = summary.FAILED || 0;
         const missing = (summary.SERVICE_NOT_FOUND || 0) + (summary.NO_CAMPAIGN || 0) + (summary.LOOKUP_ERROR || 0);
         $("total").textContent = data.total.toLocaleString();
+        $("total-sub").textContent = `${data.originalPropertyCount.toLocaleString()} original · ${data.oxpAddedPropertyCount.toLocaleString()} added`;
         $("approved").textContent = approved.toLocaleString();
         $("pending").textContent = pending.toLocaleString();
         $("failed").textContent = failed.toLocaleString();
@@ -184,7 +190,7 @@
         $("approved-sub").textContent = `${Math.round(approved / data.total * 100)}% approved`;
         $("freshness-title").textContent = `Last updated: ${dateText(data.generatedAt)}`;
         $("freshness-detail").textContent = "Twilio is queried every 15 minutes. This button reloads the last published scan — it does not call Twilio.";
-        $("notice").innerHTML = `<span>●</span><div><strong>Resubmissions are matched by client and property ID.</strong> This follows the replacement services created during resubmission without exposing Twilio account identifiers. ${data.excludedCount.toLocaleString()} rows marked unimplemented or blank are outside the submitted cohort.</div>`;
+        $("notice").innerHTML = `<span>●</span><div><strong>${data.oxpClientCount.toLocaleString()} OXP Submitted clients reconciled.</strong> ${data.oxpClientsAlreadyInOriginalCohort.toLocaleString()} were already in the property cohort; ${data.oxpNetNewClientCount.toLocaleString()} are net-new. ${data.oxpNotOnOriginalMigrationCount.toLocaleString()} were marked as not on the original migration list. ${data.unmappedClients.length.toLocaleString()} could not be confidently mapped to a Twilio subaccount.</div>`;
 
         const statuses = [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort();
         $("status").innerHTML = `<option value="">All live statuses</option>${statuses.map((value) => `<option>${esc(value)}</option>`).join("")}`;
@@ -196,12 +202,13 @@
         const query = $("search").value.trim().toLowerCase();
         const status = $("status").value;
         const client = $("client").value;
+        const source = $("source").value;
         const filtered = data.campaigns.filter((row) => {
           const meta = statusMeta(row.liveStatus);
-          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId].join(" ").toLowerCase();
-          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client);
+          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId, ...(row.cohortOrigins || [])].join(" ").toLowerCase();
+          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client) && (!source || (row.cohortOrigins || []).includes(source));
         });
-        $("countline").textContent = `Showing ${filtered.length.toLocaleString()} of ${data.total.toLocaleString()} submitted properties`;
+        $("countline").textContent = `Showing ${filtered.length.toLocaleString()} of ${data.total.toLocaleString()} monitored properties`;
         $("empty").hidden = filtered.length > 0;
         $("rows").innerHTML = filtered.map((row) => {
           const meta = statusMeta(row.liveStatus);
@@ -213,6 +220,7 @@
             <td><span class="badge ${meta.css}">${esc(meta.label)}</span></td>
             <td><div class="property">${esc(row.property)}</div><div class="meta">Property ID ${esc(row.propertyId)}</div></td>
             <td><div>${esc(row.company)}</div><div class="meta">CID ${esc(row.cid)}</div></td>
+            <td>${(row.cohortOrigins || []).map((value) => `<span class="source ${value.startsWith("OXP") ? "oxp" : ""}">${esc(value)}</span>`).join("")}${row.notOnOriginalMigration ? `<span class="flag">Not on original migration sheet</span>` : ""}</td>
             <td>${esc(row.paigeStatus)}</td>
             <td>${dateText(row.dateUpdated || row.dateCreated)}</td>
             <td><div class="id">${row.tcrCampaignId ? `TCR ${esc(row.tcrCampaignId)}` : "Pending assignment"}</div></td>
@@ -221,7 +229,7 @@
         }).join("");
       }
 
-      ["search", "status", "client"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
+      ["search", "status", "client", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
       $("refresh").addEventListener("click", () => load().catch(showError));
       function showError(error) {
         $("freshness-title").textContent = "Unable to reload last scan";

@@ -18,9 +18,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SOURCE_PATH = Path(os.environ.get("CAMPAIGN_SOURCE_PATH", ROOT / "campaigns-source.json"))
+OXP_SOURCE_PATH = Path(
+    os.environ.get("OXP_CLIENT_SOURCE_PATH", ROOT / "oxp-clients-source.json")
+)
 OUTPUT_PATH = Path(os.environ.get("CAMPAIGN_OUTPUT_PATH", ROOT / "data.json"))
 MASTER_SID = os.environ["TWILIO_ACCOUNT_SID"]
 MASTER_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
+
+
+def normalize_name(value: str) -> str:
+    value = value.casefold().replace("&", " and ")
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", value).split())
 
 
 def request_json(url: str, sid: str, token: str, params: dict | None = None) -> dict:
@@ -76,13 +84,38 @@ def fetch_inventory(item: tuple[str, dict]) -> tuple[str, tuple[str, str], list[
 
 def main() -> None:
     source = json.loads(SOURCE_PATH.read_text())
+    oxp_source = json.loads(OXP_SOURCE_PATH.read_text())
     rows = source["rows"]
     tracked = [
+        {
+            **row,
+            "cohortOrigins": ["Original property cohort"],
+            "notOnOriginalMigration": False,
+        }
+        for row in rows
+        if row["paigeStatus"] in {"Pending", "Approved", "Failed"}
+    ]
+    tracked_source_rows = [
         row
         for row in rows
         if row["paigeStatus"] in {"Pending", "Approved", "Failed"}
     ]
-    excluded = [row for row in rows if row not in tracked]
+    excluded = [row for row in rows if row not in tracked_source_rows]
+
+    cid_by_company = {
+        normalize_name(row["company"]): row["cid"]
+        for row in rows
+    }
+    overrides = oxp_source.get("clientCidOverrides", {})
+    migration_names = {
+        normalize_name(name)
+        for name in oxp_source.get("originalMigrationClients", [])
+    }
+    oxp_clients = oxp_source["clients"]
+    oxp_mappings = {
+        client: cid_by_company.get(normalize_name(client)) or overrides.get(client)
+        for client in oxp_clients
+    }
 
     accounts = paged(
         "https://api.twilio.com/2010-04-01/Accounts.json",
@@ -96,7 +129,10 @@ def main() -> None:
         if match:
             account_by_cid[match.group(1)] = account
 
-    target_cids = sorted({row["cid"] for row in tracked})
+    target_cids = sorted(
+        {row["cid"] for row in tracked}
+        | {cid for cid in oxp_mappings.values() if cid}
+    )
     inventories: dict[str, list[dict]] = {}
     auth_by_cid: dict[str, tuple[str, str]] = {}
     scan_errors: list[dict] = []
@@ -115,6 +151,42 @@ def main() -> None:
                 inventories[resolved_cid] = services
             except Exception as error:
                 scan_errors.append({"cid": cid, "error": str(error)})
+
+    tracked_by_key = {
+        (row["cid"], row["propertyId"]): row
+        for row in tracked
+    }
+    for client, cid in oxp_mappings.items():
+        if not cid or cid not in inventories:
+            continue
+        not_on_original = normalize_name(client) not in migration_names
+        for service in inventories[cid]:
+            match = re.fullmatch(
+                rf"Entrata_{re.escape(cid)}_(\d+)",
+                service.get("friendly_name") or "",
+            )
+            if not match:
+                continue
+            property_id = match.group(1)
+            key = (cid, property_id)
+            existing = tracked_by_key.get(key)
+            if existing:
+                if "OXP submitted client list" not in existing["cohortOrigins"]:
+                    existing["cohortOrigins"].append("OXP submitted client list")
+                existing["notOnOriginalMigration"] = not_on_original
+                continue
+            row = {
+                "company": client,
+                "cid": cid,
+                "property": f"Property {property_id}",
+                "propertyId": property_id,
+                "paigeStatus": oxp_source["status"],
+                "sourceDisposition": "client_level_expansion",
+                "cohortOrigins": ["OXP submitted client list"],
+                "notOnOriginalMigration": not_on_original,
+            }
+            tracked.append(row)
+            tracked_by_key[key] = row
 
     def check(row: dict) -> dict:
         cid = row["cid"]
@@ -184,15 +256,46 @@ def main() -> None:
     campaigns.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     excluded.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     summary = Counter(row["liveStatus"] for row in campaigns)
+    unmapped_clients = []
+    for client, cid in oxp_mappings.items():
+        if not cid:
+            unmapped_clients.append(
+                {"company": client, "reason": "No confident CID match"}
+            )
+        elif cid not in account_by_cid:
+            unmapped_clients.append(
+                {"company": client, "cid": cid, "reason": "Twilio subaccount not found"}
+            )
     output = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "sourceWorkbook": "Campaign Reistration Draft",
+        "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
         "sourceTab": source["sourceTab"],
         "sourceGid": source["sourceGid"],
         "cohortDefinition": (
-            "Rows Paige marked Pending, Approved, or Failed in column B"
+            "Original property cohort union OXP Submitted clients from Paige's reconciliation"
         ),
         "total": len(campaigns),
+        "originalPropertyCount": len(tracked_source_rows),
+        "oxpClientCount": len(oxp_clients),
+        "oxpClientsAlreadyInOriginalCohort": sum(
+            normalize_name(client) in cid_by_company
+            for client in oxp_clients
+        ),
+        "oxpNetNewClientCount": sum(
+            normalize_name(client) not in cid_by_company
+            for client in oxp_clients
+        ),
+        "oxpNotOnOriginalMigrationCount": sum(
+            normalize_name(client) not in migration_names
+            for client in oxp_clients
+        ),
+        "oxpMappedClientCount": len(oxp_clients) - len(unmapped_clients),
+        "oxpAddedPropertyCount": sum(
+            "OXP submitted client list" in row["cohortOrigins"]
+            and "Original property cohort" not in row["cohortOrigins"]
+            for row in campaigns
+        ),
+        "unmappedClients": unmapped_clients,
         "excludedCount": len(excluded),
         "summary": dict(summary),
         "scanErrors": scan_errors,

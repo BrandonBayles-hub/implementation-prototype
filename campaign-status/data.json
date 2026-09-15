@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T15:20:32.216237+00:00",
+  "generatedAt": "2026-09-15T15:35:32.037981+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 300,
+    "VERIFIED": 335,
     "FAILED": 40,
-    "IN_PROGRESS": 232,
+    "IN_PROGRESS": 197,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -142,12 +142,12 @@
       "dateUpdated": "2026-09-11T21:53:39Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -343,12 +343,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -432,16 +432,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -3680,7 +3680,7 @@
       "serviceName": "Entrata_4042_100140155",
       "serviceCreated": "2026-09-14T15:51:58Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CHI9038",
       "dateCreated": "2026-09-14T15:51:58Z",
       "dateUpdated": "2026-09-14T15:51:58Z",
@@ -4741,7 +4741,7 @@
       "serviceName": "Entrata_15027_100064754",
       "serviceCreated": "2026-09-14T15:58:29Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CNJH0DT",
       "dateCreated": "2026-09-14T15:58:29Z",
       "dateUpdated": "2026-09-14T15:58:29Z",
@@ -4837,7 +4837,7 @@
       "serviceName": "Entrata_19530_1311125",
       "serviceCreated": "2026-09-14T16:11:05Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CGTU23P",
       "dateCreated": "2026-09-14T16:11:05Z",
       "dateUpdated": "2026-09-14T16:11:05Z",
@@ -4853,7 +4853,7 @@
       "serviceName": "Entrata_19530_1311126",
       "serviceCreated": "2026-09-14T16:11:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CNKZV81",
       "dateCreated": "2026-09-14T16:11:09Z",
       "dateUpdated": "2026-09-14T16:11:09Z",
@@ -4885,7 +4885,7 @@
       "serviceName": "Entrata_19530_1311128",
       "serviceCreated": "2026-09-14T16:05:10Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C6MXK08",
       "dateCreated": "2026-09-14T16:05:10Z",
       "dateUpdated": "2026-09-14T16:05:10Z",
@@ -4933,7 +4933,7 @@
       "serviceName": "Entrata_19530_1311141",
       "serviceCreated": "2026-09-14T16:11:50Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C3RZT8Y",
       "dateCreated": "2026-09-14T16:11:50Z",
       "dateUpdated": "2026-09-14T16:11:50Z",
@@ -4949,7 +4949,7 @@
       "serviceName": "Entrata_19530_1311156",
       "serviceCreated": "2026-09-14T16:11:54Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CRGDBLQ",
       "dateCreated": "2026-09-14T16:11:54Z",
       "dateUpdated": "2026-09-14T16:11:54Z",
@@ -4997,7 +4997,7 @@
       "serviceName": "Entrata_19530_1311142",
       "serviceCreated": "2026-09-14T16:12:01Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C1FYUTN",
       "dateCreated": "2026-09-14T16:12:01Z",
       "dateUpdated": "2026-09-14T16:12:01Z",
@@ -5045,7 +5045,7 @@
       "serviceName": "Entrata_19530_1311133",
       "serviceCreated": "2026-09-14T16:12:18Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CZ44R9V",
       "dateCreated": "2026-09-14T16:12:18Z",
       "dateUpdated": "2026-09-14T16:12:18Z",
@@ -5077,7 +5077,7 @@
       "serviceName": "Entrata_19530_1311153",
       "serviceCreated": "2026-09-14T16:12:06Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "COZNBD3",
       "dateCreated": "2026-09-14T16:12:07Z",
       "dateUpdated": "2026-09-14T16:12:07Z",
@@ -5141,7 +5141,7 @@
       "serviceName": "Entrata_19530_1311155",
       "serviceCreated": "2026-09-14T16:12:19Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CPG4PG1",
       "dateCreated": "2026-09-14T16:12:19Z",
       "dateUpdated": "2026-09-14T16:12:19Z",
@@ -5157,7 +5157,7 @@
       "serviceName": "Entrata_19530_1311146",
       "serviceCreated": "2026-09-14T16:12:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CYSFK1Y",
       "dateCreated": "2026-09-14T16:12:25Z",
       "dateUpdated": "2026-09-14T16:12:25Z",
@@ -5189,7 +5189,7 @@
       "serviceName": "Entrata_19530_1311148",
       "serviceCreated": "2026-09-14T16:12:29Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CHGOA3L",
       "dateCreated": "2026-09-14T16:12:30Z",
       "dateUpdated": "2026-09-14T16:12:30Z",
@@ -5205,7 +5205,7 @@
       "serviceName": "Entrata_19530_1311149",
       "serviceCreated": "2026-09-14T16:12:36Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C5ZJ3OB",
       "dateCreated": "2026-09-14T16:12:36Z",
       "dateUpdated": "2026-09-14T16:12:36Z",
@@ -5221,7 +5221,7 @@
       "serviceName": "Entrata_19530_1311134",
       "serviceCreated": "2026-09-14T16:12:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CSKSTCE",
       "dateCreated": "2026-09-14T16:12:40Z",
       "dateUpdated": "2026-09-14T16:12:40Z",
@@ -5253,7 +5253,7 @@
       "serviceName": "Entrata_19530_1311136",
       "serviceCreated": "2026-09-14T16:12:42Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CGY42P9",
       "dateCreated": "2026-09-14T16:12:42Z",
       "dateUpdated": "2026-09-14T16:12:42Z",
@@ -5317,7 +5317,7 @@
       "serviceName": "Entrata_19530_100165509",
       "serviceCreated": "2026-09-14T16:12:53Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C2NFX0V",
       "dateCreated": "2026-09-14T16:12:53Z",
       "dateUpdated": "2026-09-14T16:12:53Z",
@@ -5333,7 +5333,7 @@
       "serviceName": "Entrata_19530_1311116",
       "serviceCreated": "2026-09-14T16:05:45Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C9RQAIU",
       "dateCreated": "2026-09-14T16:05:45Z",
       "dateUpdated": "2026-09-14T16:05:45Z",
@@ -5365,7 +5365,7 @@
       "serviceName": "Entrata_19530_100091210",
       "serviceCreated": "2026-09-14T16:07:51Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CSH6FJX",
       "dateCreated": "2026-09-14T16:07:51Z",
       "dateUpdated": "2026-09-14T16:07:51Z",
@@ -5381,7 +5381,7 @@
       "serviceName": "Entrata_19530_1311152",
       "serviceCreated": "2026-09-14T16:06:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CGWTUNZ",
       "dateCreated": "2026-09-14T16:06:12Z",
       "dateUpdated": "2026-09-14T16:06:12Z",
@@ -5397,8 +5397,8 @@
       "serviceName": "Entrata_18179_1155514",
       "serviceCreated": "2026-09-14T16:14:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CGZF9PI",
       "dateCreated": "2026-09-14T16:14:41Z",
       "dateUpdated": "2026-09-14T16:14:41Z",
       "errors": []
@@ -5461,8 +5461,8 @@
       "serviceName": "Entrata_17662_1102154",
       "serviceCreated": "2026-09-14T16:15:20Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CVXW7NN",
       "dateCreated": "2026-09-14T16:15:20Z",
       "dateUpdated": "2026-09-14T16:15:20Z",
       "errors": []
@@ -5477,7 +5477,7 @@
       "serviceName": "Entrata_17662_1137028",
       "serviceCreated": "2026-09-14T16:15:22Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C5BU2BK",
       "dateCreated": "2026-09-14T16:15:23Z",
       "dateUpdated": "2026-09-14T16:15:23Z",
@@ -5557,8 +5557,8 @@
       "serviceName": "Entrata_17662_1152903",
       "serviceCreated": "2026-09-14T16:15:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C4DB4QY",
       "dateCreated": "2026-09-14T16:15:32Z",
       "dateUpdated": "2026-09-14T16:15:32Z",
       "errors": []
@@ -7052,7 +7052,7 @@
       "serviceName": "Entrata_102125_100169172",
       "serviceCreated": "2026-09-14T16:22:20Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CTNUU1A",
       "dateCreated": "2026-09-14T16:22:20Z",
       "dateUpdated": "2026-09-14T16:22:20Z",
@@ -7100,7 +7100,7 @@
       "serviceName": "Entrata_101161_100083927",
       "serviceCreated": "2026-09-14T16:23:55Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C6AUK7T",
       "dateCreated": "2026-09-14T16:23:55Z",
       "dateUpdated": "2026-09-14T16:23:55Z",
@@ -7462,7 +7462,7 @@
       "serviceName": "Entrata_101214_100085808",
       "serviceCreated": "2026-09-14T16:25:08Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C01EVVH",
       "dateCreated": "2026-09-14T16:25:08Z",
       "dateUpdated": "2026-09-14T16:25:08Z",
@@ -7478,8 +7478,8 @@
       "serviceName": "Entrata_17310_100177735",
       "serviceCreated": "2026-09-14T16:46:03Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CGG5BRL",
       "dateCreated": "2026-09-14T16:46:03Z",
       "dateUpdated": "2026-09-14T16:46:03Z",
       "errors": []
@@ -7494,7 +7494,7 @@
       "serviceName": "Entrata_101078_100070014",
       "serviceCreated": "2026-09-14T16:45:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C3HCOTM",
       "dateCreated": "2026-09-14T16:45:12Z",
       "dateUpdated": "2026-09-14T16:45:12Z",
@@ -7510,7 +7510,7 @@
       "serviceName": "Entrata_101078_100070018",
       "serviceCreated": "2026-09-14T16:45:27Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "C5OJHA5",
       "dateCreated": "2026-09-14T16:45:27Z",
       "dateUpdated": "2026-09-14T16:45:27Z",
@@ -7702,8 +7702,8 @@
       "serviceName": "Entrata_100174_100017998",
       "serviceCreated": "2026-09-14T16:48:14Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C8BQNU6",
       "dateCreated": "2026-09-14T16:48:14Z",
       "dateUpdated": "2026-09-14T16:48:14Z",
       "errors": []
@@ -7718,8 +7718,8 @@
       "serviceName": "Entrata_100174_100017999",
       "serviceCreated": "2026-09-14T16:48:18Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C4QUREJ",
       "dateCreated": "2026-09-14T16:48:18Z",
       "dateUpdated": "2026-09-14T16:48:18Z",
       "errors": []
@@ -7814,8 +7814,8 @@
       "serviceName": "Entrata_19160_1319869",
       "serviceCreated": "2026-09-14T16:49:07Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CYZORDI",
       "dateCreated": "2026-09-14T16:49:08Z",
       "dateUpdated": "2026-09-14T16:49:08Z",
       "errors": []
@@ -8070,8 +8070,8 @@
       "serviceName": "Entrata_2740_100142177",
       "serviceCreated": "2026-09-14T16:55:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CR6A6WJ",
       "dateCreated": "2026-09-14T16:55:24Z",
       "dateUpdated": "2026-09-14T16:55:24Z",
       "errors": []
@@ -8134,8 +8134,8 @@
       "serviceName": "Entrata_18122_1142459",
       "serviceCreated": "2026-09-14T16:56:43Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CF3TYCG",
       "dateCreated": "2026-09-14T16:56:44Z",
       "dateUpdated": "2026-09-14T16:56:44Z",
       "errors": []

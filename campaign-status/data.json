@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T14:20:21.697758+00:00",
+  "generatedAt": "2026-09-15T14:35:21.024107+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 281,
-    "IN_PROGRESS": 281,
-    "FAILED": 10,
+    "VERIFIED": 283,
+    "IN_PROGRESS": 275,
+    "FAILED": 14,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -621,11 +621,20 @@
       "serviceName": "Entrata_100135_100013691",
       "serviceCreated": "2026-09-10T16:25:42Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:57:56Z",
       "dateUpdated": "2026-09-14T17:57:56Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        }
+      ]
     },
     {
       "company": "Aztex Management Group",
@@ -679,11 +688,16 @@
       "serviceName": "Entrata_100135_100149459",
       "serviceCreated": "2026-09-10T16:25:50Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:58:06Z",
       "dateUpdated": "2026-09-14T17:58:06Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Aztex Management Group",
@@ -2076,12 +2090,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ]
     },
@@ -2399,7 +2413,7 @@
       "serviceName": "Entrata_101599_100108638",
       "serviceCreated": "2026-09-11T23:07:03Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CTXES07",
       "dateCreated": "2026-09-11T23:07:03Z",
       "dateUpdated": "2026-09-11T23:07:03Z",
@@ -3391,8 +3405,8 @@
       "serviceName": "Entrata_100288_100021886",
       "serviceCreated": "2026-09-14T15:37:10Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXXWPGQ",
       "dateCreated": "2026-09-14T15:37:10Z",
       "dateUpdated": "2026-09-14T15:37:10Z",
       "errors": []
@@ -4654,11 +4668,16 @@
       "serviceName": "Entrata_15027_100017787",
       "serviceCreated": "2026-09-14T15:58:31Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T15:58:32Z",
       "dateUpdated": "2026-09-14T15:58:32Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Greystar Student Living",
@@ -5593,7 +5612,7 @@
       "serviceCreated": "2026-09-14T16:19:00Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CW8BNSV",
       "dateCreated": "2026-09-14T16:19:00Z",
       "dateUpdated": "2026-09-14T16:19:00Z",
       "errors": []
@@ -6674,11 +6693,16 @@
       "serviceName": "Entrata_17329_100149216",
       "serviceCreated": "2026-09-11T21:27:31Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:31Z",
       "dateUpdated": "2026-09-11T21:27:31Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",

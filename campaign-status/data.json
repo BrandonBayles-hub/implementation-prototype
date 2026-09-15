@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:35:11.291516+00:00",
+  "generatedAt": "2026-09-15T13:50:13.749017+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,10 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 267,
-    "IN_PROGRESS": 300,
+    "VERIFIED": 281,
+    "IN_PROGRESS": 290,
     "FAILED": 1,
-    "LOOKUP_ERROR": 4,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -3310,8 +3309,8 @@
       "serviceName": "Entrata_16392_100120701",
       "serviceCreated": "2026-09-14T15:36:49Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CJJ3K7M",
       "dateCreated": "2026-09-14T15:36:50Z",
       "dateUpdated": "2026-09-14T15:36:50Z",
       "errors": []
@@ -3342,8 +3341,8 @@
       "serviceName": "Entrata_16392_100047563",
       "serviceCreated": "2026-09-14T15:35:47Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFNWD6P",
       "dateCreated": "2026-09-14T15:35:48Z",
       "dateUpdated": "2026-09-14T15:35:48Z",
       "errors": []
@@ -3981,8 +3980,12 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070206",
       "serviceCreated": "2026-09-11T22:14:19Z",
-      "liveStatus": "LOOKUP_ERROR",
-      "error": "Remote end closed connection without response"
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CCNRKIR",
+      "dateCreated": "2026-09-11T22:14:19Z",
+      "dateUpdated": "2026-09-11T22:14:19Z",
+      "errors": []
     },
     {
       "company": "Ginkgo Residential",
@@ -4105,8 +4108,12 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070161",
       "serviceCreated": "2026-09-11T22:10:05Z",
-      "liveStatus": "LOOKUP_ERROR",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CHSF73E",
+      "dateCreated": "2026-09-11T22:10:05Z",
+      "dateUpdated": "2026-09-11T22:10:05Z",
+      "errors": []
     },
     {
       "company": "Ginkgo Residential",
@@ -4117,8 +4124,12 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070179",
       "serviceCreated": "2026-09-11T22:10:07Z",
-      "liveStatus": "LOOKUP_ERROR",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CDRC5WI",
+      "dateCreated": "2026-09-11T22:10:07Z",
+      "dateUpdated": "2026-09-11T22:10:07Z",
+      "errors": []
     },
     {
       "company": "Ginkgo Residential",
@@ -4129,8 +4140,12 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070197",
       "serviceCreated": "2026-09-11T22:13:11Z",
-      "liveStatus": "LOOKUP_ERROR",
-      "error": "<urlopen error [Errno 104] Connection reset by peer>"
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C9BKN3O",
+      "dateCreated": "2026-09-11T22:13:11Z",
+      "dateUpdated": "2026-09-11T22:13:11Z",
+      "errors": []
     },
     {
       "company": "Ginkgo Residential",
@@ -4606,8 +4621,8 @@
       "serviceName": "Entrata_15027_1176906",
       "serviceCreated": "2026-09-14T16:01:48Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C9HLTM8",
       "dateCreated": "2026-09-14T16:01:48Z",
       "dateUpdated": "2026-09-14T16:01:48Z",
       "errors": []
@@ -4750,8 +4765,8 @@
       "serviceName": "Entrata_19530_1311123",
       "serviceCreated": "2026-09-14T16:11:33Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C1FVJ76",
       "dateCreated": "2026-09-14T16:11:33Z",
       "dateUpdated": "2026-09-14T16:11:33Z",
       "errors": []
@@ -4846,8 +4861,8 @@
       "serviceName": "Entrata_19530_1311131",
       "serviceCreated": "2026-09-14T16:11:55Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFFECTU",
       "dateCreated": "2026-09-14T16:11:55Z",
       "dateUpdated": "2026-09-14T16:11:55Z",
       "errors": []
@@ -4862,8 +4877,8 @@
       "serviceName": "Entrata_19530_1311157",
       "serviceCreated": "2026-09-14T16:11:55Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CTSM01O",
       "dateCreated": "2026-09-14T16:11:55Z",
       "dateUpdated": "2026-09-14T16:11:55Z",
       "errors": []
@@ -4894,8 +4909,8 @@
       "serviceName": "Entrata_19530_1311132",
       "serviceCreated": "2026-09-14T16:12:02Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXQ8AQ5",
       "dateCreated": "2026-09-14T16:12:02Z",
       "dateUpdated": "2026-09-14T16:12:02Z",
       "errors": []
@@ -5166,8 +5181,8 @@
       "serviceName": "Entrata_19530_1311117",
       "serviceCreated": "2026-09-14T16:05:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CYKZ1TS",
       "dateCreated": "2026-09-14T16:05:17Z",
       "dateUpdated": "2026-09-14T16:05:17Z",
       "errors": []
@@ -5182,8 +5197,8 @@
       "serviceName": "Entrata_19530_1311115",
       "serviceCreated": "2026-09-14T16:05:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CWZZLYQ",
       "dateCreated": "2026-09-14T16:05:40Z",
       "dateUpdated": "2026-09-14T16:05:40Z",
       "errors": []
@@ -5294,8 +5309,8 @@
       "serviceName": "Entrata_18179_1155515",
       "serviceCreated": "2026-09-14T16:14:45Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C9IUE21",
       "dateCreated": "2026-09-14T16:14:45Z",
       "dateUpdated": "2026-09-14T16:14:45Z",
       "errors": []

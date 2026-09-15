@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T14:35:21.024107+00:00",
+  "generatedAt": "2026-09-15T14:50:26.611600+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 283,
-    "IN_PROGRESS": 275,
-    "FAILED": 14,
+    "VERIFIED": 289,
+    "FAILED": 30,
+    "IN_PROGRESS": 253,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -136,11 +136,20 @@
       "serviceName": "Entrata_13886_1140180",
       "serviceCreated": "2026-09-11T21:53:39Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:39Z",
       "dateUpdated": "2026-09-11T21:53:39Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -328,11 +337,20 @@
       "serviceName": "Entrata_13886_1162350",
       "serviceCreated": "2026-09-11T21:54:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:17Z",
       "dateUpdated": "2026-09-11T21:54:17Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -2090,12 +2108,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ]
     },
@@ -5611,7 +5629,7 @@
       "serviceName": "Entrata_18183_100107441",
       "serviceCreated": "2026-09-14T16:19:00Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CW8BNSV",
       "dateCreated": "2026-09-14T16:19:00Z",
       "dateUpdated": "2026-09-14T16:19:00Z",
@@ -6133,11 +6151,16 @@
       "serviceName": "Entrata_17329_100058453",
       "serviceCreated": "2026-09-11T21:25:49Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:25:49Z",
       "dateUpdated": "2026-09-11T21:25:49Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6165,11 +6188,16 @@
       "serviceName": "Entrata_17329_100069958",
       "serviceCreated": "2026-09-11T21:26:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:18Z",
       "dateUpdated": "2026-09-11T21:26:18Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6213,11 +6241,16 @@
       "serviceName": "Entrata_17329_1062772",
       "serviceCreated": "2026-09-11T21:26:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:12Z",
       "dateUpdated": "2026-09-11T21:26:12Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6261,11 +6294,16 @@
       "serviceName": "Entrata_17329_1224209",
       "serviceCreated": "2026-09-11T21:26:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:24Z",
       "dateUpdated": "2026-09-11T21:26:24Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6277,11 +6315,16 @@
       "serviceName": "Entrata_17329_1062776",
       "serviceCreated": "2026-09-11T21:26:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:12Z",
       "dateUpdated": "2026-09-11T21:26:12Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6293,11 +6336,16 @@
       "serviceName": "Entrata_17329_1062777",
       "serviceCreated": "2026-09-11T21:26:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:24Z",
       "dateUpdated": "2026-09-11T21:26:24Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6341,11 +6389,16 @@
       "serviceName": "Entrata_17329_1062783",
       "serviceCreated": "2026-09-11T21:26:35Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:35Z",
       "dateUpdated": "2026-09-11T21:26:35Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6453,11 +6506,16 @@
       "serviceName": "Entrata_17329_1062787",
       "serviceCreated": "2026-09-11T21:26:47Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:47Z",
       "dateUpdated": "2026-09-11T21:26:47Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6469,11 +6527,16 @@
       "serviceName": "Entrata_17329_1062788",
       "serviceCreated": "2026-09-11T21:26:51Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:51Z",
       "dateUpdated": "2026-09-11T21:26:51Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6517,11 +6580,16 @@
       "serviceName": "Entrata_17329_1062792",
       "serviceCreated": "2026-09-11T21:27:04Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:04Z",
       "dateUpdated": "2026-09-11T21:27:04Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6533,11 +6601,16 @@
       "serviceName": "Entrata_17329_1062794",
       "serviceCreated": "2026-09-11T21:26:58Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:58Z",
       "dateUpdated": "2026-09-11T21:26:58Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6629,11 +6702,16 @@
       "serviceName": "Entrata_17329_1062801",
       "serviceCreated": "2026-09-11T21:27:15Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:15Z",
       "dateUpdated": "2026-09-11T21:27:15Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6645,11 +6723,16 @@
       "serviceName": "Entrata_17329_1062803",
       "serviceCreated": "2026-09-11T21:27:21Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:22Z",
       "dateUpdated": "2026-09-11T21:27:22Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6661,11 +6744,16 @@
       "serviceName": "Entrata_17329_1062806",
       "serviceCreated": "2026-09-11T21:27:21Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:21Z",
       "dateUpdated": "2026-09-11T21:27:21Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Palisade Property Management",
@@ -6874,8 +6962,8 @@
       "serviceName": "Entrata_102125_100169173",
       "serviceCreated": "2026-09-14T16:22:45Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CAAR2DS",
       "dateCreated": "2026-09-14T16:22:45Z",
       "dateUpdated": "2026-09-14T16:22:45Z",
       "errors": []
@@ -7524,8 +7612,8 @@
       "serviceName": "Entrata_100174_100017996",
       "serviceCreated": "2026-09-14T16:48:10Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CUWT479",
       "dateCreated": "2026-09-14T16:48:11Z",
       "dateUpdated": "2026-09-14T16:48:11Z",
       "errors": []
@@ -7604,8 +7692,8 @@
       "serviceName": "Entrata_100174_100018000",
       "serviceCreated": "2026-09-14T16:48:23Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CWA6VDE",
       "dateCreated": "2026-09-14T16:48:23Z",
       "dateUpdated": "2026-09-14T16:48:23Z",
       "errors": []
@@ -7748,8 +7836,8 @@
       "serviceName": "Entrata_17795_100160167",
       "serviceCreated": "2026-09-14T16:51:39Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C6B8D2D",
       "dateCreated": "2026-09-14T16:51:39Z",
       "dateUpdated": "2026-09-14T16:51:39Z",
       "errors": []
@@ -7764,8 +7852,8 @@
       "serviceName": "Entrata_17795_100155251",
       "serviceCreated": "2026-09-14T16:51:41Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CIKYD1W",
       "dateCreated": "2026-09-14T16:51:41Z",
       "dateUpdated": "2026-09-14T16:51:41Z",
       "errors": []

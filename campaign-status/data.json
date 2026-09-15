@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:04:27.809111+00:00",
+  "generatedAt": "2026-09-15T10:19:35.705698+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,10 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 271,
-    "IN_PROGRESS": 300,
+    "VERIFIED": 267,
+    "IN_PROGRESS": 296,
     "FAILED": 1,
+    "LOOKUP_ERROR": 8,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -2300,12 +2301,8 @@
       "sourceDisposition": "review_url_conflict_or_missing",
       "serviceName": "Entrata_101599_100124785",
       "serviceCreated": "2026-09-11T23:06:46Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "C6IGANC",
-      "dateCreated": "2026-09-11T23:06:46Z",
-      "dateUpdated": "2026-09-11T23:06:46Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Canyon View Properties",
@@ -3116,12 +3113,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101606_100109238",
       "serviceCreated": "2026-09-11T23:18:31Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "C260LG9",
-      "dateCreated": "2026-09-11T23:18:31Z",
-      "dateUpdated": "2026-09-11T23:18:31Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Cityzen",
@@ -4716,12 +4709,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_19530_1311124",
       "serviceCreated": "2026-09-14T16:11:20Z",
-      "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
-      "dateCreated": "2026-09-14T16:11:21Z",
-      "dateUpdated": "2026-09-14T16:11:21Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Liberty Asset Group",
@@ -5244,12 +5233,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_19530_100182348",
       "serviceCreated": "2026-09-14T16:05:43Z",
-      "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
-      "dateCreated": "2026-09-14T16:05:43Z",
-      "dateUpdated": "2026-09-14T16:05:43Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Liberty Asset Group",
@@ -7210,12 +7195,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_102170_100173228",
       "serviceCreated": "2026-09-11T22:34:46Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "CCDEQO3",
-      "dateCreated": "2026-09-11T22:34:46Z",
-      "dateUpdated": "2026-09-11T22:34:46Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Phillips Management Group",
@@ -7642,12 +7623,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_5972_100181079",
       "serviceCreated": "2026-09-02T21:20:09Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "C6B35A5",
-      "dateCreated": "2026-09-02T21:20:09Z",
-      "dateUpdated": "2026-09-02T21:20:09Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Starka Properties Inc.",
@@ -7882,12 +7859,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_18122_1142450",
       "serviceCreated": "2026-09-14T16:56:40Z",
-      "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
-      "dateCreated": "2026-09-14T16:56:40Z",
-      "dateUpdated": "2026-09-14T16:56:40Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "T.R. McKenzie, Inc. (New)",
@@ -7930,12 +7903,8 @@
       "sourceDisposition": "review_url_conflict_or_missing",
       "serviceName": "Entrata_18122_1142462",
       "serviceCreated": "2026-09-14T16:56:49Z",
-      "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
-      "dateCreated": "2026-09-14T16:56:49Z",
-      "dateUpdated": "2026-09-14T16:56:49Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "The Annex Group",

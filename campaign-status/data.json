@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:20:03.889870+00:00",
+  "generatedAt": "2026-09-15T13:35:11.291516+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,10 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 271,
+    "VERIFIED": 267,
     "IN_PROGRESS": 300,
     "FAILED": 1,
+    "LOOKUP_ERROR": 4,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -3980,12 +3981,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070206",
       "serviceCreated": "2026-09-11T22:14:19Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "CCNRKIR",
-      "dateCreated": "2026-09-11T22:14:19Z",
-      "dateUpdated": "2026-09-11T22:14:19Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "Remote end closed connection without response"
     },
     {
       "company": "Ginkgo Residential",
@@ -4108,12 +4105,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070161",
       "serviceCreated": "2026-09-11T22:10:05Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "CHSF73E",
-      "dateCreated": "2026-09-11T22:10:05Z",
-      "dateUpdated": "2026-09-11T22:10:05Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Ginkgo Residential",
@@ -4124,12 +4117,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070179",
       "serviceCreated": "2026-09-11T22:10:07Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "CDRC5WI",
-      "dateCreated": "2026-09-11T22:10:07Z",
-      "dateUpdated": "2026-09-11T22:10:07Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Ginkgo Residential",
@@ -4140,12 +4129,8 @@
       "sourceDisposition": "unmatched",
       "serviceName": "Entrata_101084_100070197",
       "serviceCreated": "2026-09-11T22:13:11Z",
-      "submitted": true,
-      "liveStatus": "VERIFIED",
-      "tcrCampaignId": "C9BKN3O",
-      "dateCreated": "2026-09-11T22:13:11Z",
-      "dateUpdated": "2026-09-11T22:13:11Z",
-      "errors": []
+      "liveStatus": "LOOKUP_ERROR",
+      "error": "<urlopen error [Errno 104] Connection reset by peer>"
     },
     {
       "company": "Ginkgo Residential",

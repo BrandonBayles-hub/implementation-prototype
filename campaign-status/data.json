@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T16:35:45.020897+00:00",
+  "generatedAt": "2026-09-15T16:50:48.962302+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 350,
-    "FAILED": 55,
-    "IN_PROGRESS": 167,
+    "VERIFIED": 366,
+    "FAILED": 63,
+    "IN_PROGRESS": 143,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -142,12 +142,12 @@
       "dateUpdated": "2026-09-11T21:53:39Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -231,16 +231,16 @@
       "dateUpdated": "2026-09-11T21:53:57Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -285,12 +285,12 @@
       "dateUpdated": "2026-09-11T21:53:59Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -408,12 +408,12 @@
       "dateUpdated": "2026-09-11T21:54:29Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -481,12 +481,12 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30891,
@@ -693,12 +693,12 @@
       "dateUpdated": "2026-09-11T21:55:03Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -734,12 +734,12 @@
       "dateUpdated": "2026-09-14T17:57:56Z",
       "errors": [
         {
-          "code": 30893,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         }
       ]
     },
@@ -1637,8 +1637,8 @@
       "serviceName": "Entrata_100130_100012854",
       "serviceCreated": "2026-09-14T17:19:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C6OT676",
       "dateCreated": "2026-09-14T17:19:12Z",
       "dateUpdated": "2026-09-14T17:19:12Z",
       "errors": []
@@ -1701,8 +1701,8 @@
       "serviceName": "Entrata_100130_100012858",
       "serviceCreated": "2026-09-14T17:19:22Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CI9J1XP",
       "dateCreated": "2026-09-14T17:19:22Z",
       "dateUpdated": "2026-09-14T17:19:22Z",
       "errors": []
@@ -1765,11 +1765,16 @@
       "serviceName": "Entrata_100130_100012865",
       "serviceCreated": "2026-09-14T17:19:30Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:30Z",
       "dateUpdated": "2026-09-14T17:19:30Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1781,8 +1786,8 @@
       "serviceName": "Entrata_100130_100012866",
       "serviceCreated": "2026-09-14T17:19:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CTFEDNW",
       "dateCreated": "2026-09-14T17:19:32Z",
       "dateUpdated": "2026-09-14T17:19:32Z",
       "errors": []
@@ -1797,11 +1802,16 @@
       "serviceName": "Entrata_100130_100012867",
       "serviceCreated": "2026-09-14T17:19:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:34Z",
       "dateUpdated": "2026-09-14T17:19:34Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1829,11 +1839,16 @@
       "serviceName": "Entrata_100130_100012872",
       "serviceCreated": "2026-09-14T17:19:38Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:39Z",
       "dateUpdated": "2026-09-14T17:19:39Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1845,8 +1860,8 @@
       "serviceName": "Entrata_100130_100012873",
       "serviceCreated": "2026-09-14T17:19:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C95IABR",
       "dateCreated": "2026-09-14T17:19:41Z",
       "dateUpdated": "2026-09-14T17:19:41Z",
       "errors": []
@@ -1877,11 +1892,16 @@
       "serviceName": "Entrata_100130_100158557",
       "serviceCreated": "2026-09-14T17:19:44Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:45Z",
       "dateUpdated": "2026-09-14T17:19:45Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1941,8 +1961,8 @@
       "serviceName": "Entrata_100130_100091465",
       "serviceCreated": "2026-09-14T17:19:59Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CAQGS7D",
       "dateCreated": "2026-09-14T17:19:59Z",
       "dateUpdated": "2026-09-14T17:19:59Z",
       "errors": []
@@ -1973,8 +1993,8 @@
       "serviceName": "Entrata_100130_100136332",
       "serviceCreated": "2026-09-14T17:20:03Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CP1TKS0",
       "dateCreated": "2026-09-14T17:20:03Z",
       "dateUpdated": "2026-09-14T17:20:03Z",
       "errors": []
@@ -2021,8 +2041,8 @@
       "serviceName": "Entrata_100130_100062279",
       "serviceCreated": "2026-09-14T17:20:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CDWXVDZ",
       "dateCreated": "2026-09-14T17:20:10Z",
       "dateUpdated": "2026-09-14T17:20:10Z",
       "errors": []
@@ -2037,11 +2057,16 @@
       "serviceName": "Entrata_100130_100158559",
       "serviceCreated": "2026-09-14T17:20:12Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:12Z",
       "dateUpdated": "2026-09-14T17:20:12Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2053,11 +2078,16 @@
       "serviceName": "Entrata_100130_100012881",
       "serviceCreated": "2026-09-14T17:20:14Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:14Z",
       "dateUpdated": "2026-09-14T17:20:14Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2106,8 +2136,8 @@
       "serviceName": "Entrata_100130_100012887",
       "serviceCreated": "2026-09-14T17:20:23Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CM8OTU4",
       "dateCreated": "2026-09-14T17:20:24Z",
       "dateUpdated": "2026-09-14T17:20:24Z",
       "errors": []
@@ -2122,11 +2152,16 @@
       "serviceName": "Entrata_100130_100012889",
       "serviceCreated": "2026-09-14T17:20:27Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:27Z",
       "dateUpdated": "2026-09-14T17:20:27Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2154,11 +2189,16 @@
       "serviceName": "Entrata_100130_100012897",
       "serviceCreated": "2026-09-14T17:20:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:32Z",
       "dateUpdated": "2026-09-14T17:20:32Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -3856,8 +3896,8 @@
       "serviceName": "Entrata_101585_100107229",
       "serviceCreated": "2026-09-14T15:53:01Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CK60WZB",
       "dateCreated": "2026-09-14T15:53:01Z",
       "dateUpdated": "2026-09-14T15:53:01Z",
       "errors": []
@@ -7638,8 +7678,8 @@
       "serviceName": "Entrata_101078_100070022",
       "serviceCreated": "2026-09-14T16:45:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CELSHNR",
       "dateCreated": "2026-09-14T16:45:32Z",
       "dateUpdated": "2026-09-14T16:45:32Z",
       "errors": []
@@ -8197,8 +8237,8 @@
       "serviceName": "Entrata_2740_100141166",
       "serviceCreated": "2026-09-14T16:55:26Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CNL0XL5",
       "dateCreated": "2026-09-14T16:55:27Z",
       "dateUpdated": "2026-09-14T16:55:27Z",
       "errors": []
@@ -8997,7 +9037,7 @@
       "serviceName": "Entrata_10133_187188",
       "serviceCreated": "2026-09-14T17:08:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "VERIFIED",
       "tcrCampaignId": "CHYF73F",
       "dateCreated": "2026-09-14T17:08:24Z",
       "dateUpdated": "2026-09-14T17:08:24Z",
@@ -9173,8 +9213,8 @@
       "serviceName": "Entrata_100808_100051240",
       "serviceCreated": "2026-09-14T17:09:25Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CNYJ8X8",
       "dateCreated": "2026-09-14T17:09:25Z",
       "dateUpdated": "2026-09-14T17:09:25Z",
       "errors": []
@@ -9205,8 +9245,8 @@
       "serviceName": "Entrata_100808_100051237",
       "serviceCreated": "2026-09-14T17:09:10Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CABKINP",
       "dateCreated": "2026-09-14T17:09:10Z",
       "dateUpdated": "2026-09-14T17:09:10Z",
       "errors": []
@@ -9237,8 +9277,8 @@
       "serviceName": "Entrata_100808_100051238",
       "serviceCreated": "2026-09-14T17:09:15Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C4JNVZS",
       "dateCreated": "2026-09-14T17:09:15Z",
       "dateUpdated": "2026-09-14T17:09:15Z",
       "errors": []
@@ -9269,8 +9309,8 @@
       "serviceName": "Entrata_100808_100051239",
       "serviceCreated": "2026-09-14T17:09:19Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CW8WMDQ",
       "dateCreated": "2026-09-14T17:09:19Z",
       "dateUpdated": "2026-09-14T17:09:19Z",
       "errors": []

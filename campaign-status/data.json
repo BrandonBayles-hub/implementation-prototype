@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T14:05:15.286500+00:00",
+  "generatedAt": "2026-09-15T14:20:21.697758+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -8,8 +8,8 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 281,
-    "IN_PROGRESS": 288,
-    "FAILED": 3,
+    "IN_PROGRESS": 281,
+    "FAILED": 10,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -637,11 +637,16 @@
       "serviceName": "Entrata_100135_100149458",
       "serviceCreated": "2026-09-10T16:25:47Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:58:00Z",
       "dateUpdated": "2026-09-14T17:58:00Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Aztex Management Group",
@@ -653,11 +658,16 @@
       "serviceName": "Entrata_100135_100013692",
       "serviceCreated": "2026-09-10T16:25:49Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:58:03Z",
       "dateUpdated": "2026-09-14T17:58:03Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Aztex Management Group",
@@ -701,11 +711,16 @@
       "serviceName": "Entrata_100135_100021552",
       "serviceCreated": "2026-09-10T16:25:54Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:58:12Z",
       "dateUpdated": "2026-09-14T17:58:12Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Barrett & Stokely",
@@ -2055,11 +2070,20 @@
       "serviceName": "Entrata_16457_773789",
       "serviceCreated": "2026-09-14T17:23:32Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:23:32Z",
       "dateUpdated": "2026-09-14T17:23:32Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ]
     },
     {
       "company": "Brookside Properties",
@@ -2376,7 +2400,7 @@
       "serviceCreated": "2026-09-11T23:07:03Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CTXES07",
       "dateCreated": "2026-09-11T23:07:03Z",
       "dateUpdated": "2026-09-11T23:07:03Z",
       "errors": []
@@ -3415,11 +3439,16 @@
       "serviceName": "Entrata_4173_45366",
       "serviceCreated": "2026-09-14T15:50:01Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T15:50:01Z",
       "dateUpdated": "2026-09-14T15:50:01Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ]
     },
     {
       "company": "Ferguson & Brewer Investment Company",
@@ -3495,11 +3524,16 @@
       "serviceName": "Entrata_4173_1151911",
       "serviceCreated": "2026-09-14T15:50:11Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T15:50:12Z",
       "dateUpdated": "2026-09-14T15:50:12Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ]
     },
     {
       "company": "Ferguson & Brewer Investment Company",
@@ -3543,11 +3577,16 @@
       "serviceName": "Entrata_4173_488825",
       "serviceCreated": "2026-09-14T15:50:15Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T15:50:16Z",
       "dateUpdated": "2026-09-14T15:50:16Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ]
     },
     {
       "company": "Ferguson & Brewer Investment Company",

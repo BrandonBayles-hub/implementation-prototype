@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T18:44:15.349461+00:00",
+  "generatedAt": "2026-09-15T19:34:45.462333+00:00",
   "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -76,24 +76,24 @@
   ],
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 1434,
-    "FAILED": 105,
-    "IN_PROGRESS": 293,
+    "VERIFIED": 1474,
+    "FAILED": 130,
+    "IN_PROGRESS": 228,
     "NO_CAMPAIGN": 1,
     "SERVICE_NOT_FOUND": 3
   },
   "failureActionSummary": {
-    "Entrata \u2014 wrong URL registered": 17,
-    "Client \u2014 website": 57,
+    "Entrata \u2014 wrong URL registered": 23,
+    "Client \u2014 website": 76,
     "Entrata \u2014 template/copy": 23,
     "Entrata \u2014 website publishing": 1,
     "Unknown \u2014 needs triage": 7
   },
   "templateAVerdict": {
-    "failedUsingTemplateA": 71,
-    "knownWebsiteOrUrlPrimary": 63,
+    "failedUsingTemplateA": 91,
+    "knownWebsiteOrUrlPrimary": 83,
     "needsUrlTriage": 7,
-    "contentErrorRows": 5
+    "contentErrorRows": 15
   },
   "scanErrors": [],
   "campaigns": [
@@ -335,12 +335,12 @@
       "dateUpdated": "2026-09-11T21:53:39Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -390,16 +390,21 @@
       "serviceName": "Entrata_13886_1110129",
       "serviceCreated": "2026-09-11T21:53:48Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:48Z",
       "dateUpdated": "2026-09-11T21:53:48Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": false,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata",
+      "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+      "actionDetail": "Entrata registered AMG's company website as https://www.amgnevada.com, which the reviewer could not open because its security certificate does not cover that address. Correct the registered company-website field to https://amgnevada.com. For rows also showing a sign-up rejection, compare the public form with the submitted sign-up description and remove any claim about a phone field or consent checkbox that is not actually visible. Follow the approved-template change process, then resubmit for a new carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Advanced Management Group",
@@ -696,12 +701,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -844,12 +849,12 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30891,
@@ -877,16 +882,21 @@
       "serviceName": "Entrata_13886_505299",
       "serviceCreated": "2026-09-11T21:54:38Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:38Z",
       "dateUpdated": "2026-09-11T21:54:38Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": false,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata",
+      "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+      "actionDetail": "Entrata registered AMG's company website as https://www.amgnevada.com, which the reviewer could not open because its security certificate does not cover that address. Correct the registered company-website field to https://amgnevada.com. For rows also showing a sign-up rejection, compare the public form with the submitted sign-up description and remove any claim about a phone field or consent checkbox that is not actually visible. Follow the approved-template change process, then resubmit for a new carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Advanced Management Group",
@@ -934,16 +944,21 @@
       "serviceName": "Entrata_13886_505296",
       "serviceCreated": "2026-09-11T21:54:44Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:44Z",
       "dateUpdated": "2026-09-11T21:54:44Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": false,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata",
+      "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+      "actionDetail": "Entrata registered AMG's company website as https://www.amgnevada.com, which the reviewer could not open because its security certificate does not cover that address. Correct the registered company-website field to https://amgnevada.com. For rows also showing a sign-up rejection, compare the public form with the submitted sign-up description and remove any claim about a phone field or consent checkbox that is not actually visible. Follow the approved-template change process, then resubmit for a new carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Advanced Management Group",
@@ -992,12 +1007,12 @@
       "dateUpdated": "2026-09-11T21:54:48Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1047,16 +1062,21 @@
       "serviceName": "Entrata_13886_505287",
       "serviceCreated": "2026-09-11T21:54:54Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:54Z",
       "dateUpdated": "2026-09-11T21:54:54Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": false,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata",
+      "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+      "actionDetail": "Entrata registered AMG's company website as https://www.amgnevada.com, which the reviewer could not open because its security certificate does not cover that address. Correct the registered company-website field to https://amgnevada.com. For rows also showing a sign-up rejection, compare the public form with the submitted sign-up description and remove any claim about a phone field or consent checkbox that is not actually visible. Follow the approved-template change process, then resubmit for a new carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Advanced Management Group",
@@ -1108,16 +1128,21 @@
       "serviceName": "Entrata_13886_360271",
       "serviceCreated": "2026-09-11T21:54:58Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:58Z",
       "dateUpdated": "2026-09-11T21:54:58Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": false,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata",
+      "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+      "actionDetail": "Entrata registered AMG's company website as https://www.amgnevada.com, which the reviewer could not open because its security certificate does not cover that address. Correct the registered company-website field to https://amgnevada.com. For rows also showing a sign-up rejection, compare the public form with the submitted sign-up description and remove any claim about a phone field or consent checkbox that is not actually visible. Follow the approved-template change process, then resubmit for a new carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Advanced Management Group",
@@ -1166,12 +1191,12 @@
       "dateUpdated": "2026-09-11T21:55:03Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1340,12 +1365,12 @@
       "dateUpdated": "2026-09-14T17:57:56Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -1462,16 +1487,21 @@
       "serviceName": "Entrata_100135_100149460",
       "serviceCreated": "2026-09-10T16:25:59Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:58:09Z",
       "dateUpdated": "2026-09-14T17:58:09Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Entrata \u2014 wrong URL registered",
+      "actionOwner": "Entrata + client",
+      "actionItem": "Fix Aztex URL typo; client publishes Privacy + Terms pages; then resubmit.",
+      "actionDetail": "Entrata registered https://www/aztexmgmt.com with a slash where the dot after 'www' should be, so the reviewer reached no website. Correct the registered company-website field to https://aztexmgmt.com. Aztex must also publish public Privacy Policy and Terms pages that cover text messaging before approval is likely. Brownstone additionally has rejected example messages: the approved-template owner must replace bracketed fill-in-the-blank text with realistic examples. After all applicable fixes, Entrata resubmits for carrier review. The tracker data does not provide a reliable review-time estimate."
     },
     {
       "company": "Aztex Management Group",
@@ -2479,16 +2509,21 @@
       "serviceName": "Entrata_100130_100097461",
       "serviceCreated": "2026-09-14T17:22:13Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:22:13Z",
       "dateUpdated": "2026-09-14T17:22:13Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2571,16 +2606,21 @@
       "serviceName": "Entrata_100130_100012853",
       "serviceCreated": "2026-09-14T17:19:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:09Z",
       "dateUpdated": "2026-09-14T17:19:09Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2619,16 +2659,21 @@
       "serviceName": "Entrata_100130_100012856",
       "serviceCreated": "2026-09-14T17:19:14Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:14Z",
       "dateUpdated": "2026-09-14T17:19:14Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2645,16 +2690,21 @@
       "serviceName": "Entrata_100130_100158554",
       "serviceCreated": "2026-09-14T17:19:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:17Z",
       "dateUpdated": "2026-09-14T17:19:17Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2671,16 +2721,21 @@
       "serviceName": "Entrata_100130_100012857",
       "serviceCreated": "2026-09-14T17:19:19Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:19Z",
       "dateUpdated": "2026-09-14T17:19:19Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2719,16 +2774,21 @@
       "serviceName": "Entrata_100130_100012859",
       "serviceCreated": "2026-09-14T17:19:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:24Z",
       "dateUpdated": "2026-09-14T17:19:24Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -2771,16 +2831,21 @@
       "serviceName": "Entrata_100130_100012861",
       "serviceCreated": "2026-09-14T17:19:28Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:28Z",
       "dateUpdated": "2026-09-14T17:19:28Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -3274,16 +3339,21 @@
       "serviceName": "Entrata_100130_100012879",
       "serviceCreated": "2026-09-14T17:20:07Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:07Z",
       "dateUpdated": "2026-09-14T17:20:07Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must make its company website publicly viewable without a password.",
+      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review."
     },
     {
       "company": "BRC Real Estate",
@@ -3586,16 +3656,12 @@
       "serviceName": "Entrata_102031_100157827",
       "serviceCreated": "2026-09-14T18:07:07Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CL8W5RC",
       "dateCreated": "2026-09-14T18:07:07Z",
       "dateUpdated": "2026-09-14T18:07:07Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Briar Meads Capital",
@@ -3611,16 +3677,25 @@
       "serviceName": "Entrata_102031_100157829",
       "serviceCreated": "2026-09-14T18:07:04Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T18:07:04Z",
       "dateUpdated": "2026-09-14T18:07:04Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://chenangoplace-merge-migration.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Broadmoor Group",
@@ -4793,16 +4868,12 @@
       "serviceName": "Entrata_100821_100051943",
       "serviceCreated": "2026-09-14T18:09:51Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C7GZUI9",
       "dateCreated": "2026-09-14T18:09:51Z",
       "dateUpdated": "2026-09-14T18:09:51Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Byler Holdings, LLC",
@@ -5564,16 +5635,12 @@
       "serviceName": "Entrata_102042_100159312",
       "serviceCreated": "2026-09-14T18:11:30Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CIHDY1K",
       "dateCreated": "2026-09-14T18:11:30Z",
       "dateUpdated": "2026-09-14T18:11:30Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Cambridge Management Services",
@@ -5610,16 +5677,12 @@
       "serviceName": "Entrata_102042_100159340",
       "serviceCreated": "2026-09-14T18:10:56Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CWTMJLD",
       "dateCreated": "2026-09-14T18:10:57Z",
       "dateUpdated": "2026-09-14T18:10:57Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Canyon View Properties",
@@ -6804,16 +6867,12 @@
       "serviceName": "Entrata_14002_100058200",
       "serviceCreated": "2026-05-06T18:37:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CVUIM3H",
       "dateCreated": "2026-09-14T18:13:30Z",
       "dateUpdated": "2026-09-14T18:13:30Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Carlsbad Management Group",
@@ -8731,16 +8790,21 @@
       "serviceName": "Entrata_100025_100003958",
       "serviceCreated": "2026-09-14T18:32:48Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T18:32:48Z",
       "dateUpdated": "2026-09-14T18:32:48Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+      "actionDetail": "Please publish a Terms & Conditions page linked from https://carriageclubva.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review."
     },
     {
       "company": "Cross River Communities, LLC",
@@ -9008,16 +9072,12 @@
       "serviceName": "Entrata_100025_100003974",
       "serviceCreated": "2026-09-14T18:33:17Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C8EDCH7",
       "dateCreated": "2026-09-14T18:33:17Z",
       "dateUpdated": "2026-09-14T18:33:17Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Cross River Communities, LLC",
@@ -9096,16 +9156,12 @@
       "serviceName": "Entrata_100527_100039213",
       "serviceCreated": "2026-09-14T18:32:10Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CERS8CL",
       "dateCreated": "2026-09-14T18:32:11Z",
       "dateUpdated": "2026-09-14T18:32:11Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "CSC Management",
@@ -9123,7 +9179,7 @@
       "serviceCreated": "2026-09-14T15:33:25Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CMMR8N8",
       "dateCreated": "2026-09-14T15:33:25Z",
       "dateUpdated": "2026-09-14T15:33:25Z",
       "errors": [],
@@ -26376,16 +26432,16 @@
       "dateUpdated": "2026-08-21T01:35:44Z",
       "errors": [
         {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
-          "code": 30893,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         }
       ],
       "usesTemplateA": false,
@@ -26444,16 +26500,16 @@
       "dateUpdated": "2026-08-21T01:35:39Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -26596,16 +26652,16 @@
       "dateUpdated": "2026-08-21T01:35:40Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -26740,16 +26796,16 @@
       "dateUpdated": "2026-08-21T01:35:40Z",
       "errors": [
         {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
-          "code": 30893,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         }
       ],
       "usesTemplateA": false,
@@ -26995,16 +27051,25 @@
       "serviceName": "Entrata_17329_1062769",
       "serviceCreated": "2026-09-11T21:26:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:24Z",
       "dateUpdated": "2026-09-11T21:26:24Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://palisadeprop.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27052,16 +27117,25 @@
       "serviceName": "Entrata_17329_1062773",
       "serviceCreated": "2026-09-11T21:26:24Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:24Z",
       "dateUpdated": "2026-09-11T21:26:24Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://contact.plattevilleapts.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27317,16 +27391,25 @@
       "serviceName": "Entrata_17329_1224207",
       "serviceCreated": "2026-09-11T21:26:36Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:36Z",
       "dateUpdated": "2026-09-11T21:26:36Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://palisadeprop.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27374,16 +27457,25 @@
       "serviceName": "Entrata_17329_100058451",
       "serviceCreated": "2026-09-11T21:26:47Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:47Z",
       "dateUpdated": "2026-09-11T21:26:47Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://420wwilson.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27519,16 +27611,25 @@
       "serviceName": "Entrata_17329_1062789",
       "serviceCreated": "2026-09-11T21:26:58Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:26:58Z",
       "dateUpdated": "2026-09-11T21:26:58Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://palisadeprop.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27633,16 +27734,25 @@
       "serviceName": "Entrata_17329_1062796",
       "serviceCreated": "2026-09-11T21:27:02Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:02Z",
       "dateUpdated": "2026-09-11T21:27:02Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://palisadeprop.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27716,16 +27826,25 @@
       "serviceName": "Entrata_17329_1062799",
       "serviceCreated": "2026-09-11T21:27:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:27:10Z",
       "dateUpdated": "2026-09-11T21:27:10Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://palisadeprop.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Palisade Property Management",
@@ -27954,16 +28073,12 @@
       "serviceName": "Entrata_17329_1062810",
       "serviceCreated": "2026-09-11T21:27:37Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CIXZ7W6",
       "dateCreated": "2026-09-11T21:27:37Z",
       "dateUpdated": "2026-09-11T21:27:37Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Palisade Property Management",
@@ -28133,16 +28248,12 @@
       "serviceName": "Entrata_17329_100051844",
       "serviceCreated": "2026-09-11T21:27:38Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CVR40KM",
       "dateCreated": "2026-09-11T21:27:38Z",
       "dateUpdated": "2026-09-11T21:27:38Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Pannon Property Management",
@@ -29097,16 +29208,12 @@
       "serviceName": "Entrata_101161_100166990",
       "serviceCreated": "2026-07-13T19:19:42Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C39KL21",
       "dateCreated": "2026-09-14T16:23:15Z",
       "dateUpdated": "2026-09-14T16:23:15Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Peak Management, LLC",
@@ -31184,16 +31291,12 @@
       "serviceName": "Entrata_101078_100097393",
       "serviceCreated": "2026-09-14T16:45:28Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CUK6KBG",
       "dateCreated": "2026-09-14T16:45:29Z",
       "dateUpdated": "2026-09-14T16:45:29Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "PSCo Philly",
@@ -31547,16 +31650,12 @@
       "serviceName": "Entrata_15770_100153098",
       "serviceCreated": "2026-09-14T16:46:31Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CDWCE4U",
       "dateCreated": "2026-09-14T16:46:32Z",
       "dateUpdated": "2026-09-14T16:46:32Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "REPAG Accounting Group",
@@ -31593,16 +31692,12 @@
       "serviceName": "Entrata_15770_100125060",
       "serviceCreated": "2026-07-22T14:12:11Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CTNRBFL",
       "dateCreated": "2026-09-14T16:46:27Z",
       "dateUpdated": "2026-09-14T16:46:27Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "REPAG Accounting Group",
@@ -31745,16 +31840,25 @@
       "serviceName": "Entrata_15770_100153099",
       "serviceCreated": "2026-09-14T16:46:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T16:46:34Z",
       "dateUpdated": "2026-09-14T16:46:34Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://vivamax.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "REPAG Accounting Group",
@@ -31849,16 +31953,25 @@
       "serviceName": "Entrata_101232_100086937",
       "serviceCreated": "2026-09-14T16:47:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T16:47:09Z",
       "dateUpdated": "2026-09-14T16:47:09Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
+      "actionDetail": "Please publish a Privacy Policy page linked from https://thereserveaptsnyc.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review."
     },
     {
       "company": "Servitas Management Group, LLC",
@@ -32025,16 +32138,12 @@
       "serviceName": "Entrata_100174_100017997",
       "serviceCreated": "2026-09-14T16:48:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "COR2LD1",
       "dateCreated": "2026-09-14T16:48:09Z",
       "dateUpdated": "2026-09-14T16:48:09Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Silveredge Management",
@@ -32073,16 +32182,12 @@
       "serviceName": "Entrata_100174_100018001",
       "serviceCreated": "2026-09-14T16:48:13Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C60EDED",
       "dateCreated": "2026-09-14T16:48:13Z",
       "dateUpdated": "2026-09-14T16:48:13Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Silveredge Management",
@@ -32164,16 +32269,12 @@
       "serviceName": "Entrata_100174_100017995",
       "serviceCreated": "2026-09-14T16:48:20Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C57UJ46",
       "dateCreated": "2026-09-14T16:48:20Z",
       "dateUpdated": "2026-09-14T16:48:20Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Silveredge Management",
@@ -32532,16 +32633,12 @@
       "serviceName": "Entrata_17795_1111129",
       "serviceCreated": "2026-09-14T16:52:16Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C5FT8W7",
       "dateCreated": "2026-09-14T16:52:16Z",
       "dateUpdated": "2026-09-14T16:52:16Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Starka Properties Inc.",
@@ -34711,12 +34808,12 @@
       "dateUpdated": "2026-09-14T16:53:45Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -34858,16 +34955,12 @@
       "serviceName": "Entrata_14917_1312655",
       "serviceCreated": "2026-09-14T16:54:33Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CWSLXRO",
       "dateCreated": "2026-09-14T16:54:34Z",
       "dateUpdated": "2026-09-14T16:54:34Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "SUHRCO Residential Properties",
@@ -34884,16 +34977,12 @@
       "serviceName": "Entrata_2740_100136399",
       "serviceCreated": "2026-09-14T16:55:20Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CMSYO3W",
       "dateCreated": "2026-09-14T16:55:20Z",
       "dateUpdated": "2026-09-14T16:55:20Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "SUHRCO Residential Properties",
@@ -34910,16 +34999,12 @@
       "serviceName": "Entrata_2740_889145",
       "serviceCreated": "2026-09-14T16:55:21Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CYK3OYE",
       "dateCreated": "2026-09-14T16:55:22Z",
       "dateUpdated": "2026-09-14T16:55:22Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "SUHRCO Residential Properties",
@@ -35118,16 +35203,12 @@
       "serviceName": "Entrata_18122_1142450",
       "serviceCreated": "2026-09-14T16:56:40Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFPANQD",
       "dateCreated": "2026-09-14T16:56:40Z",
       "dateUpdated": "2026-09-14T16:56:40Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "T.R. McKenzie, Inc. (New)",
@@ -35144,16 +35225,12 @@
       "serviceName": "Entrata_18122_100045109",
       "serviceCreated": "2026-09-14T16:56:46Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C6A9I06",
       "dateCreated": "2026-09-14T16:56:47Z",
       "dateUpdated": "2026-09-14T16:56:47Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "T.R. McKenzie, Inc. (New)",
@@ -35423,16 +35500,12 @@
       "serviceName": "Entrata_18122_1142462",
       "serviceCreated": "2026-09-14T16:56:49Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CKWQTNG",
       "dateCreated": "2026-09-14T16:56:49Z",
       "dateUpdated": "2026-09-14T16:56:49Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "The Annex Group",
@@ -36410,16 +36483,12 @@
       "serviceName": "Entrata_19071_1229793",
       "serviceCreated": "2026-09-14T17:01:11Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CMU914B",
       "dateCreated": "2026-09-14T17:01:11Z",
       "dateUpdated": "2026-09-14T17:01:11Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "The Breeden Company - NEW",
@@ -36435,16 +36504,12 @@
       "serviceName": "Entrata_19071_100153526",
       "serviceCreated": "2026-09-14T17:00:36Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C45A9ER",
       "dateCreated": "2026-09-14T17:00:36Z",
       "dateUpdated": "2026-09-14T17:00:36Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "The Breeden Company - NEW",
@@ -36554,16 +36619,12 @@
       "serviceName": "Entrata_19071_100152370",
       "serviceCreated": "2026-09-14T17:00:49Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C9YWHVW",
       "dateCreated": "2026-09-14T17:00:49Z",
       "dateUpdated": "2026-09-14T17:00:49Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "The Breeden Company - NEW",
@@ -36580,16 +36641,12 @@
       "serviceName": "Entrata_19071_100152371",
       "serviceCreated": "2026-09-14T17:00:59Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CH7IT2Q",
       "dateCreated": "2026-09-14T17:00:59Z",
       "dateUpdated": "2026-09-14T17:00:59Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "The Garrett Companies",
@@ -37391,16 +37448,12 @@
       "serviceName": "Entrata_16725_858042",
       "serviceCreated": "2026-09-14T17:02:13Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C10GK7K",
       "dateCreated": "2026-09-14T17:02:13Z",
       "dateUpdated": "2026-09-14T17:02:13Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Trantor Management",
@@ -37442,16 +37495,12 @@
       "serviceName": "Entrata_16725_1106224",
       "serviceCreated": "2026-09-14T17:03:52Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CPEVM4V",
       "dateCreated": "2026-09-14T17:03:53Z",
       "dateUpdated": "2026-09-14T17:03:53Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Trantor Management",
@@ -37590,16 +37639,12 @@
       "serviceName": "Entrata_125_307",
       "serviceCreated": "2026-09-14T17:04:27Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CTX8JJ8",
       "dateCreated": "2026-09-14T17:04:27Z",
       "dateUpdated": "2026-09-14T17:04:27Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37638,16 +37683,12 @@
       "serviceName": "Entrata_125_313",
       "serviceCreated": "2026-09-14T17:04:31Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C93TTED",
       "dateCreated": "2026-09-14T17:04:31Z",
       "dateUpdated": "2026-09-14T17:04:31Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37663,16 +37704,12 @@
       "serviceName": "Entrata_125_111",
       "serviceCreated": "2026-09-14T17:04:39Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CQ0K98C",
       "dateCreated": "2026-09-14T17:04:39Z",
       "dateUpdated": "2026-09-14T17:04:39Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37762,16 +37799,12 @@
       "serviceName": "Entrata_125_308",
       "serviceCreated": "2026-09-14T17:04:38Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CJ18GE1",
       "dateCreated": "2026-09-14T17:04:38Z",
       "dateUpdated": "2026-09-14T17:04:38Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37788,16 +37821,12 @@
       "serviceName": "Entrata_125_123955",
       "serviceCreated": "2026-09-14T17:04:41Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C1V6AFJ",
       "dateCreated": "2026-09-14T17:04:41Z",
       "dateUpdated": "2026-09-14T17:04:41Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37814,16 +37843,12 @@
       "serviceName": "Entrata_125_89",
       "serviceCreated": "2026-09-14T17:04:43Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXF5BK6",
       "dateCreated": "2026-09-14T17:04:43Z",
       "dateUpdated": "2026-09-14T17:04:43Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Triton Investments",
@@ -37862,16 +37887,12 @@
       "serviceName": "Entrata_17228_100089902",
       "serviceCreated": "2026-09-14T17:06:00Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CO3SGKS",
       "dateCreated": "2026-09-14T17:06:00Z",
       "dateUpdated": "2026-09-14T17:06:00Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "UP CAMPUS STUDENT LIVING",
@@ -37888,16 +37909,12 @@
       "serviceName": "Entrata_17228_1277223",
       "serviceCreated": "2026-09-14T17:07:04Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFSF7CV",
       "dateCreated": "2026-09-14T17:07:04Z",
       "dateUpdated": "2026-09-14T17:07:04Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "UP CAMPUS STUDENT LIVING",
@@ -37913,16 +37930,12 @@
       "serviceName": "Entrata_17228_100141254",
       "serviceCreated": "2026-09-14T17:06:34Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CXIW10U",
       "dateCreated": "2026-09-14T17:06:34Z",
       "dateUpdated": "2026-09-14T17:06:34Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "UP CAMPUS STUDENT LIVING",
@@ -37959,16 +37972,12 @@
       "serviceName": "Entrata_17228_1175939",
       "serviceCreated": "2026-05-14T17:38:00Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CS86EMK",
       "dateCreated": "2026-09-14T17:05:40Z",
       "dateUpdated": "2026-09-14T17:05:40Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "UP CAMPUS STUDENT LIVING",
@@ -38884,16 +38893,12 @@
       "serviceName": "Entrata_15907_100045647",
       "serviceCreated": "2026-09-14T17:10:58Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CJRVMTX",
       "dateCreated": "2026-09-14T17:10:59Z",
       "dateUpdated": "2026-09-14T17:10:59Z",
       "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open."
+      "usesTemplateA": true
     },
     {
       "company": "Welcome Properties",

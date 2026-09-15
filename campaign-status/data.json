@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T15:35:32.037981+00:00",
+  "generatedAt": "2026-09-15T15:40:30.523590+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -7,9 +7,9 @@
   "total": 575,
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 335,
+    "VERIFIED": 337,
     "FAILED": 40,
-    "IN_PROGRESS": 197,
+    "IN_PROGRESS": 195,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -432,16 +432,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -8470,8 +8470,8 @@
       "serviceName": "Entrata_16725_100070670",
       "serviceCreated": "2026-09-14T17:03:55Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C8MUDVQ",
       "dateCreated": "2026-09-14T17:03:55Z",
       "dateUpdated": "2026-09-14T17:03:55Z",
       "errors": []
@@ -8518,8 +8518,8 @@
       "serviceName": "Entrata_125_127",
       "serviceCreated": "2026-09-14T17:04:22Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C8HUA0C",
       "dateCreated": "2026-09-14T17:04:23Z",
       "dateUpdated": "2026-09-14T17:04:23Z",
       "errors": []

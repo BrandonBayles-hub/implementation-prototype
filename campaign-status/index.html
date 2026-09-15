@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <meta name="ui-build" content="2026-09-15-c" />
+    <meta name="ui-build" content="2026-09-15-d" />
     <title>A2P Campaign Status</title>
     <style>
       :root {
@@ -61,7 +61,7 @@
       .countline { padding: 10px 15px; font-size: 12px; color: var(--muted); border-bottom: 1px solid var(--line); }
       .table-wrap { overflow: auto; max-height: calc(100vh - 365px); min-height: 430px; }
       table { width: 100%; border-collapse: collapse; font-size: 12px; }
-      th { position: sticky; top: 0; z-index: 1; text-align: left; background: #faf8f6; color: #62564e; font-size: 10px; text-transform: uppercase; letter-spacing: .055em; padding: 11px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+      th { position: sticky; top: 0; z-index: 1; text-align: left; background: #faf8f6; color: #62564e; font-size: 10px; text-transform: uppercase; letter-spacing: .055em; padding: 11px 12px; border-bottom: 1px solid var(--line); white-space: normal; }
       td { padding: 12px; border-bottom: 1px solid #eee8e4; vertical-align: top; }
       tbody tr:hover { background: #fcfaf8; }
       .property { font-weight: 720; margin-bottom: 3px; font-size: 13px; }
@@ -78,8 +78,9 @@
       .source.oxp { background: #e8f2ff; color: #175cd3; }
       .flag { display: block; color: var(--failed); font-size: 10px; font-weight: 750; margin-top: 3px; }
       .id { font: 10px ui-monospace, SFMono-Regular, Menlo, monospace; color: #6c5e55; white-space: nowrap; }
-      .issue { max-width: 390px; color: #6d261e; line-height: 1.4; }
-      .action { min-width: 300px; max-width: 430px; line-height: 1.45; }
+      .issue { max-width: 250px; color: #6d261e; line-height: 1.4; }
+      .action { min-width: 210px; max-width: 320px; line-height: 1.45; }
+      .source { white-space: normal; }
       .action-owner { display: block; color: #344054; font-weight: 780; margin-bottom: 4px; }
       .action-short { color: #475467; }
       details { margin-top: 6px; }
@@ -157,8 +158,8 @@
                 <th>Client</th>
                 <th>Cohort source</th>
                 <th>Sheet status</th>
-                <th>Submitted / updated</th>
-                <th>Carrier reference</th>
+                <th>Submitted / updated (UTC)</th>
+                <th>Carrier ref (TCR)</th>
                 <th>Action item</th>
                 <th>Issue</th>
               </tr>
@@ -209,10 +210,20 @@
         timeZoneName: "short",
       }) : "—";
 
+      // Per-row dates drop the timezone suffix because the column header carries it.
+      const rowDateText = (value) => value ? new Date(value).toLocaleString("en-US", {
+        timeZone: "UTC",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+      }) : "—";
+
       // Bumped whenever this page's markup or script changes. Compared against the
       // published ui-version.json so a browser running a cached copy of this file
       // can tell the reader instead of silently showing an old layout.
-      const UI_BUILD = "2026-09-15-c";
+      const UI_BUILD = "2026-09-15-d";
 
       async function checkForStaleShell() {
         try {
@@ -282,12 +293,17 @@
         const unknown = actionCounts["Unknown — needs triage"] || 0;
         $("template-verdict").innerHTML = `<strong>Template A is not a universal fix.</strong> ${Number(verdict.failedUsingTemplateA || 0).toLocaleString()} failed rows already use Template A. Of those, ${Number(verdict.knownWebsiteOrUrlPrimary || 0).toLocaleString()} primarily fail because the public or registered website cannot support what the reviewer must verify, ${Number(verdict.needsUrlTriage || 0).toLocaleString()} need an exact URL mismatch checked, and ${Number(verdict.contentErrorRows || 0).toLocaleString()} also have a submission-content rejection. The AMG evidence is especially clear: Ridge Falls kept the standard wording and still failed on AMG’s broken registered URL; rewritten AMG rows kept that failure and added sign-up rejections. Fix the underlying website or registered URL before changing locked copy.<div class="verdict-counts"><strong>All failed rows:</strong> Entrata-fixable ${entrataFixable.toLocaleString()} · Client-blocked ${clientBlocked.toLocaleString()} · Carrier waiting ${waiting.toLocaleString()} · Needs triage ${unknown.toLocaleString()}</div>`;
 
-        const statuses = [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort();
-        $("status").innerHTML = `<option value="">All live statuses</option>${statuses.map((value) => `<option>${esc(value)}</option>`).join("")}`;
-        const clients = [...new Set(data.campaigns.map((row) => row.company))].sort();
-        $("client").innerHTML = `<option value="">All clients</option>${clients.map((value) => `<option>${esc(value)}</option>`).join("")}`;
-        const actions = [...new Set(data.campaigns.map((row) => row.actionCategory).filter(Boolean))].sort();
-        $("action").innerHTML = `<option value="">All action owners</option>${actions.map((value) => `<option>${esc(value)}</option>`).join("")}`;
+        // Rebuilding a select's options clears its value, which would silently drop
+        // the reader's filter on every reload — including the 15-minute auto-reload.
+        const fillSelect = (id, placeholder, values) => {
+          const select = $(id);
+          const previous = select.value;
+          select.innerHTML = `<option value="">${placeholder}</option>${values.map((value) => `<option>${esc(value)}</option>`).join("")}`;
+          if (previous && values.includes(previous)) select.value = previous;
+        };
+        fillSelect("status", "All live statuses", [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort());
+        fillSelect("client", "All clients", [...new Set(data.campaigns.map((row) => row.company))].sort());
+        fillSelect("action", "All action owners", [...new Set(data.campaigns.map((row) => row.actionCategory).filter(Boolean))].sort());
       }
 
       function render() {
@@ -315,8 +331,8 @@
             <td><div>${esc(row.company)}</div><div class="meta">CID ${esc(row.cid)}</div></td>
             <td>${(row.cohortOrigins || []).map((value) => `<span class="source ${value.startsWith("OXP") ? "oxp" : ""}">${esc(value)}</span>`).join("")}${row.notOnOriginalMigration ? `<span class="flag">Not on original migration sheet</span>` : ""}</td>
             <td>${esc(row.paigeStatus)}</td>
-            <td>${dateText(row.dateUpdated || row.dateCreated)}</td>
-            <td><div class="id">${row.tcrCampaignId ? `TCR ${esc(row.tcrCampaignId)}` : "Pending assignment"}</div></td>
+            <td>${rowDateText(row.dateUpdated || row.dateCreated)}</td>
+            <td><div class="id">${row.tcrCampaignId ? esc(row.tcrCampaignId) : "Pending"}</div></td>
             <td class="action">${row.actionItem ? `<span class="action-owner">${esc(row.actionCategory)}</span><span class="action-short">${esc(row.actionItem)}</span><details><summary>Why this failed + exact steps</summary><div class="action-detail">${esc(row.actionDetail)}</div></details>` : "—"}</td>
             <td class="issue">${issue}</td>
           </tr>`;

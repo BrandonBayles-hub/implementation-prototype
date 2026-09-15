@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta name="ui-build" content="2026-09-15-c" />
     <title>A2P Campaign Status</title>
     <style>
       :root {
@@ -41,6 +43,9 @@
       .card.pending .value { color: var(--pending); }
       .card.failed .value { color: var(--failed); }
       .card.missing .value { color: var(--missing); }
+      #failed-card { cursor: pointer; }
+      #failed-card:hover { border-color: #e3a49d; box-shadow: 0 5px 18px rgba(180, 35, 24, .12); }
+      #failed-card:focus-visible { outline: 2px solid #b42318; outline-offset: 2px; }
       .notice { display: flex; align-items: flex-start; gap: 10px; padding: 13px 15px; background: #fff9ed; border: 1px solid #f0d7a1; border-radius: 12px; color: #76530b; font-size: 13px; line-height: 1.45; margin-bottom: 18px; }
       .notice strong { color: #4e3607; }
       .verdict { padding: 15px 17px; background: #f5f7ff; border: 1px solid #ccd5f3; border-radius: 12px; color: #344054; font-size: 13px; line-height: 1.5; margin-bottom: 18px; }
@@ -81,6 +86,11 @@
       summary { color: #175cd3; cursor: pointer; font-weight: 700; font-size: 11px; }
       .action-detail { color: #475467; margin-top: 6px; padding: 8px 10px; background: #f8fafc; border-left: 3px solid #b2c2e8; border-radius: 4px; }
       .empty { padding: 56px; text-align: center; color: var(--muted); }
+      .stale { display: none; align-items: center; gap: 12px; padding: 13px 15px; background: #fdeceb; border: 1px solid #f3b9b4; border-radius: 12px; color: #7a2b22; font-size: 13px; line-height: 1.45; margin-bottom: 18px; }
+      .stale[data-visible="true"] { display: flex; }
+      .stale strong { color: #5c1d16; }
+      .stale button { margin-left: auto; border-color: #d98e86; background: #fff; color: #9a2f24; white-space: nowrap; }
+      .reload-flash { color: var(--approved); font-weight: 700; }
       footer { color: var(--muted); font-size: 11px; margin-top: 13px; display: flex; justify-content: space-between; gap: 16px; }
       @media (max-width: 1050px) {
         .summary { grid-template-columns: repeat(3, 1fr); }
@@ -113,9 +123,15 @@
         <div class="card"><div class="label">Monitored properties</div><div class="value" id="total">—</div><div class="sub" id="total-sub">original + OXP client expansion</div></div>
         <div class="card approved"><div class="label">Approved</div><div class="value" id="approved">—</div><div class="sub" id="approved-sub">—</div></div>
         <div class="card pending"><div class="label">Pending review</div><div class="value" id="pending">—</div><div class="sub">carrier review in progress</div></div>
-        <div class="card failed"><div class="label">Failed</div><div class="value" id="failed">—</div><div class="sub">needs action</div></div>
+        <div class="card failed" id="failed-card" role="button" tabindex="0"><div class="label">Failed</div><div class="value" id="failed">—</div><div class="sub">needs action — click to see action items</div></div>
         <div class="card missing"><div class="label">Needs investigation</div><div class="value" id="missing">—</div><div class="sub">no matching live service</div></div>
       </section>
+
+      <div class="stale" id="stale-banner">
+        <span>●</span>
+        <div><strong>You are viewing an outdated version of this page.</strong> Your browser cached an older copy, so columns and layout may be missing. Reload to get the current version.</div>
+        <button id="stale-reload" type="button">Reload this page</button>
+      </div>
 
       <div class="notice" id="notice"><span>●</span><div><strong>Source reconciliation:</strong> Loading details…</div></div>
       <div class="verdict" id="template-verdict">
@@ -143,8 +159,8 @@
                 <th>Sheet status</th>
                 <th>Submitted / updated</th>
                 <th>Carrier reference</th>
+                <th>Action item</th>
                 <th>Issue</th>
-                <th>Action Item</th>
               </tr>
             </thead>
             <tbody id="rows"></tbody>
@@ -193,6 +209,22 @@
         timeZoneName: "short",
       }) : "—";
 
+      // Bumped whenever this page's markup or script changes. Compared against the
+      // published ui-version.json so a browser running a cached copy of this file
+      // can tell the reader instead of silently showing an old layout.
+      const UI_BUILD = "2026-09-15-c";
+
+      async function checkForStaleShell() {
+        try {
+          const response = await fetch(`ui-version.json?v=${Date.now()}`, { cache: "no-store" });
+          if (!response.ok) return;
+          const published = (await response.json()).uiBuild;
+          $("stale-banner").dataset.visible = String(Boolean(published) && published !== UI_BUILD);
+        } catch {
+          // A failed version check should never block the status table.
+        }
+      }
+
       async function load() {
         $("freshness-title").textContent = "Reloading last scan…";
         const response = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
@@ -200,6 +232,30 @@
         data = await response.json();
         hydrate();
         render();
+        checkForStaleShell();
+      }
+
+      const clockText = (value) => value.toLocaleTimeString("en-US", { timeZone: "UTC", hour: "numeric", minute: "2-digit", second: "2-digit", timeZoneName: "short" });
+
+      async function reloadWithFeedback() {
+        const button = $("refresh");
+        const previousGeneratedAt = data && data.generatedAt;
+        button.disabled = true;
+        button.textContent = "Reloading…";
+        try {
+          await load();
+          const isNewScan = data.generatedAt !== previousGeneratedAt;
+          button.textContent = isNewScan ? "Newer scan loaded ✓" : "Reloaded — no new scan ✓";
+          $("freshness-detail").innerHTML = `<span class="reload-flash">Checked at ${esc(clockText(new Date()))}.</span> ${isNewScan ? "This pulled in a newer published scan." : "The published scan has not changed since the last reload."} Twilio is queried every 15 minutes by a scheduled job. This button reloads the last published scan — it does not call Twilio.`;
+        } catch (error) {
+          button.textContent = "Reload failed";
+          showError(error);
+        } finally {
+          setTimeout(() => {
+            button.disabled = false;
+            button.textContent = "Reload last scan";
+          }, 2600);
+        }
       }
 
       function hydrate() {
@@ -261,14 +317,32 @@
             <td>${esc(row.paigeStatus)}</td>
             <td>${dateText(row.dateUpdated || row.dateCreated)}</td>
             <td><div class="id">${row.tcrCampaignId ? `TCR ${esc(row.tcrCampaignId)}` : "Pending assignment"}</div></td>
-            <td class="issue">${issue}</td>
             <td class="action">${row.actionItem ? `<span class="action-owner">${esc(row.actionCategory)}</span><span class="action-short">${esc(row.actionItem)}</span><details><summary>Why this failed + exact steps</summary><div class="action-detail">${esc(row.actionDetail)}</div></details>` : "—"}</td>
+            <td class="issue">${issue}</td>
           </tr>`;
         }).join("");
       }
 
       ["search", "status", "client", "action", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
-      $("refresh").addEventListener("click", () => load().catch(showError));
+      function showFailedOnly() {
+        $("status").value = "Failed";
+        $("search").value = "";
+        render();
+        $("rows").scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      $("failed-card").addEventListener("click", showFailedOnly);
+      $("failed-card").addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          showFailedOnly();
+        }
+      });
+
+      $("refresh").addEventListener("click", reloadWithFeedback);
+      $("stale-reload").addEventListener("click", () => {
+        // Cache-busted navigation so the browser must re-request this document.
+        window.location.replace(`${window.location.pathname}?r=${Date.now()}`);
+      });
       function showError(error) {
         $("freshness-title").textContent = "Unable to reload last scan";
         $("freshness-detail").textContent = error.message;

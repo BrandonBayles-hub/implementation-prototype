@@ -40,9 +40,19 @@ jobs:
           from pathlib import Path
 
           data = json.loads(Path("campaign-status/data.json").read_text())
-          assert data["total"] == 575, f"Expected 575 campaigns, got {data['total']}"
+          total = data["total"]
+          original = data["originalPropertyCount"]
+          added = data["oxpAddedPropertyCount"]
+
+          # The cohort is the original submitted-property list plus the properties
+          # pulled in by the OXP client reconciliation, so the expected total is
+          # derived from the scan rather than pinned to a single hard-coded number.
+          assert original == 575, f"Original cohort should be 575 properties, got {original}"
+          assert total == original + added, f"total {total} != original {original} + OXP-added {added}"
           assert not data.get("scanErrors"), f"Twilio account scans failed: {data['scanErrors']}"
-          assert sum(data["summary"].values()) == 575, "Status totals do not equal cohort"
+          assert sum(data["summary"].values()) == total, (
+              f"Status totals {sum(data['summary'].values())} do not equal cohort {total}"
+          )
           PY
 
       - name: Publish refreshed data

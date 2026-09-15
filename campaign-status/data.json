@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T17:05:49.231429+00:00",
+  "generatedAt": "2026-09-15T17:20:54.742701+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -8,8 +8,8 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 371,
-    "FAILED": 66,
-    "IN_PROGRESS": 135,
+    "FAILED": 71,
+    "IN_PROGRESS": 130,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -231,16 +231,16 @@
       "dateUpdated": "2026-09-11T21:53:57Z",
       "errors": [
         {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -285,12 +285,12 @@
       "dateUpdated": "2026-09-11T21:53:59Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -383,12 +383,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -408,12 +408,12 @@
       "dateUpdated": "2026-09-11T21:54:29Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -636,12 +636,12 @@
       "dateUpdated": "2026-09-11T21:54:57Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -693,12 +693,12 @@
       "dateUpdated": "2026-09-11T21:55:03Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -1823,11 +1823,16 @@
       "serviceName": "Entrata_100130_100012868",
       "serviceCreated": "2026-09-14T17:19:36Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:36Z",
       "dateUpdated": "2026-09-14T17:19:36Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1876,11 +1881,16 @@
       "serviceName": "Entrata_100130_100158556",
       "serviceCreated": "2026-09-14T17:19:42Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:42Z",
       "dateUpdated": "2026-09-14T17:19:42Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1929,11 +1939,16 @@
       "serviceName": "Entrata_100130_100012874",
       "serviceCreated": "2026-09-14T17:19:54Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:19:55Z",
       "dateUpdated": "2026-09-14T17:19:55Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -1977,11 +1992,16 @@
       "serviceName": "Entrata_100130_100012876",
       "serviceCreated": "2026-09-14T17:20:01Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:01Z",
       "dateUpdated": "2026-09-14T17:20:01Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2173,11 +2193,16 @@
       "serviceName": "Entrata_100130_100012896",
       "serviceCreated": "2026-09-14T17:20:29Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-14T17:20:29Z",
       "dateUpdated": "2026-09-14T17:20:29Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30921,
+          "description": "The campaign submission has been reviewed and rejected because the website requires authentication and cannot be reviewed."
+        }
+      ]
     },
     {
       "company": "BRC Real Estate",
@@ -2237,12 +2262,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ]
     },
@@ -9373,7 +9398,7 @@
       "serviceCreated": "2026-09-14T17:10:57Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "C36KVL7",
       "dateCreated": "2026-09-14T17:10:57Z",
       "dateUpdated": "2026-09-14T17:10:57Z",
       "errors": []

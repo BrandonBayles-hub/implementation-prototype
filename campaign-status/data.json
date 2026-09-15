@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T16:05:36.870619+00:00",
+  "generatedAt": "2026-09-15T16:20:42.628965+00:00",
   "sourceWorkbook": "Campaign Reistration Draft",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -8,8 +8,8 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 342,
-    "FAILED": 42,
-    "IN_PROGRESS": 188,
+    "FAILED": 48,
+    "IN_PROGRESS": 182,
     "SERVICE_NOT_FOUND": 3
   },
   "scanErrors": [],
@@ -235,12 +235,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -279,11 +279,20 @@
       "serviceName": "Entrata_13886_598332",
       "serviceCreated": "2026-09-11T21:53:59Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:53:59Z",
       "dateUpdated": "2026-09-11T21:53:59Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -327,11 +336,20 @@
       "serviceName": "Entrata_13886_503382",
       "serviceCreated": "2026-09-11T21:54:09Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:10Z",
       "dateUpdated": "2026-09-11T21:54:10Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -365,12 +383,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ]
     },
@@ -384,11 +402,20 @@
       "serviceName": "Entrata_13886_505300",
       "serviceCreated": "2026-09-11T21:54:29Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:29Z",
       "dateUpdated": "2026-09-11T21:54:29Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -454,16 +481,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ]
     },
@@ -546,11 +573,20 @@
       "serviceName": "Entrata_13886_100042063",
       "serviceCreated": "2026-09-11T21:54:48Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:48Z",
       "dateUpdated": "2026-09-11T21:54:48Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -594,11 +630,20 @@
       "serviceName": "Entrata_13886_1125667",
       "serviceCreated": "2026-09-11T21:54:56Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:54:57Z",
       "dateUpdated": "2026-09-11T21:54:57Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -642,11 +687,20 @@
       "serviceName": "Entrata_13886_505302",
       "serviceCreated": "2026-09-11T21:55:03Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-11T21:55:03Z",
       "dateUpdated": "2026-09-11T21:55:03Z",
-      "errors": []
+      "errors": [
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        }
+      ]
     },
     {
       "company": "Advanced Management Group",
@@ -680,12 +734,12 @@
       "dateUpdated": "2026-09-14T17:57:56Z",
       "errors": [
         {
-          "code": 30893,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         }
       ]
     },
@@ -2143,12 +2197,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ]
     },
@@ -8797,7 +8851,7 @@
       "serviceCreated": "2026-09-14T17:08:11Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "C8MM0HJ",
       "dateCreated": "2026-09-14T17:08:11Z",
       "dateUpdated": "2026-09-14T17:08:11Z",
       "errors": []
@@ -8845,7 +8899,7 @@
       "serviceCreated": "2026-09-14T17:08:16Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CM71Y62",
       "dateCreated": "2026-09-14T17:08:16Z",
       "dateUpdated": "2026-09-14T17:08:16Z",
       "errors": []
@@ -8957,7 +9011,7 @@
       "serviceCreated": "2026-09-14T17:08:30Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CO31SKJ",
       "dateCreated": "2026-09-14T17:08:30Z",
       "dateUpdated": "2026-09-14T17:08:30Z",
       "errors": []
@@ -8989,7 +9043,7 @@
       "serviceCreated": "2026-09-14T17:08:34Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CMB16PK",
       "dateCreated": "2026-09-14T17:08:34Z",
       "dateUpdated": "2026-09-14T17:08:34Z",
       "errors": []
@@ -9037,7 +9091,7 @@
       "serviceCreated": "2026-09-14T17:08:40Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CTU01BC",
       "dateCreated": "2026-09-14T17:08:40Z",
       "dateUpdated": "2026-09-14T17:08:40Z",
       "errors": []
@@ -9053,7 +9107,7 @@
       "serviceCreated": "2026-09-14T17:10:38Z",
       "submitted": true,
       "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
+      "tcrCampaignId": "CYME519",
       "dateCreated": "2026-09-14T17:10:38Z",
       "dateUpdated": "2026-09-14T17:10:38Z",
       "errors": []

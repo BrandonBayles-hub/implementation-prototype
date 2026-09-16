@@ -27,6 +27,70 @@ MASTER_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 
 TEMPLATE_A_MARKER = "will be live post campaign approval"
 COPY_ERROR_CODES = {30886, 30893, 30896, 30909, 30917}
+CLIENT_BLOCKER_CODES = {30882, 30908, 30919, 30921}
+TRIAGE_CODES = {30880, 30891, 30907, 30922}
+KNOWN_BRAND_RECORD_FIXES = {
+    "Advanced Management Group": {
+        "registeredUrl": "https://www.amgnevada.com",
+        "correctedUrl": "https://amgnevada.com",
+        "remainingBlocker": (
+            "The corrected site loads and exposes a Privacy Policy, but no public Terms page was "
+            "found; affected property sites also need their claimed opt-in controls verified."
+        ),
+    },
+    "Aztex Management Group": {
+        "registeredUrl": "https://www/aztexmgmt.com",
+        "correctedUrl": "https://aztexmgmt.com",
+        "remainingBlocker": (
+            "The corrected site loads, but no public Privacy Policy or Terms page was found."
+        ),
+    },
+}
+
+BUCKET_LABELS = {
+    "fix_confident": "Fix now, high confidence",
+    "fix_will_still_fail": "Fix now, but will still fail",
+    "client_blocked": "Blocked on client",
+    "needs_triage": "Needs triage",
+}
+
+
+def confidence_bucket(campaign: dict, company: str) -> dict:
+    """Classify failures by approval confidence, not by nominal action owner."""
+    codes = {
+        int(error.get("error_code"))
+        for error in campaign.get("errors") or []
+        if isinstance(error, dict) and error.get("error_code")
+    }
+    if company in KNOWN_BRAND_RECORD_FIXES:
+        bucket = "fix_will_still_fail"
+        detail = (
+            "Entrata can correct the registered brand URL, but the empirically tested replacement "
+            "still lacks required public evidence. Do not expect re-review to pass after that fix alone."
+        )
+    elif codes & CLIENT_BLOCKER_CODES:
+        bucket = "client_blocked"
+        detail = (
+            "The carrier found a defect in the client's public website: access, business information, "
+            "Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+        )
+    elif codes & TRIAGE_CODES:
+        bucket = "needs_triage"
+        detail = (
+            "The rejection does not prove whether the registered value, submitted URL, or public site "
+            "is wrong. Compare all three before assigning or resubmitting."
+        )
+    else:
+        bucket = "fix_will_still_fail"
+        detail = (
+            "Entrata can correct rejected submission text, but the live target did not pass the full "
+            "HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+        )
+    return {
+        "confidenceBucket": bucket,
+        "confidenceBucketLabel": BUCKET_LABELS[bucket],
+        "confidenceBucketDetail": detail,
+    }
 
 
 def first_website(message_flow: str | None) -> str:
@@ -62,16 +126,18 @@ def action_for_campaign(campaign: dict, company: str) -> dict:
         detail = (
             "Entrata registered AMG's company website as https://www.amgnevada.com, which the "
             "reviewer could not open because its security certificate does not cover that address. "
-            "Correct the registered company-website field to https://amgnevada.com. For rows also "
+            "Correct the registered company-website field to https://amgnevada.com for accuracy, but "
+            "do not resubmit yet: the corrected site has a public Privacy Policy but no public Terms "
+            "page. For rows also "
             "showing a sign-up rejection, compare the public form with the submitted sign-up "
             "description and remove any claim about a phone field or consent checkbox that is not "
-            "actually visible. Follow the approved-template change process, then resubmit for a new "
-            "carrier review. The tracker data does not provide a reliable review-time estimate."
+            "actually visible. The client must publish the missing website evidence before re-review "
+            "is likely to pass."
         )
         return {
             "actionCategory": "Entrata — wrong URL registered",
-            "actionOwner": "Entrata",
-            "actionItem": "Correct AMG website to https://amgnevada.com; verify the sign-up claim; resubmit.",
+            "actionOwner": "Entrata + client",
+            "actionItem": "Fix AMG's URL for accuracy; client website work is still required before resubmission.",
             "actionDetail": detail,
         }
 
@@ -402,6 +468,7 @@ def main() -> None:
                 or "",
             )
             action = action_for_campaign(campaign, row["company"])
+            bucket = confidence_bucket(campaign, row["company"])
             errors = []
             for error in campaign.get("errors") or []:
                 if isinstance(error, dict):
@@ -423,6 +490,7 @@ def main() -> None:
                 "errors": errors,
                 "usesTemplateA": TEMPLATE_A_MARKER in (campaign.get("message_flow") or "").lower(),
                 **action,
+                **bucket,
             }
         except Exception as error:
             return {**result, "liveStatus": "LOOKUP_ERROR", "error": str(error)}
@@ -440,6 +508,20 @@ def main() -> None:
     failure_action_summary = Counter(
         row.get("actionCategory", "Unknown — needs triage") for row in failed
     )
+    confidence_bucket_summary = Counter(
+        row.get("confidenceBucket", "needs_triage") for row in failed
+    )
+    brand_website_rollup = []
+    for company, fix in KNOWN_BRAND_RECORD_FIXES.items():
+        affected = sum(row["company"] == company for row in failed)
+        if affected:
+            brand_website_rollup.append(
+                {
+                    "company": company,
+                    "affectedCampaigns": affected,
+                    **fix,
+                }
+            )
     template_a_failed = [row for row in failed if row.get("usesTemplateA")]
     unmapped_clients = []
     for client, cid in oxp_mappings.items():
@@ -484,6 +566,27 @@ def main() -> None:
         "excludedCount": len(excluded),
         "summary": dict(summary),
         "failureActionSummary": dict(failure_action_summary),
+        "confidenceBucketSummary": {
+            key: confidence_bucket_summary.get(key, 0)
+            for key in BUCKET_LABELS
+        },
+        "confidenceBucketLabels": BUCKET_LABELS,
+        "siteVerification": {
+            "testedAt": "2026-09-16T15:57:00Z",
+            "uniqueTargetsTested": 23,
+            "fullyPassed": 0,
+            "requirements": [
+                "valid HTTPS",
+                "public Privacy Policy",
+                "public Terms",
+                "served opt-in control when claimed",
+            ],
+            "note": (
+                "Headless browser verification covered all 21 unique property URLs in the possible "
+                "Entrata-copy-fix set plus corrected AMG and Aztex brand targets. None passed every check."
+            ),
+        },
+        "brandWebsiteRollup": brand_website_rollup,
         "templateAVerdict": {
             "failedUsingTemplateA": len(template_a_failed),
             "knownWebsiteOrUrlPrimary": sum(

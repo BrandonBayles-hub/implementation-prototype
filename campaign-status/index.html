@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <meta name="ui-build" content="2026-09-15-d" />
+    <meta name="ui-build" content="2026-09-16-a" />
     <title>A2P Campaign Status</title>
     <style>
       :root {
@@ -51,8 +51,22 @@
       .verdict { padding: 15px 17px; background: #f5f7ff; border: 1px solid #ccd5f3; border-radius: 12px; color: #344054; font-size: 13px; line-height: 1.5; margin-bottom: 18px; }
       .verdict strong { color: #182230; }
       .verdict-counts { margin-top: 7px; color: #475467; font-size: 12px; }
+      .confidence { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 17px; margin-bottom: 18px; box-shadow: 0 5px 18px rgba(62, 47, 39, .05); }
+      .confidence h2 { margin: 0 0 4px; font-size: 18px; letter-spacing: -.02em; }
+      .confidence-intro { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+      .bucket-grid { display: grid; grid-template-columns: repeat(4, minmax(160px, 1fr)); gap: 10px; }
+      .bucket-card { text-align: left; padding: 13px; min-height: 102px; border-radius: 11px; }
+      .bucket-card .bucket-value { display: block; font-size: 27px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+      .bucket-card .bucket-label { display: block; color: var(--ink); font-size: 12px; font-weight: 760; }
+      .bucket-card .bucket-sub { display: block; color: var(--muted); font-size: 10px; line-height: 1.35; margin-top: 4px; }
+      .bucket-card[data-bucket="fix_confident"] .bucket-value { color: var(--approved); }
+      .bucket-card[data-bucket="fix_will_still_fail"] .bucket-value { color: #9a6700; }
+      .bucket-card[data-bucket="client_blocked"] .bucket-value { color: var(--failed); }
+      .bucket-card[data-bucket="needs_triage"] .bucket-value { color: var(--missing); }
+      .brand-rollup { margin-top: 12px; padding: 12px 13px; border-radius: 10px; background: #f8fafc; color: #344054; font-size: 12px; line-height: 1.5; }
+      .brand-rollup strong { color: #182230; }
       .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 5px 18px rgba(62, 47, 39, .05); }
-      .toolbar { display: grid; grid-template-columns: minmax(240px, 1fr) 160px 190px 210px 220px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
+      .toolbar { display: grid; grid-template-columns: minmax(220px, 1fr) 145px 180px 205px 205px 190px auto; gap: 10px; padding: 14px; border-bottom: 1px solid var(--line); }
       input, select, button { font: inherit; }
       input, select { width: 100%; border: 1px solid #d8cec8; border-radius: 9px; background: #fff; padding: 10px 11px; color: var(--ink); outline: none; }
       input:focus, select:focus { border-color: #b97955; box-shadow: 0 0 0 3px rgba(185, 121, 85, .12); }
@@ -95,6 +109,7 @@
       footer { color: var(--muted); font-size: 11px; margin-top: 13px; display: flex; justify-content: space-between; gap: 16px; }
       @media (max-width: 1050px) {
         .summary { grid-template-columns: repeat(3, 1fr); }
+        .bucket-grid { grid-template-columns: repeat(2, 1fr); }
         .toolbar { grid-template-columns: 1fr 1fr; }
         header { flex-direction: column; }
         .freshness { width: 100%; }
@@ -102,6 +117,7 @@
       @media (max-width: 650px) {
         .shell { padding: 20px 14px 40px; }
         .summary { grid-template-columns: 1fr 1fr; }
+        .bucket-grid { grid-template-columns: 1fr; }
         .toolbar { grid-template-columns: 1fr; }
       }
     </style>
@@ -128,6 +144,18 @@
         <div class="card missing"><div class="label">Needs investigation</div><div class="value" id="missing">—</div><div class="sub">no matching live service</div></div>
       </section>
 
+      <section class="confidence" id="confidence-summary">
+        <h2>What can we actually fix?</h2>
+        <div class="confidence-intro" id="confidence-intro">Loading current failed-campaign evidence…</div>
+        <div class="bucket-grid">
+          <button class="bucket-card" data-bucket="fix_confident"><span class="bucket-value" id="bucket-fix-confident">—</span><span class="bucket-label">Fix now, high confidence</span><span class="bucket-sub">We control it and verified the corrected target.</span></button>
+          <button class="bucket-card" data-bucket="fix_will_still_fail"><span class="bucket-value" id="bucket-fix-still-fail">—</span><span class="bucket-label">Fix now, but will still fail</span><span class="bucket-sub">Accuracy fix available; website evidence still fails.</span></button>
+          <button class="bucket-card" data-bucket="client_blocked"><span class="bucket-value" id="bucket-client-blocked">—</span><span class="bucket-label">Blocked on client</span><span class="bucket-sub">Client must change public website evidence.</span></button>
+          <button class="bucket-card" data-bucket="needs_triage"><span class="bucket-value" id="bucket-needs-triage">—</span><span class="bucket-label">Needs triage</span><span class="bucket-sub">Rejection does not identify a safe correction.</span></button>
+        </div>
+        <div class="brand-rollup" id="brand-rollup"><strong>Brand-level leverage:</strong> Loading…</div>
+      </section>
+
       <div class="stale" id="stale-banner">
         <span>●</span>
         <div><strong>You are viewing an outdated version of this page.</strong> Your browser cached an older copy, so columns and layout may be missing. Reload to get the current version.</div>
@@ -144,6 +172,7 @@
           <input id="search" type="search" placeholder="Search property, client, CID, property ID, or carrier reference…" />
           <select id="status"><option value="">All live statuses</option></select>
           <select id="client"><option value="">All clients</option></select>
+          <select id="bucket"><option value="">All confidence buckets</option></select>
           <select id="action"><option value="">All action owners</option></select>
           <select id="source"><option value="">All cohort sources</option><option>Original property cohort</option><option>OXP submitted client list</option></select>
           <button id="refresh" type="button">Reload last scan</button>
@@ -223,7 +252,7 @@
       // Bumped whenever this page's markup or script changes. Compared against the
       // published ui-version.json so a browser running a cached copy of this file
       // can tell the reader instead of silently showing an old layout.
-      const UI_BUILD = "2026-09-15-d";
+      const UI_BUILD = "2026-09-16-a";
 
       async function checkForStaleShell() {
         try {
@@ -285,6 +314,16 @@
         $("freshness-title").textContent = `Last updated: ${dateText(data.generatedAt)}`;
         $("freshness-detail").textContent = "Twilio is queried every 15 minutes. This button reloads the last published scan — it does not call Twilio.";
         $("notice").innerHTML = `<span>●</span><div><strong>${data.oxpClientCount.toLocaleString()} OXP Submitted clients reconciled.</strong> ${data.oxpClientsAlreadyInOriginalCohort.toLocaleString()} were already in the property cohort; ${data.oxpNetNewClientCount.toLocaleString()} are net-new. ${data.oxpNotOnOriginalMigrationCount.toLocaleString()} were marked as not on the original migration list. ${data.unmappedClients.length.toLocaleString()} could not be confidently mapped to a Twilio subaccount.</div>`;
+        const bucketCounts = data.confidenceBucketSummary || {};
+        $("bucket-fix-confident").textContent = Number(bucketCounts.fix_confident || 0).toLocaleString();
+        $("bucket-fix-still-fail").textContent = Number(bucketCounts.fix_will_still_fail || 0).toLocaleString();
+        $("bucket-client-blocked").textContent = Number(bucketCounts.client_blocked || 0).toLocaleString();
+        $("bucket-needs-triage").textContent = Number(bucketCounts.needs_triage || 0).toLocaleString();
+        const verification = data.siteVerification || {};
+        $("confidence-intro").textContent = `${failed.toLocaleString()} current failures. ${Number(verification.uniqueTargetsTested || 0).toLocaleString()} possible fix targets tested against HTTPS, Privacy, Terms, and claimed opt-in controls; ${Number(verification.fullyPassed || 0).toLocaleString()} passed every check. Click a bucket to filter.`;
+        const brandRows = data.brandWebsiteRollup || [];
+        const brandCampaigns = brandRows.reduce((sum, row) => sum + Number(row.affectedCampaigns || 0), 0);
+        $("brand-rollup").innerHTML = `<strong>Brand-level leverage:</strong> Correcting ${brandRows.length.toLocaleString()} registered brand websites removes a brand-level blocker from ${brandCampaigns.toLocaleString()} campaigns: ${brandRows.map((row) => `${esc(row.company)} (${Number(row.affectedCampaigns).toLocaleString()})`).join(" · ")}. This does not mean those campaigns are ready to resubmit; the replacement sites still fail at least one required check.`;
         const verdict = data.templateAVerdict || {};
         const actionCounts = data.failureActionSummary || {};
         const entrataFixable = Object.entries(actionCounts).filter(([name]) => name.startsWith("Entrata")).reduce((sum, [, count]) => sum + count, 0);
@@ -298,11 +337,13 @@
         const fillSelect = (id, placeholder, values) => {
           const select = $(id);
           const previous = select.value;
-          select.innerHTML = `<option value="">${placeholder}</option>${values.map((value) => `<option>${esc(value)}</option>`).join("")}`;
-          if (previous && values.includes(previous)) select.value = previous;
+          const options = values.map((value) => typeof value === "object" ? value : ({ value, label: value }));
+          select.innerHTML = `<option value="">${placeholder}</option>${options.map((option) => `<option value="${esc(option.value)}">${esc(option.label)}</option>`).join("")}`;
+          if (previous && options.some((option) => option.value === previous)) select.value = previous;
         };
         fillSelect("status", "All live statuses", [...new Set(data.campaigns.map((row) => statusMeta(row.liveStatus).label))].sort());
         fillSelect("client", "All clients", [...new Set(data.campaigns.map((row) => row.company))].sort());
+        fillSelect("bucket", "All confidence buckets", Object.entries(data.confidenceBucketLabels || {}).map(([value, label]) => ({ value, label })));
         fillSelect("action", "All action owners", [...new Set(data.campaigns.map((row) => row.actionCategory).filter(Boolean))].sort());
       }
 
@@ -310,12 +351,13 @@
         const query = $("search").value.trim().toLowerCase();
         const status = $("status").value;
         const client = $("client").value;
+        const bucket = $("bucket").value;
         const action = $("action").value;
         const source = $("source").value;
         const filtered = data.campaigns.filter((row) => {
           const meta = statusMeta(row.liveStatus);
-          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId, row.actionCategory, row.actionOwner, row.actionItem, row.actionDetail, ...(row.cohortOrigins || [])].join(" ").toLowerCase();
-          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client) && (!action || row.actionCategory === action) && (!source || (row.cohortOrigins || []).includes(source));
+          const haystack = [row.property, row.company, row.cid, row.propertyId, row.tcrCampaignId, row.confidenceBucketLabel, row.actionCategory, row.actionOwner, row.actionItem, row.actionDetail, ...(row.cohortOrigins || [])].join(" ").toLowerCase();
+          return (!query || haystack.includes(query)) && (!status || meta.label === status) && (!client || row.company === client) && (!bucket || row.confidenceBucket === bucket) && (!action || row.actionCategory === action) && (!source || (row.cohortOrigins || []).includes(source));
         });
         $("countline").textContent = `Showing ${filtered.length.toLocaleString()} of ${data.total.toLocaleString()} monitored properties`;
         $("empty").hidden = filtered.length > 0;
@@ -333,13 +375,20 @@
             <td>${esc(row.paigeStatus)}</td>
             <td>${rowDateText(row.dateUpdated || row.dateCreated)}</td>
             <td><div class="id">${row.tcrCampaignId ? esc(row.tcrCampaignId) : "Pending"}</div></td>
-            <td class="action">${row.actionItem ? `<span class="action-owner">${esc(row.actionCategory)}</span><span class="action-short">${esc(row.actionItem)}</span><details><summary>Why this failed + exact steps</summary><div class="action-detail">${esc(row.actionDetail)}</div></details>` : "—"}</td>
+            <td class="action">${row.actionItem ? `<span class="action-owner">${esc(row.confidenceBucketLabel || row.actionCategory)}</span><span class="action-short">${esc(row.actionItem)}</span><details><summary>Why this failed + exact steps</summary><div class="action-detail">${esc(row.confidenceBucketDetail)} ${esc(row.actionDetail)}</div></details>` : "—"}</td>
             <td class="issue">${issue}</td>
           </tr>`;
         }).join("");
       }
 
-      ["search", "status", "client", "action", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
+      ["search", "status", "client", "bucket", "action", "source"].forEach((id) => $(id).addEventListener(id === "search" ? "input" : "change", render));
+      document.querySelectorAll(".bucket-card").forEach((button) => button.addEventListener("click", () => {
+        $("status").value = "Failed";
+        $("bucket").value = button.dataset.bucket;
+        $("search").value = "";
+        render();
+        document.querySelector(".panel").scrollIntoView({ behavior: "smooth", block: "start" });
+      }));
       function showFailedOnly() {
         $("status").value = "Failed";
         $("search").value = "";

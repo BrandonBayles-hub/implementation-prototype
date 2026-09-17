@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T15:59:37.673659+00:00",
+  "generatedAt": "2026-09-17T16:14:39.418012+00:00",
   "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -77,23 +77,23 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 1600,
-    "FAILED": 226,
+    "FAILED": 227,
     "NO_CAMPAIGN": 1,
-    "IN_PROGRESS": 6,
+    "IN_PROGRESS": 5,
     "SERVICE_NOT_FOUND": 3
   },
   "failureActionSummary": {
     "Entrata \u2014 wrong URL registered": 35,
     "Entrata \u2014 template/copy": 24,
     "Client \u2014 website": 126,
-    "Unknown \u2014 needs triage": 40,
+    "Unknown \u2014 needs triage": 41,
     "Entrata \u2014 website publishing": 1
   },
   "confidenceBucketSummary": {
     "fix_confident": 0,
     "fix_will_still_fail": 59,
     "client_blocked": 130,
-    "needs_triage": 37
+    "needs_triage": 38
   },
   "confidenceBucketLabels": {
     "fix_confident": "Fix now, high confidence",
@@ -130,9 +130,9 @@
     }
   ],
   "templateAVerdict": {
-    "failedUsingTemplateA": 174,
+    "failedUsingTemplateA": 175,
     "knownWebsiteOrUrlPrimary": 133,
-    "needsUrlTriage": 40,
+    "needsUrlTriage": 41,
     "contentErrorRows": 19
   },
   "scanErrors": [],
@@ -553,16 +553,16 @@
       "dateUpdated": "2026-09-11T21:53:54Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30886,
@@ -679,12 +679,12 @@
       "dateUpdated": "2026-09-11T21:53:59Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -717,20 +717,20 @@
       "dateUpdated": "2026-09-11T21:54:07Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -763,20 +763,20 @@
       "dateUpdated": "2026-09-11T21:54:15Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -851,16 +851,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -893,12 +893,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -931,12 +931,12 @@
       "dateUpdated": "2026-09-11T21:54:29Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -969,16 +969,16 @@
       "dateUpdated": "2026-09-11T21:54:31Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
@@ -1015,20 +1015,20 @@
       "dateUpdated": "2026-09-11T21:54:33Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -1061,20 +1061,20 @@
       "dateUpdated": "2026-09-11T21:54:36Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -1107,16 +1107,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1297,12 +1297,12 @@
       "dateUpdated": "2026-09-11T21:54:48Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1335,12 +1335,12 @@
       "dateUpdated": "2026-09-11T21:54:50Z",
       "errors": [
         {
-          "code": 30927,
-          "description": "The campaign submission has been reviewed and rejected because the opt-in consent is for a different company than the registered brand."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30927,
+          "description": "The campaign submission has been reviewed and rejected because the opt-in consent is for a different company than the registered brand."
         }
       ],
       "usesTemplateA": false,
@@ -1407,12 +1407,12 @@
       "dateUpdated": "2026-09-11T21:54:57Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1479,8 +1479,8 @@
       "dateUpdated": "2026-09-11T21:55:00Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
@@ -1491,8 +1491,8 @@
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -1525,12 +1525,12 @@
       "dateUpdated": "2026-09-11T21:55:03Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1563,20 +1563,20 @@
       "dateUpdated": "2026-09-11T21:55:06Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1747,12 +1747,12 @@
       "dateUpdated": "2026-09-14T17:57:56Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -4369,12 +4369,12 @@
       "dateUpdated": "2026-09-14T18:07:04Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -8887,12 +8887,12 @@
       "dateUpdated": "2026-09-11T23:18:29Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30907,
           "description": "The campaign submission has been reviewed and rejected because the provided website URL does not match the Brand and Campaign registered."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -19434,12 +19434,12 @@
       "dateUpdated": "2026-09-15T16:54:35Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -19705,12 +19705,12 @@
       "dateUpdated": "2026-09-15T16:54:48Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -19812,12 +19812,12 @@
       "dateUpdated": "2026-09-15T16:54:17Z",
       "errors": [
         {
-          "code": 30922,
-          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30922,
+          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
         }
       ],
       "usesTemplateA": true,
@@ -19915,12 +19915,12 @@
       "dateUpdated": "2026-09-15T16:54:31Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -20223,12 +20223,12 @@
       "dateUpdated": "2026-09-15T16:54:32Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -20391,12 +20391,12 @@
       "dateUpdated": "2026-09-15T16:55:01Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -20734,12 +20734,12 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -23200,19 +23200,24 @@
       "serviceName": "Entrata_19530_1311202",
       "serviceCreated": "2026-09-14T16:06:07Z",
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-16T17:24:03Z",
       "dateUpdated": "2026-09-16T17:24:03Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30880,
+          "description": "The campaign submission has been reviewed and it was rejected because of an unknown reason."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+      "actionCategory": "Unknown \u2014 needs triage",
+      "actionOwner": "Entrata",
+      "actionItem": "Needs triage \u2014 inspect the carrier's rejected fields before changing anything.",
+      "actionDetail": "The available rejection does not identify a safe correction. Entrata must open the read-only carrier record, note every rejected field, compare each value with the public website and registered business, and document the exact mismatch before choosing a fix. Do not guess or resubmit unchanged.",
+      "confidenceBucket": "needs_triage",
+      "confidenceBucketLabel": "Needs triage",
+      "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
     },
     {
       "company": "Liberty Asset Group",
@@ -25029,12 +25034,12 @@
       "dateUpdated": "2026-09-15T17:14:04Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30907,
           "description": "The campaign submission has been reviewed and rejected because the provided website URL does not match the Brand and Campaign registered."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -30377,12 +30382,12 @@
       "dateUpdated": "2026-08-21T01:35:44Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30893,
@@ -30451,12 +30456,12 @@
       "dateUpdated": "2026-08-21T01:35:39Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30893,
@@ -30549,12 +30554,12 @@
       "dateUpdated": "2026-08-21T01:35:39Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30893,
@@ -30618,12 +30623,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -30655,16 +30660,16 @@
       "dateUpdated": "2026-08-21T01:35:41Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30893,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -30770,12 +30775,12 @@
       "dateUpdated": "2026-08-21T01:35:40Z",
       "errors": [
         {
-          "code": 30893,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
-        },
-        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+        },
+        {
+          "code": 30893,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid sample message content."
         },
         {
           "code": 30909,
@@ -31063,12 +31068,12 @@
       "dateUpdated": "2026-09-11T21:26:24Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -31508,12 +31513,12 @@
       "dateUpdated": "2026-09-11T21:26:47Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -31682,12 +31687,12 @@
       "dateUpdated": "2026-09-11T21:26:58Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -31822,12 +31827,12 @@
       "dateUpdated": "2026-09-11T21:27:02Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -31928,12 +31933,12 @@
       "dateUpdated": "2026-09-11T21:27:10Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -32424,12 +32429,12 @@
       "dateUpdated": "2026-09-16T16:21:45Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30922,
           "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -36309,12 +36314,12 @@
       "dateUpdated": "2026-09-14T16:46:34Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -36422,12 +36427,12 @@
       "dateUpdated": "2026-09-14T16:47:09Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -40996,16 +41001,16 @@
       "dateUpdated": "2026-09-15T18:00:40Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
         },
         {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         },
         {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,

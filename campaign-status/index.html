@@ -213,7 +213,7 @@
         if (["VERIFIED", "APPROVED"].includes(value)) return { label: "Approved", css: "approved" };
         if (["IN_PROGRESS", "PENDING", "PENDING_REVIEW"].includes(value)) return { label: "Pending", css: "pending" };
         if (value === "FAILED") return { label: "Failed", css: "failed" };
-        if (["SERVICE_NOT_FOUND", "NO_CAMPAIGN"].includes(value)) return { label: "Needs investigation", css: "missing" };
+        if (["SERVICE_NOT_FOUND", "NO_CAMPAIGN", "NO_SERVICE", "NO_SUBACCOUNT"].includes(value)) return { label: "Needs investigation", css: "missing" };
         return { label: value.replaceAll("_", " "), css: "other" };
       };
       const errorMeaning = (code) => ({
@@ -303,9 +303,10 @@
         const approved = (summary.VERIFIED || 0) + (summary.APPROVED || 0);
         const pending = (summary.IN_PROGRESS || 0) + (summary.PENDING || 0) + (summary.PENDING_REVIEW || 0);
         const failed = summary.FAILED || 0;
-        const missing = (summary.SERVICE_NOT_FOUND || 0) + (summary.NO_CAMPAIGN || 0) + (summary.LOOKUP_ERROR || 0);
+        const missing = (summary.SERVICE_NOT_FOUND || 0) + (summary.NO_CAMPAIGN || 0) + (summary.LOOKUP_ERROR || 0)
+          + (summary.NO_SERVICE || 0) + (summary.NO_SUBACCOUNT || 0);
         $("total").textContent = data.total.toLocaleString();
-        $("total-sub").textContent = `${data.originalPropertyCount.toLocaleString()} original · ${data.oxpAddedPropertyCount.toLocaleString()} added`;
+        $("total-sub").textContent = `${data.originalPropertyCount.toLocaleString()} original · ${data.oxpAddedPropertyCount.toLocaleString()} added · ${(data.remediationAddedPropertyCount || 0).toLocaleString()} remediation`;
         $("approved").textContent = approved.toLocaleString();
         $("pending").textContent = pending.toLocaleString();
         $("failed").textContent = failed.toLocaleString();
@@ -366,7 +367,10 @@
           const errors = row.errors || [];
           const issue = errors.length
             ? errors.map((error) => `${esc(errorMeaning(error.code))} <span class="meta">(carrier code ${esc(error.code || "unknown")})</span>`).join("<br>")
-            : row.liveStatus === "SERVICE_NOT_FOUND" ? "No current Messaging Service matched this property ID." : "—";
+            : row.liveStatus === "SERVICE_NOT_FOUND" ? "No current Messaging Service matched this property ID."
+            : row.liveStatus === "NO_SERVICE" ? "Twilio subaccount exists but holds no Entrata messaging service, so no campaign was ever created."
+            : row.liveStatus === "NO_SUBACCOUNT" ? "No readable Twilio subaccount for this client."
+            : "—";
           return `<tr>
             <td><span class="badge ${meta.css}">${esc(meta.label)}</span></td>
             <td><div class="property">${esc(row.property)}</div><div class="meta">Property ID ${esc(row.propertyId)}</div></td>

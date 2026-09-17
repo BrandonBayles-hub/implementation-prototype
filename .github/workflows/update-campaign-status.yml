@@ -43,12 +43,15 @@ jobs:
           total = data["total"]
           original = data["originalPropertyCount"]
           added = data["oxpAddedPropertyCount"]
+          remediation = data["remediationAddedPropertyCount"]
 
-          # The cohort is the original submitted-property list plus the properties
-          # pulled in by the OXP client reconciliation, so the expected total is
-          # derived from the scan rather than pinned to a single hard-coded number.
+          # The cohort is the original submitted-property list, plus the properties pulled
+          # in by the OXP client reconciliation, plus clients added for active remediation,
+          # so the expected total is derived from the scan rather than hard-coded.
           assert original == 575, f"Original cohort should be 575 properties, got {original}"
-          assert total == original + added, f"total {total} != original {original} + OXP-added {added}"
+          assert total == original + added + remediation, (
+              f"total {total} != original {original} + OXP-added {added} + remediation {remediation}"
+          )
           assert not data.get("scanErrors"), f"Twilio account scans failed: {data['scanErrors']}"
           assert sum(data["summary"].values()) == total, (
               f"Status totals {sum(data['summary'].values())} do not equal cohort {total}"

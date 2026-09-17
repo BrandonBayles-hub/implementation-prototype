@@ -249,5 +249,12 @@
     "Watkins Realty Services, LLC",
     "Yellow Tree Property Management",
     "Yugo Austin"
-  ]
+  ],
+  "additionalTrackedClients": {
+    "RISE Residential": {
+      "cid": "18068",
+      "origin": "Active remediation list",
+      "status": "Active remediation"
+    }
+  }
 }

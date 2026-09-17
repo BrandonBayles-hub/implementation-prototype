@@ -360,105 +360,203 @@ def main() -> None:
         for client in oxp_clients
     }
 
+    # Clients under active A2P remediation that are on neither source list. Without these
+    # the tracker silently reported zero rows for them (RISE had 12 live campaigns).
+    extra_clients = oxp_source.get("additionalTrackedClients", {})
+    client_mappings = dict(oxp_mappings)
+    client_origin = {client: "OXP submitted client list" for client in oxp_clients}
+    client_status = {client: oxp_source["status"] for client in oxp_clients}
+    for client, meta in extra_clients.items():
+        client_mappings[client] = meta["cid"]
+        client_origin[client] = meta.get("origin", "Active remediation list")
+        client_status[client] = meta.get("status", "Active remediation")
+
     accounts = paged(
         "https://api.twilio.com/2010-04-01/Accounts.json",
         "accounts",
         MASTER_SID,
         MASTER_TOKEN,
     )
-    account_by_cid = {}
+    # A CID can have several subaccounts with the identical Entrata_Subaccount_{cid}
+    # friendly name (Green Alpha/102127 has seven). Last-wins picked an empty shell and
+    # made the client vanish from the tracker, so keep every candidate and resolve later.
+    accounts_by_cid: dict[str, list[dict]] = {}
     for account in accounts:
         match = re.search(r"Entrata_Subaccount_(\d+)", account.get("friendly_name") or "")
         if match:
-            account_by_cid[match.group(1)] = account
+            accounts_by_cid.setdefault(match.group(1), []).append(account)
 
     target_cids = sorted(
         {row["cid"] for row in tracked}
-        | {cid for cid in oxp_mappings.values() if cid}
+        | {cid for cid in client_mappings.values() if cid}
     )
     inventories: dict[str, list[dict]] = {}
     auth_by_cid: dict[str, tuple[str, str]] = {}
     scan_errors: list[dict] = []
 
+    duplicate_subaccounts: list[dict] = []
     with ThreadPoolExecutor(max_workers=18) as pool:
-        futures = {
-            pool.submit(fetch_inventory, (cid, account_by_cid[cid])): cid
-            for cid in target_cids
-            if cid in account_by_cid
-        }
+        futures = {}
+        for cid in target_cids:
+            for account in accounts_by_cid.get(cid, []):
+                futures[pool.submit(fetch_inventory, (cid, account))] = cid
+        per_cid: dict[str, list[tuple[tuple[str, str], list[dict]]]] = {}
         for future in as_completed(futures):
             cid = futures[future]
             try:
                 resolved_cid, auth, services = future.result()
-                auth_by_cid[resolved_cid] = auth
-                inventories[resolved_cid] = services
+                per_cid.setdefault(resolved_cid, []).append((auth, services))
             except Exception as error:
                 scan_errors.append({"cid": cid, "error": str(error)})
+
+    # Prefer the subaccount that actually holds messaging services.
+    for cid, results in per_cid.items():
+        auth, services = max(results, key=lambda pair: len(pair[1]))
+        auth_by_cid[cid] = auth
+        inventories[cid] = services
+        if len(results) > 1:
+            duplicate_subaccounts.append(
+                {
+                    # Deliberately no account SID: this file is published publicly.
+                    "cid": cid,
+                    "subaccountCount": len(results),
+                    "serviceCount": len(services),
+                    "allEmpty": all(not svc for _, svc in results),
+                }
+            )
 
     tracked_by_key = {
         (row["cid"], row["propertyId"]): row
         for row in tracked
     }
-    for client, cid in oxp_mappings.items():
-        if not cid or cid not in inventories:
+    tracked_by_service: dict[tuple[str, str], dict] = {}
+    for client, cid in client_mappings.items():
+        origin = client_origin[client]
+        if not cid:
             continue
         not_on_original = normalize_name(client) not in migration_names
+        if cid not in inventories:
+            # The client maps to a Twilio subaccount we could not read, or to none at all.
+            # Emit a visible row instead of dropping the client from the tracker.
+            tracked.append(
+                {
+                    "company": client,
+                    "cid": cid,
+                    "property": "No Twilio subaccount reachable",
+                    "propertyId": "",
+                    "paigeStatus": client_status[client],
+                    "sourceDisposition": "client_level_expansion",
+                    "cohortOrigins": [origin],
+                    "notOnOriginalMigration": not_on_original,
+                    "forcedLiveStatus": "NO_SUBACCOUNT",
+                }
+            )
+            continue
+
+        matched_any = False
         for service in inventories[cid]:
+            # Service names carry an optional numeric suffix (Entrata_18068_1136553_16602).
+            # Requiring a bare propertyId hid five of RISE's twelve live campaigns.
             match = re.fullmatch(
-                rf"Entrata_{re.escape(cid)}_(\d+)",
+                rf"Entrata_{re.escape(cid)}_(\d+)(?:_(\d+))?",
                 service.get("friendly_name") or "",
             )
             if not match:
                 continue
+            matched_any = True
             property_id = match.group(1)
-            key = (cid, property_id)
-            existing = tracked_by_key.get(key)
+            existing = tracked_by_key.get((cid, property_id))
             if existing:
-                if "OXP submitted client list" not in existing["cohortOrigins"]:
-                    existing["cohortOrigins"].append("OXP submitted client list")
+                if origin not in existing["cohortOrigins"]:
+                    existing["cohortOrigins"].append(origin)
                 existing["notOnOriginalMigration"] = not_on_original
+                continue
+            key = (cid, service["friendly_name"])
+            if key in tracked_by_service:
                 continue
             row = {
                 "company": client,
                 "cid": cid,
                 "property": f"Property {property_id}",
                 "propertyId": property_id,
-                "paigeStatus": oxp_source["status"],
+                "serviceNameMatch": service["friendly_name"],
+                "paigeStatus": client_status[client],
                 "sourceDisposition": "client_level_expansion",
-                "cohortOrigins": ["OXP submitted client list"],
+                "cohortOrigins": [origin],
                 "notOnOriginalMigration": not_on_original,
             }
             tracked.append(row)
-            tracked_by_key[key] = row
+            tracked_by_service[key] = row
+
+        if not matched_any and not any(
+            row["cid"] == cid and row["company"] == client for row in tracked
+        ):
+            tracked.append(
+                {
+                    "company": client,
+                    "cid": cid,
+                    "property": "No Entrata messaging service in Twilio",
+                    "propertyId": "",
+                    "paigeStatus": client_status[client],
+                    "sourceDisposition": "client_level_expansion",
+                    "cohortOrigins": [origin],
+                    "notOnOriginalMigration": not_on_original,
+                    "forcedLiveStatus": "NO_SERVICE",
+                }
+            )
 
     def check(row: dict) -> dict:
         cid = row["cid"]
         result = {**row}
+        if row.get("forcedLiveStatus"):
+            return {**result, "liveStatus": row["forcedLiveStatus"], "submitted": False}
         services = inventories.get(cid, [])
         expected_name = f"Entrata_{cid}_{row['propertyId']}"
-        exact = [
-            service
-            for service in services
-            if (service.get("friendly_name") or "") == expected_name
-        ]
-        candidates = exact
+        if row.get("serviceNameMatch"):
+            candidates = [
+                service
+                for service in services
+                if (service.get("friendly_name") or "") == row["serviceNameMatch"]
+            ]
+        else:
+            candidates = [
+                service
+                for service in services
+                if (service.get("friendly_name") or "") == expected_name
+            ] or [
+                # Suffixed variants (Entrata_18068_1136553_16602) are the same property.
+                service
+                for service in services
+                if (service.get("friendly_name") or "").startswith(f"{expected_name}_")
+            ]
         if not candidates:
             return {**result, "liveStatus": "SERVICE_NOT_FOUND", "submitted": False}
 
-        service = max(candidates, key=lambda value: value.get("date_created") or "")
-        result.update(
-            {
-                "serviceName": service.get("friendly_name"),
-                "serviceCreated": service.get("date_created"),
-            }
-        )
+        candidates.sort(key=lambda value: value.get("date_created") or "", reverse=True)
         try:
             auth = auth_by_cid[cid]
-            compliance = request_json(
-                f"https://messaging.twilio.com/v1/Services/{service['sid']}/Compliance/Usa2p",
-                *auth,
-                params={"PageSize": 50},
-            ).get("compliance", [])
+            # A property can own several identically named services (RISE 1224822 has three).
+            # Reading only the newest reported NO_CAMPAIGN over a live VERIFIED campaign, so
+            # read every candidate and keep the service that actually holds a campaign.
+            compliance: list[dict] = []
+            service = candidates[0]
+            for option in candidates:
+                found = request_json(
+                    f"https://messaging.twilio.com/v1/Services/{option['sid']}/Compliance/Usa2p",
+                    *auth,
+                    params={"PageSize": 50},
+                ).get("compliance", [])
+                if found:
+                    service, compliance = option, found
+                    break
+            result.update(
+                {
+                    "serviceName": service.get("friendly_name"),
+                    "serviceCreated": service.get("date_created"),
+                    "serviceSid": service.get("sid"),
+                    "duplicateServiceCount": len(candidates),
+                }
+            )
             if not compliance:
                 return {**result, "liveStatus": "NO_CAMPAIGN", "submitted": False}
             campaign = max(
@@ -529,7 +627,7 @@ def main() -> None:
             unmapped_clients.append(
                 {"company": client, "reason": "No confident CID match"}
             )
-        elif cid not in account_by_cid:
+        elif cid not in accounts_by_cid:
             unmapped_clients.append(
                 {"company": client, "cid": cid, "reason": "Twilio subaccount not found"}
             )
@@ -557,12 +655,32 @@ def main() -> None:
             for client in oxp_clients
         ),
         "oxpMappedClientCount": len(oxp_clients) - len(unmapped_clients),
+        "remediationAddedPropertyCount": sum(
+            "Original property cohort" not in row["cohortOrigins"]
+            and "OXP submitted client list" not in row["cohortOrigins"]
+            for row in campaigns
+        ),
         "oxpAddedPropertyCount": sum(
             "OXP submitted client list" in row["cohortOrigins"]
             and "Original property cohort" not in row["cohortOrigins"]
             for row in campaigns
         ),
         "unmappedClients": unmapped_clients,
+        "additionalTrackedClients": [
+            {
+                "company": client,
+                "cid": meta["cid"],
+                "origin": client_origin[client],
+                "propertiesFound": sum(
+                    row["company"] == client and row["cid"] == meta["cid"]
+                    for row in campaigns
+                ),
+            }
+            for client, meta in extra_clients.items()
+        ],
+        "duplicateSubaccounts": sorted(
+            duplicate_subaccounts, key=lambda row: -row["subaccountCount"]
+        ),
         "excludedCount": len(excluded),
         "summary": dict(summary),
         "failureActionSummary": dict(failure_action_summary),

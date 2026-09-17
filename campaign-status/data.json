@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T20:00:29.228427+00:00",
+  "generatedAt": "2026-09-17T20:13:17.190509+00:00",
   "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -103,8 +103,10 @@
   "failureActionSummary": {
     "Entrata \u2014 wrong URL registered": 29,
     "Entrata \u2014 template/copy": 11,
-    "Client \u2014 website": 111,
-    "Unknown \u2014 needs triage": 42
+    "Client \u2014 privacy policy wording": 43,
+    "Carrier \u2014 contradicted by evidence": 28,
+    "Client \u2014 website": 60,
+    "Unknown \u2014 needs triage": 22
   },
   "confidenceBucketSummary": {
     "fix_confident": 0,
@@ -141,8 +143,8 @@
   ],
   "templateAVerdict": {
     "failedUsingTemplateA": 153,
-    "knownWebsiteOrUrlPrimary": 111,
-    "needsUrlTriage": 41,
+    "knownWebsiteOrUrlPrimary": 60,
+    "needsUrlTriage": 21,
     "contentErrorRows": 17
   },
   "scanErrors": [],
@@ -552,16 +554,16 @@
       "dateUpdated": "2026-09-11T21:53:51Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30886,
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -600,16 +602,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -768,16 +770,16 @@
       "dateUpdated": "2026-09-11T21:54:07Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30886,
@@ -820,12 +822,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30891,
@@ -864,12 +866,12 @@
       "dateUpdated": "2026-09-11T21:54:10Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -908,16 +910,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1032,20 +1034,20 @@
       "dateUpdated": "2026-09-11T21:54:31Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -1080,16 +1082,16 @@
       "dateUpdated": "2026-09-11T21:54:33Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30886,
@@ -1132,16 +1134,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -1376,12 +1378,12 @@
       "dateUpdated": "2026-09-11T21:54:48Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1656,20 +1658,20 @@
       "dateUpdated": "2026-09-11T21:55:06Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1736,10 +1738,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://canterburyhouse.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 2 submitted sites loaded publicly and 2 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 2 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "Axia Living",
+        "sitesTested": 2,
+        "sitesPubliclyReachable": 2,
+        "sitesWithReachablePrivacy": 2,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 2,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -1772,10 +1784,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://chateaucreole.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 2 submitted sites loaded publicly and 2 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 2 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "Axia Living",
+        "sitesTested": 2,
+        "sitesPubliclyReachable": 2,
+        "sitesWithReachablePrivacy": 2,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 2,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3228,10 +3250,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3345,10 +3377,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3408,10 +3450,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3444,10 +3496,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3480,10 +3542,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3543,10 +3615,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3579,10 +3661,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3615,10 +3707,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3651,10 +3753,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3714,10 +3826,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3750,10 +3872,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3786,10 +3918,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3849,10 +3991,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3885,10 +4037,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3921,10 +4083,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3957,10 +4129,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -3993,10 +4175,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4056,10 +4248,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4200,10 +4402,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4236,10 +4448,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4299,10 +4521,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4335,10 +4567,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4371,10 +4613,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4407,10 +4659,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4470,10 +4732,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4506,10 +4778,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4542,10 +4824,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -4578,10 +4870,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must make its company website publicly viewable without a password.",
-      "actionDetail": "Please publish a company page that anyone can open without a username or password. The page must show your legal business name, physical address, phone number, business email, and a link to your privacy policy. The carrier reviewer reached a login screen instead of public business information, so it could not verify the company. Send Paige or Brandon the public URL once it is live; Entrata will then resubmit it for carrier review.",
+      "actionCategory": "Carrier \u2014 contradicted by evidence",
+      "actionOwner": "Entrata (challenge with Twilio)",
+      "actionItem": "Do not send this to the client \u2014 the site is public. Challenge the rejection with Twilio.",
+      "actionDetail": "The carrier rejected this as 'website requires authentication', but all 28 submitted sites for this client were rendered on 2026-09-17 and every one loaded publicly with no login and a reachable privacy policy. The rejection does not match the live site, so asking the client to unlock a website that is already public will not resolve it. Open a Twilio support case with the campaign SID and the rendered evidence, and separately add the mobile/SMS disclosure block to the privacy policy, which is the one real gap we measured.",
+      "evidence": {
+        "company": "BRC Real Estate",
+        "sitesTested": 28,
+        "sitesPubliclyReachable": 28,
+        "sitesWithReachablePrivacy": 28,
+        "privacyPdfOnly": 21,
+        "privacyMissingSmsClause": 28,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -6708,12 +7010,12 @@
       "dateUpdated": "2026-05-21T16:32:43Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30917,
           "description": "The campaign submission has been reviewed and rejected because the multiple opt-in workflow description is incomplete or unclear."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -25485,19 +25787,29 @@
       "dateUpdated": "2026-09-15T16:54:35Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://jamestownevillage.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25557,10 +25869,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://30elm.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -25593,10 +25915,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://taylorgarden.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -25633,10 +25965,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://bayway.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25664,19 +26006,29 @@
       "dateUpdated": "2026-09-15T16:54:37Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://lidgerwood.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25704,19 +26056,29 @@
       "dateUpdated": "2026-09-15T16:54:38Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://madisonapartments.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25749,10 +26111,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://monroegardens.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -25789,10 +26161,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://vineandwatson.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25829,10 +26211,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://thefairview.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25865,10 +26257,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://174polifly.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -25896,19 +26298,29 @@
       "dateUpdated": "2026-09-15T16:54:17Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30922,
           "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://25fairmount.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -25941,10 +26353,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://cambridge.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -25977,10 +26399,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://fairleigh.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26008,19 +26440,29 @@
       "dateUpdated": "2026-09-15T16:54:31Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://gibraltar.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26053,10 +26495,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://hudsonstreet.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26093,10 +26545,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://mckinley.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26124,19 +26586,29 @@
       "dateUpdated": "2026-09-15T16:54:41Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://oliviaterrace.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26191,19 +26663,29 @@
       "dateUpdated": "2026-09-15T16:54:43Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://southpark.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26236,10 +26718,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://templeapartments.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26272,10 +26764,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://11fairmount.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26303,19 +26805,29 @@
       "dateUpdated": "2026-09-15T16:54:24Z",
       "errors": [
         {
-          "code": 30922,
-          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30922,
+          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://belmontestates.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26352,10 +26864,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://holmdelpoint.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26383,19 +26905,29 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://liberty.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26432,10 +26964,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://lloydmanor.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26468,10 +27010,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://valleybrook.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26535,10 +27087,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://456kinderkamack.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26647,19 +27209,29 @@
       "dateUpdated": "2026-09-15T16:54:19Z",
       "errors": [
         {
-          "code": 30922,
-          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30922,
+          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://54north.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26692,10 +27264,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://82chestnut.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26728,10 +27310,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://ettrickterrace.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26768,10 +27360,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://schopmann.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26808,10 +27410,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://caldwellterrace.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26844,10 +27456,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://theavion.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -26902,19 +27524,29 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish a complete, public text-messaging privacy policy.",
-      "actionDetail": "Please publish a Privacy Policy page linked from https://kentvillage.prospectportal.com that opens without a login. It must explain what personal information is collected, how phone numbers are used for text messages, that mobile information is not sold or shared with third parties for marketing, expected message frequency, how to stop messages by replying STOP, how to get help, and how to contact your company. The reviewer could not find a compliant policy. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -26947,10 +27579,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://destinaplaza.prospectportal.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 34 submitted sites loaded publicly and 34 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 34 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "JP Management",
+        "sitesTested": 34,
+        "sitesPubliclyReachable": 34,
+        "sitesWithReachablePrivacy": 34,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 34,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -32153,12 +32795,12 @@
       "dateUpdated": "2026-09-15T17:14:04Z",
       "errors": [
         {
-          "code": 30907,
-          "description": "The campaign submission has been reviewed and rejected because the provided website URL does not match the Brand and Campaign registered."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30907,
+          "description": "The campaign submission has been reviewed and rejected because the provided website URL does not match the Brand and Campaign registered."
         }
       ],
       "usesTemplateA": true,
@@ -32225,10 +32867,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://www.liveattheash.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 5 submitted sites loaded publicly and 5 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 4 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have.",
+      "evidence": {
+        "company": "Maslow's",
+        "sitesTested": 5,
+        "sitesPubliclyReachable": 5,
+        "sitesWithReachablePrivacy": 5,
+        "privacyPdfOnly": 0,
+        "privacyMissingSmsClause": 4,
+        "privacyHasSmsClause": 1,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -38752,12 +39404,12 @@
       "dateUpdated": "2026-09-11T21:26:24Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -39147,12 +39799,12 @@
       "dateUpdated": "2026-09-11T21:26:36Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -39223,12 +39875,12 @@
       "dateUpdated": "2026-09-11T21:26:47Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,
@@ -45116,12 +45768,12 @@
       "dateUpdated": "2026-09-14T16:46:34Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -45880,12 +46532,12 @@
       "dateUpdated": "2026-09-15T17:49:54Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -50903,16 +51555,16 @@
       "dateUpdated": "2026-09-15T18:00:40Z",
       "errors": [
         {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
         }
       ],
       "usesTemplateA": true,
@@ -54062,10 +54714,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://blueheronpointetownhomes.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -54125,10 +54787,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://northgateofcanton.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -54188,10 +54860,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Needs triage \u2014 inspect the carrier's rejected fields before changing anything.",
-      "actionDetail": "The available rejection does not identify a safe correction. Entrata must open the read-only carrier record, note every rejected field, compare each value with the public website and registered business, and document the exact mismatch before choosing a fix. Do not guess or resubmit unchanged.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -54251,10 +54933,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Compare the submitted website with the registered business; correct the mismatch.",
-      "actionDetail": "The reviewer checked https://harrisonroyaloak.com against the legal business registered for messaging and could not validate that they belong together. Entrata must open the submitted site, compare its business name and domain with the registered legal company, and check the exact website stored in the business profile. If the submitted URL is wrong, replace it with the correct public property URL; if the business profile is wrong, correct that profile through the approved support path. The rejection does not identify which value is wrong, so do not guess. After the values match and the site is public, resubmit for carrier review.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "needs_triage",
       "confidenceBucketLabel": "Needs triage",
       "confidenceBucketDetail": "The rejection does not prove whether the registered value, submitted URL, or public site is wrong. Compare all three before assigning or resubmitting."
@@ -54314,10 +55006,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Needs triage \u2014 inspect the carrier's rejected fields before changing anything.",
-      "actionDetail": "The available rejection does not identify a safe correction. Entrata must open the read-only carrier record, note every rejected field, compare each value with the public website and registered business, and document the exact mismatch before choosing a fix. Do not guess or resubmit unchanged.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
@@ -54350,10 +55052,20 @@
         }
       ],
       "usesTemplateA": true,
-      "actionCategory": "Unknown \u2014 needs triage",
-      "actionOwner": "Entrata",
-      "actionItem": "Needs triage \u2014 inspect the carrier's rejected fields before changing anything.",
-      "actionDetail": "The available rejection does not identify a safe correction. Entrata must open the read-only carrier record, note every rejected field, compare each value with the public website and registered business, and document the exact mismatch before choosing a fix. Do not guess or resubmit unchanged.",
+      "actionCategory": "Client \u2014 privacy policy wording",
+      "actionOwner": "Client (wording change only)",
+      "actionItem": "Policy is already published \u2014 it needs the text-messaging paragraph added.",
+      "actionDetail": "Tested on 2026-09-17: all 6 submitted sites loaded publicly and 6 had a reachable privacy policy, so the client does NOT need to publish a policy or unlock a website. However 6 of those policies contain no text-messaging language at all. A2P review requires the policy to state that mobile phone numbers are collected for text messages, that mobile information is not sold or shared with third parties for marketing, the expected message frequency, and that STOP ends messages and HELP gets help. Ask the client to add that paragraph to the policy they already have. Note: 6 of these policies are PDFs; reviewers prefer an HTML page, so publishing it as a web page reduces the chance of another rejection.",
+      "evidence": {
+        "company": "VennPoint",
+        "sitesTested": 6,
+        "sitesPubliclyReachable": 6,
+        "sitesWithReachablePrivacy": 6,
+        "privacyPdfOnly": 6,
+        "privacyMissingSmsClause": 6,
+        "privacyHasSmsClause": 0,
+        "testedAt": "2026-09-17"
+      },
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."

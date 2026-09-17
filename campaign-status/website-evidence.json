@@ -1,0 +1,52 @@
+{
+  "102203": {
+    "company": "Axia Living",
+    "sitesTested": 2,
+    "sitesPubliclyReachable": 2,
+    "sitesWithReachablePrivacy": 2,
+    "privacyPdfOnly": 0,
+    "privacyMissingSmsClause": 2,
+    "privacyHasSmsClause": 0,
+    "testedAt": "2026-09-17"
+  },
+  "100130": {
+    "company": "BRC Real Estate",
+    "sitesTested": 28,
+    "sitesPubliclyReachable": 28,
+    "sitesWithReachablePrivacy": 28,
+    "privacyPdfOnly": 21,
+    "privacyMissingSmsClause": 28,
+    "privacyHasSmsClause": 0,
+    "testedAt": "2026-09-17"
+  },
+  "101935": {
+    "company": "JP Management",
+    "sitesTested": 34,
+    "sitesPubliclyReachable": 34,
+    "sitesWithReachablePrivacy": 34,
+    "privacyPdfOnly": 0,
+    "privacyMissingSmsClause": 34,
+    "privacyHasSmsClause": 0,
+    "testedAt": "2026-09-17"
+  },
+  "100808": {
+    "company": "VennPoint",
+    "sitesTested": 6,
+    "sitesPubliclyReachable": 6,
+    "sitesWithReachablePrivacy": 6,
+    "privacyPdfOnly": 6,
+    "privacyMissingSmsClause": 6,
+    "privacyHasSmsClause": 0,
+    "testedAt": "2026-09-17"
+  },
+  "101762": {
+    "company": "Maslow's",
+    "sitesTested": 5,
+    "sitesPubliclyReachable": 5,
+    "sitesWithReachablePrivacy": 5,
+    "privacyPdfOnly": 0,
+    "privacyMissingSmsClause": 4,
+    "privacyHasSmsClause": 1,
+    "testedAt": "2026-09-17"
+  }
+}

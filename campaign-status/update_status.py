@@ -21,6 +21,13 @@ SOURCE_PATH = Path(os.environ.get("CAMPAIGN_SOURCE_PATH", ROOT / "campaigns-sour
 OXP_SOURCE_PATH = Path(
     os.environ.get("OXP_CLIENT_SOURCE_PATH", ROOT / "oxp-clients-source.json")
 )
+# Measured, per-CID results of rendering every submitted website and reading its privacy
+# policy. Without this the tracker inferred "client must publish a policy" from the carrier
+# code alone and told clients to publish pages that were already live.
+EVIDENCE_PATH = Path(os.environ.get("WEBSITE_EVIDENCE_PATH", ROOT / "website-evidence.json"))
+WEBSITE_EVIDENCE = (
+    json.loads(EVIDENCE_PATH.read_text()) if EVIDENCE_PATH.exists() else {}
+)
 OUTPUT_PATH = Path(os.environ.get("CAMPAIGN_OUTPUT_PATH", ROOT / "data.json"))
 MASTER_SID = os.environ["TWILIO_ACCOUNT_SID"]
 MASTER_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
@@ -98,6 +105,65 @@ def first_website(message_flow: str | None) -> str:
     return match.group(0).rstrip(".,") if match else "the website named in the submission"
 
 
+def evidence_action(cid: str, codes: set[int]) -> dict:
+    """Prefer measured website evidence over inferring the fix from the carrier code.
+
+    Every site we rendered for these CIDs loaded publicly with a reachable privacy policy,
+    so "publish a privacy policy" and "make the site public" are both wrong. What the
+    policies lack is the mobile/SMS disclosure block that A2P review requires.
+    """
+    ev = WEBSITE_EVIDENCE.get(cid)
+    if not ev:
+        return {}
+    tested = ev.get("sitesTested") or 0
+    if not tested or ev.get("sitesPubliclyReachable") != tested:
+        return {}
+    missing = ev.get("privacyMissingSmsClause") or 0
+    reachable = ev.get("sitesWithReachablePrivacy") or 0
+
+    if 30921 in codes:
+        return {
+            "actionCategory": "Carrier — contradicted by evidence",
+            "actionOwner": "Entrata (challenge with Twilio)",
+            "actionItem": "Do not send this to the client — the site is public. Challenge the rejection with Twilio.",
+            "actionDetail": (
+                f"The carrier rejected this as 'website requires authentication', but all "
+                f"{tested} submitted sites for this client were rendered on {ev['testedAt']} and "
+                "every one loaded publicly with no login and a reachable privacy policy. The "
+                "rejection does not match the live site, so asking the client to unlock a website "
+                "that is already public will not resolve it. Open a Twilio support case with the "
+                "campaign SID and the rendered evidence, and separately add the mobile/SMS "
+                "disclosure block to the privacy policy, which is the one real gap we measured."
+            ),
+            "evidence": ev,
+        }
+
+    if codes & {30908, 30882, 30919, 30922, 30891} and reachable and missing:
+        return {
+            "actionCategory": "Client — privacy policy wording",
+            "actionOwner": "Client (wording change only)",
+            "actionItem": "Policy is already published — it needs the text-messaging paragraph added.",
+            "actionDetail": (
+                f"Tested on {ev['testedAt']}: all {tested} submitted sites loaded publicly and "
+                f"{reachable} had a reachable privacy policy, so the client does NOT need to "
+                f"publish a policy or unlock a website. However {missing} of those policies "
+                "contain no text-messaging language at all. A2P review requires the policy to "
+                "state that mobile phone numbers are collected for text messages, that mobile "
+                "information is not sold or shared with third parties for marketing, the expected "
+                "message frequency, and that STOP ends messages and HELP gets help. Ask the client "
+                "to add that paragraph to the policy they already have."
+                + (
+                    f" Note: {ev['privacyPdfOnly']} of these policies are PDFs; reviewers prefer an "
+                    "HTML page, so publishing it as a web page reduces the chance of another rejection."
+                    if ev.get("privacyPdfOnly")
+                    else ""
+                )
+            ),
+            "evidence": ev,
+        }
+    return {}
+
+
 def action_for_campaign(campaign: dict, company: str) -> dict:
     """Translate carrier failures into a short owner/action plus expandable detail."""
     status = (campaign.get("campaign_status") or "UNKNOWN").upper()
@@ -121,6 +187,11 @@ def action_for_campaign(campaign: dict, company: str) -> dict:
         if isinstance(error, dict) and error.get("error_code")
     }
     website = first_website(campaign.get("message_flow"))
+
+    # Measured evidence wins over code-based inference.
+    measured = evidence_action(campaign.get("_cid", ""), codes)
+    if measured:
+        return measured
 
     if company == "Advanced Management Group" and 30891 in codes:
         detail = (
@@ -565,7 +636,7 @@ def main() -> None:
                 or value.get("date_created")
                 or "",
             )
-            action = action_for_campaign(campaign, row["company"])
+            action = action_for_campaign({**campaign, "_cid": cid}, row["company"])
             bucket = confidence_bucket(campaign, row["company"])
             errors = []
             for error in campaign.get("errors") or []:

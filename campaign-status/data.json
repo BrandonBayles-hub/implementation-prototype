@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-09-17T20:45:39.163580+00:00",
+  "generatedAt": "2026-09-17T20:48:09.700758+00:00",
   "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
   "cohortDefinition": "Original property cohort union OXP Submitted clients from Paige's reconciliation",
-  "total": 2060,
+  "total": 2084,
   "originalPropertyCount": 575,
   "oxpClientCount": 119,
   "oxpClientsAlreadyInOriginalCohort": 65,
   "oxpNetNewClientCount": 54,
   "oxpNotOnOriginalMigrationCount": 55,
   "oxpMappedClientCount": 104,
-  "remediationAddedPropertyCount": 21,
+  "remediationAddedPropertyCount": 45,
   "oxpAddedPropertyCount": 1464,
   "unmappedClients": [
     {
@@ -81,6 +81,12 @@
       "cid": "18068",
       "origin": "Active remediation list",
       "propertiesFound": 21
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "origin": "ELI Orchestrator 2.0 ignition check",
+      "propertiesFound": 24
     }
   ],
   "duplicateSubaccounts": [
@@ -93,9 +99,9 @@
   ],
   "excludedCount": 41,
   "summary": {
-    "VERIFIED": 1823,
+    "VERIFIED": 1846,
     "FAILED": 193,
-    "IN_PROGRESS": 27,
+    "IN_PROGRESS": 28,
     "NO_CAMPAIGN": 13,
     "NO_SERVICE": 1,
     "SERVICE_NOT_FOUND": 3
@@ -442,12 +448,12 @@
       "dateUpdated": "2026-09-11T21:53:39Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -558,12 +564,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -598,20 +604,20 @@
       "dateUpdated": "2026-09-11T21:53:54Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -646,12 +652,12 @@
       "dateUpdated": "2026-09-11T21:53:57Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
@@ -690,12 +696,12 @@
       "dateUpdated": "2026-09-11T21:54:00Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -770,12 +776,12 @@
       "dateUpdated": "2026-09-11T21:54:07Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
@@ -822,16 +828,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -866,12 +872,12 @@
       "dateUpdated": "2026-09-11T21:54:10Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -906,20 +912,20 @@
       "dateUpdated": "2026-09-11T21:54:20Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -954,12 +960,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -994,12 +1000,12 @@
       "dateUpdated": "2026-09-11T21:54:29Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -1034,20 +1040,20 @@
       "dateUpdated": "2026-09-11T21:54:31Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1138,12 +1144,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1178,16 +1184,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1330,20 +1336,20 @@
       "dateUpdated": "2026-09-11T21:54:46Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1418,12 +1424,12 @@
       "dateUpdated": "2026-09-11T21:54:50Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30927,
           "description": "The campaign submission has been reviewed and rejected because the opt-in consent is for a different company than the registered brand."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1494,12 +1500,12 @@
       "dateUpdated": "2026-09-11T21:54:57Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1570,20 +1576,20 @@
       "dateUpdated": "2026-09-11T21:55:00Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1618,12 +1624,12 @@
       "dateUpdated": "2026-09-11T21:55:03Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1658,20 +1664,20 @@
       "dateUpdated": "2026-09-11T21:55:06Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -5086,12 +5092,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -26152,12 +26158,12 @@
       "dateUpdated": "2026-09-15T16:54:48Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -26202,12 +26208,12 @@
       "dateUpdated": "2026-09-15T16:54:30Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -26536,12 +26542,12 @@
       "dateUpdated": "2026-09-15T16:54:39Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -26855,12 +26861,12 @@
       "dateUpdated": "2026-09-15T16:54:32Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -26905,12 +26911,12 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -27351,12 +27357,12 @@
       "dateUpdated": "2026-09-15T16:54:43Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -27401,12 +27407,12 @@
       "dateUpdated": "2026-09-15T16:54:25Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30922,
           "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -27524,12 +27530,12 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -39823,12 +39829,12 @@
       "dateUpdated": "2026-09-11T21:26:47Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -41061,6 +41067,658 @@
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 100018007",
+      "propertyId": "100018007",
+      "serviceNameMatch": "Entrata_17698_100018007",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_100018007",
+      "serviceCreated": "2024-04-11T14:46:57Z",
+      "serviceSid": "MG31ecebf91026b8a0d5e4a5fb9f29fd47",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CMWEGKZ",
+      "dateCreated": "2024-04-11T14:46:57Z",
+      "dateUpdated": "2026-04-08T16:35:03Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 100087511",
+      "propertyId": "100087511",
+      "serviceNameMatch": "Entrata_17698_100087511",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_100087511",
+      "serviceCreated": "2025-12-03T16:34:18Z",
+      "serviceSid": "MG39c51240fe914190d2966aed28a8f7fc",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CAPPYOP",
+      "dateCreated": "2025-12-03T16:34:18Z",
+      "dateUpdated": "2025-12-03T16:34:18Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 100112456",
+      "propertyId": "100112456",
+      "serviceNameMatch": "Entrata_17698_100112456",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_100112456",
+      "serviceCreated": "2025-09-12T20:33:48Z",
+      "serviceSid": "MG23dcbdbb39ace522d3ef7f0ae1280fa7",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C2XBR3B",
+      "dateCreated": "2025-09-12T20:33:49Z",
+      "dateUpdated": "2026-03-11T23:24:30Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102199",
+      "propertyId": "1102199",
+      "serviceNameMatch": "Entrata_17698_1102199_14320",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102199_14320",
+      "serviceCreated": "2023-06-28T19:06:37Z",
+      "serviceSid": "MG59b7b61af4efe9adaf1e5f740907b12f",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CHGP1NC",
+      "dateCreated": "2023-06-28T19:06:37Z",
+      "dateUpdated": "2026-03-23T17:57:31Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102200",
+      "propertyId": "1102200",
+      "serviceNameMatch": "Entrata_17698_1102200_14601",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102200_14601",
+      "serviceCreated": "2023-06-28T19:07:25Z",
+      "serviceSid": "MG81860ff7487becf2a45037bf9a4f3e2f",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CJTRIYN",
+      "dateCreated": "2023-06-28T19:07:26Z",
+      "dateUpdated": "2026-03-23T17:53:22Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102202",
+      "propertyId": "1102202",
+      "serviceNameMatch": "Entrata_17698_1102202",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102202",
+      "serviceCreated": "2024-12-30T16:02:29Z",
+      "serviceSid": "MG8155efd181ffee2428da372ff195726d",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CTS7UX8",
+      "dateCreated": "2024-12-30T16:02:29Z",
+      "dateUpdated": "2026-03-16T21:43:33Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102205",
+      "propertyId": "1102205",
+      "serviceNameMatch": "Entrata_17698_1102205",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102205",
+      "serviceCreated": "2024-08-15T12:04:30Z",
+      "serviceSid": "MGba209b7fb8eb8bc8a679a9de5bfc113b",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C5A70TS",
+      "dateCreated": "2024-08-15T12:04:30Z",
+      "dateUpdated": "2026-06-05T11:18:23Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102208",
+      "propertyId": "1102208",
+      "serviceNameMatch": "Entrata_17698_1102208_13008",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102208_13008",
+      "serviceCreated": "2023-06-28T19:24:11Z",
+      "serviceSid": "MG08416ac1077d6cb69ac0bb3c2643cd56",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CB6WCXZ",
+      "dateCreated": "2023-06-28T19:24:11Z",
+      "dateUpdated": "2026-03-12T17:14:41Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102209",
+      "propertyId": "1102209",
+      "serviceNameMatch": "Entrata_17698_1102209_16050",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102209_16050",
+      "serviceCreated": "2023-06-28T19:24:48Z",
+      "serviceSid": "MG1371d576af0f88f587c1180baa436360",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C7PN0O5",
+      "dateCreated": "2023-06-28T19:24:49Z",
+      "dateUpdated": "2026-03-16T20:54:52Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102210",
+      "propertyId": "1102210",
+      "serviceNameMatch": "Entrata_17698_1102210_13922",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102210_13922",
+      "serviceCreated": "2023-06-28T19:25:19Z",
+      "serviceSid": "MG98d18b4e2b8018e6dc89ae1adead034f",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CKDGUWJ",
+      "dateCreated": "2023-06-28T19:25:19Z",
+      "dateUpdated": "2026-03-26T17:57:37Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102211",
+      "propertyId": "1102211",
+      "serviceNameMatch": "Entrata_17698_1102211_13682",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102211_13682",
+      "serviceCreated": "2023-06-28T19:25:58Z",
+      "serviceSid": "MG83692fbf3c240df77dc7db8fa39bf697",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C7MLKC3",
+      "dateCreated": "2023-06-28T19:25:58Z",
+      "dateUpdated": "2026-04-08T15:34:39Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102212",
+      "propertyId": "1102212",
+      "serviceNameMatch": "Entrata_17698_1102212_13830",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102212_13830",
+      "serviceCreated": "2023-06-28T19:26:27Z",
+      "serviceSid": "MG2ab3c4197fdcb5d1378413535aa2e99c",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C9RI8KG",
+      "dateCreated": "2023-06-28T19:26:27Z",
+      "dateUpdated": "2026-03-17T17:07:47Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102213",
+      "propertyId": "1102213",
+      "serviceNameMatch": "Entrata_17698_1102213_13835",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102213_13835",
+      "serviceCreated": "2023-06-28T19:27:02Z",
+      "serviceSid": "MG5111311333dceac33e81444a82965f18",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CBAV3EL",
+      "dateCreated": "2023-06-28T19:27:02Z",
+      "dateUpdated": "2026-03-17T16:39:03Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102214",
+      "propertyId": "1102214",
+      "serviceNameMatch": "Entrata_17698_1102214_14835",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102214_14835",
+      "serviceCreated": "2023-06-28T19:27:30Z",
+      "serviceSid": "MGdf1ba199e366414976eca8286406bec2",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C8JDJQQ",
+      "dateCreated": "2023-06-28T19:27:31Z",
+      "dateUpdated": "2026-03-17T18:10:04Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102216",
+      "propertyId": "1102216",
+      "serviceNameMatch": "Entrata_17698_1102216_13923",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102216_13923",
+      "serviceCreated": "2023-06-28T19:04:30Z",
+      "serviceSid": "MG626c4088873eb397d464bfd57883ea81",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CVUQNI6",
+      "dateCreated": "2023-06-28T19:04:30Z",
+      "dateUpdated": "2026-04-06T18:12:49Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102258",
+      "propertyId": "1102258",
+      "serviceNameMatch": "Entrata_17698_1102258_13098",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102258_13098",
+      "serviceCreated": "2023-06-28T19:28:51Z",
+      "serviceSid": "MG150795f05202adf0db17070c3c5182ba",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CKJGGZX",
+      "dateCreated": "2023-06-28T19:28:52Z",
+      "dateUpdated": "2026-03-17T20:42:20Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102259",
+      "propertyId": "1102259",
+      "serviceNameMatch": "Entrata_17698_1102259_14836",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102259_14836",
+      "serviceCreated": "2023-06-28T19:30:01Z",
+      "serviceSid": "MGf08ca9a2f676ad29d1eef20618de1fad",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFLOPLV",
+      "dateCreated": "2023-06-28T19:30:02Z",
+      "dateUpdated": "2026-03-16T20:55:33Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102264",
+      "propertyId": "1102264",
+      "serviceNameMatch": "Entrata_17698_1102264",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102264",
+      "serviceCreated": "2026-09-11T19:29:39Z",
+      "serviceSid": "MG752046f7192e834cca5ce3eba0d25cfd",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "IN_PROGRESS",
+      "tcrCampaignId": null,
+      "dateCreated": "2026-09-11T19:29:39Z",
+      "dateUpdated": "2026-09-11T19:29:39Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1102268",
+      "propertyId": "1102268",
+      "serviceNameMatch": "Entrata_17698_1102268_14321",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1102268_14321",
+      "serviceCreated": "2023-06-28T19:31:07Z",
+      "serviceSid": "MG740968677616a1713902f0faba125f90",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CH07RDZ",
+      "dateCreated": "2023-06-28T19:31:07Z",
+      "dateUpdated": "2026-03-16T23:10:02Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1134963",
+      "propertyId": "1134963",
+      "serviceNameMatch": "Entrata_17698_1134963_20698",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1134963_20698",
+      "serviceCreated": "2023-06-28T19:28:08Z",
+      "serviceSid": "MG089a0346810ab0969dcd8e56849675df",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CFFZEME",
+      "dateCreated": "2023-06-28T19:28:08Z",
+      "dateUpdated": "2026-03-12T00:43:43Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1162357",
+      "propertyId": "1162357",
+      "serviceNameMatch": "Entrata_17698_1162357",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1162357",
+      "serviceCreated": "2025-01-23T19:39:06Z",
+      "serviceSid": "MGca70157c9fb1fe2c6b4e3104185eefe8",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CRNFHWV",
+      "dateCreated": "2025-01-23T19:39:06Z",
+      "dateUpdated": "2026-06-05T11:18:24Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1282100",
+      "propertyId": "1282100",
+      "serviceNameMatch": "Entrata_17698_1282100",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1282100",
+      "serviceCreated": "2023-11-01T20:20:06Z",
+      "serviceSid": "MG804671118fabc8740863ad9b87873fc8",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C6TEBA9",
+      "dateCreated": "2023-11-01T20:20:06Z",
+      "dateUpdated": "2026-03-18T16:36:14Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1285351",
+      "propertyId": "1285351",
+      "serviceNameMatch": "Entrata_17698_1285351",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1285351",
+      "serviceCreated": "2023-11-22T18:48:39Z",
+      "serviceSid": "MG33a31fd284d0080f446285ef7a929242",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "C3UQ5HX",
+      "dateCreated": "2023-11-22T18:48:39Z",
+      "dateUpdated": "2026-03-17T17:17:54Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Paradigm Management Company",
+      "cid": "17698",
+      "property": "Property 1285352",
+      "propertyId": "1285352",
+      "serviceNameMatch": "Entrata_17698_1285352",
+      "paigeStatus": "Active remediation",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "ELI Orchestrator 2.0 ignition check"
+      ],
+      "notOnOriginalMigration": true,
+      "serviceName": "Entrata_17698_1285352",
+      "serviceCreated": "2023-11-22T18:50:28Z",
+      "serviceSid": "MGde038dd662602782b9f673b5bf23919e",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "VERIFIED",
+      "tcrCampaignId": "CSUQLSG",
+      "dateCreated": "2023-11-22T18:50:28Z",
+      "dateUpdated": "2026-03-11T23:21:12Z",
+      "errors": [],
+      "usesTemplateA": false,
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Patrician Management",
@@ -46480,12 +47138,12 @@
       "dateUpdated": "2026-09-15T17:49:54Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,

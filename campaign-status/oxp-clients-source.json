@@ -255,6 +255,11 @@
       "cid": "18068",
       "origin": "Active remediation list",
       "status": "Active remediation"
+    },
+    "Paradigm Management Company": {
+      "cid": "17698",
+      "origin": "ELI Orchestrator 2.0 ignition check",
+      "status": "Active remediation"
     }
   }
 }

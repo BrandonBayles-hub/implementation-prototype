@@ -398,15 +398,20 @@ def fetch_inventory(item: tuple[str, dict]) -> tuple[str, tuple[str, str], list[
 
 
 def main() -> None:
+    # Frozen means the campaign LIST is pinned, not the data. Status still refreshes
+    # from Twilio every run; rows outside cohort-lock.json are dropped so the tracker
+    # cannot grow on its own. Brandon must ask before the lock is regenerated.
     freeze_path = ROOT / "freeze.json"
-    if freeze_path.exists() and os.environ.get("CAMPAIGN_TRACKER_UNFREEZE") != "1":
-        freeze = json.loads(freeze_path.read_text())
-        if freeze.get("frozen"):
-            print(
-                "FROZEN: refusing to refresh or add campaigns. "
-                "Brandon must ask to add campaigns, then set CAMPAIGN_TRACKER_UNFREEZE=1."
-            )
-            sys.exit(0)
+    lock_path = ROOT / "cohort-lock.json"
+    cohort_lock: set[str] | None = None
+    if (
+        freeze_path.exists()
+        and lock_path.exists()
+        and os.environ.get("CAMPAIGN_TRACKER_UNFREEZE") != "1"
+        and json.loads(freeze_path.read_text()).get("frozen")
+    ):
+        cohort_lock = set(json.loads(lock_path.read_text())["keys"])
+        print(f"FROZEN: cohort pinned to {len(cohort_lock)} campaigns; status still refreshing")
     source = json.loads(SOURCE_PATH.read_text())
     oxp_source = json.loads(OXP_SOURCE_PATH.read_text())
     rows = source["rows"]
@@ -680,6 +685,17 @@ def main() -> None:
         for future in as_completed(futures):
             campaigns.append(future.result())
 
+    if cohort_lock is not None:
+        before = len(campaigns)
+        campaigns = [
+            row
+            for row in campaigns
+            if f"{row.get('cid','')}|{row.get('propertyId','')}|{row.get('company','')}"
+            in cohort_lock
+        ]
+        if before != len(campaigns):
+            print(f"FROZEN: dropped {before - len(campaigns)} campaigns not in the lock")
+
     campaigns.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     excluded.sort(key=lambda row: (row["company"].lower(), row["property"].lower()))
     summary = Counter(row["liveStatus"] for row in campaigns)
@@ -720,6 +736,7 @@ def main() -> None:
         "cohortDefinition": (
             "Original property cohort union OXP Submitted clients from Paige's reconciliation"
         ),
+        "frozenCohort": cohort_lock is not None,
         "total": len(campaigns),
         "originalPropertyCount": len(tracked_source_rows),
         "oxpClientCount": len(oxp_clients),

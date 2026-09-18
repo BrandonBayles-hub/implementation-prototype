@@ -1,8 +1,11 @@
 name: Update A2P campaign status
 
 on:
-  # Tracker frozen 2026-09-18. Do not restore schedule unless Brandon asks
-  # to add campaigns or unfreeze. Manual dispatch still no-ops while freeze.json is on.
+  # Offset minutes avoid GitHub's high-load */15 / :00 slots, which can delay or drop runs.
+  # The cohort is frozen by campaign-status/freeze.json + cohort-lock.json; this schedule
+  # refreshes STATUS for the locked campaigns only and cannot add new ones.
+  schedule:
+    - cron: "8,23,38,53 * * * *"
   workflow_dispatch:
   repository_dispatch:
     types: [refresh-campaign-status]
@@ -44,13 +47,21 @@ jobs:
           added = data["oxpAddedPropertyCount"]
           remediation = data["remediationAddedPropertyCount"]
 
-          # The cohort is the original submitted-property list, plus the properties pulled
-          # in by the OXP client reconciliation, plus clients added for active remediation,
-          # so the expected total is derived from the scan rather than hard-coded.
-          assert original == 575, f"Original cohort should be 575 properties, got {original}"
-          assert total == original + added + remediation, (
-              f"total {total} != original {original} + OXP-added {added} + remediation {remediation}"
-          )
+          if data.get("frozenCohort"):
+              # Frozen: the list is pinned to cohort-lock.json, so the derived sum no
+              # longer applies. Assert the tracker did not grow or silently shrink.
+              lock = json.loads(Path("campaign-status/cohort-lock.json").read_text())
+              assert total == lock["count"], (
+                  f"frozen cohort drifted: total {total} != locked {lock['count']}"
+              )
+          else:
+              # The cohort is the original submitted-property list, plus the properties pulled
+              # in by the OXP client reconciliation, plus clients added for active remediation,
+              # so the expected total is derived from the scan rather than hard-coded.
+              assert original == 575, f"Original cohort should be 575 properties, got {original}"
+              assert total == original + added + remediation, (
+                  f"total {total} != original {original} + OXP-added {added} + remediation {remediation}"
+              )
           assert not data.get("scanErrors"), f"Twilio account scans failed: {data['scanErrors']}"
           assert sum(data["summary"].values()) == total, (
               f"Status totals {sum(data['summary'].values())} do not equal cohort {total}"

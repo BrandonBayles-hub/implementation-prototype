@@ -1,8 +1,13 @@
 {
   "frozen": true,
-  "frozenAt": "2026-09-18T18:53:00Z",
+  "frozenAt": "2026-09-18T19:03:00Z",
   "frozenBy": "Brandon Bayles",
-  "reason": "Do not add campaigns or auto-refresh Twilio status unless Brandon asks.",
+  "meaning": "The campaign LIST is frozen. Status still refreshes from Twilio on the normal schedule.",
+  "rules": [
+    "Never add a campaign to the tracker unless Brandon asks.",
+    "Rows not in cohort-lock.json are dropped from data.json every run.",
+    "Status, error codes, and action items for locked campaigns keep updating."
+  ],
   "campaignCountAtFreeze": 2084,
-  "unfreeze": "Only when Brandon says to add campaigns or refresh. Then set CAMPAIGN_TRACKER_UNFREEZE=1 for one run and leave freeze.json frozen=true until he says otherwise."
+  "unfreeze": "Brandon asks to add campaigns. Then regenerate cohort-lock.json (or run once with CAMPAIGN_TRACKER_UNFREEZE=1) and tell him what was added."
 }

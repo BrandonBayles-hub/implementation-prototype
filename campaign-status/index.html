@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <meta name="ui-build" content="2026-09-16-a" />
+      <meta name="ui-build" content="2026-09-18-freeze" />
     <title>A2P Campaign Status</title>
     <style>
       :root {
@@ -128,7 +128,7 @@
         <div>
           <div class="eyebrow">ELI+ · A2P Registration</div>
           <h1>Campaign status tracker</h1>
-          <p class="lede">Status for the original submitted-property cohort plus properties found for Paige’s OXP Submitted client list. Twilio is queried every 15 minutes.</p>
+          <p class="lede">Frozen snapshot. Campaigns will not be added unless Brandon asks. Twilio is not on a 15-minute refresh.</p>
         </div>
         <div class="freshness">
           <strong id="freshness-title">Loading current status…</strong>
@@ -136,6 +136,7 @@
         </div>
       </header>
 
+      <div class="notice" id="freeze-banner"><strong>Frozen.</strong> This list is locked. No new campaigns and no scheduled Twilio refresh until Brandon unfreezes it.</div>
       <section class="summary">
         <div class="card"><div class="label">Monitored properties</div><div class="value" id="total">—</div><div class="sub" id="total-sub">original + OXP client expansion</div></div>
         <div class="card approved"><div class="label">Approved</div><div class="value" id="approved">—</div><div class="sub" id="approved-sub">—</div></div>
@@ -252,7 +253,7 @@
       // Bumped whenever this page's markup or script changes. Compared against the
       // published ui-version.json so a browser running a cached copy of this file
       // can tell the reader instead of silently showing an old layout.
-      const UI_BUILD = "2026-09-16-a";
+      const UI_BUILD = "2026-09-18-freeze";
 
       async function checkForStaleShell() {
         try {
@@ -286,7 +287,7 @@
           await load();
           const isNewScan = data.generatedAt !== previousGeneratedAt;
           button.textContent = isNewScan ? "Newer scan loaded ✓" : "Reloaded — no new scan ✓";
-          $("freshness-detail").innerHTML = `<span class="reload-flash">Checked at ${esc(clockText(new Date()))}.</span> ${isNewScan ? "This pulled in a newer published scan." : "The published scan has not changed since the last reload."} Twilio is queried every 15 minutes by a scheduled job. This button reloads the last published scan — it does not call Twilio.`;
+          $("freshness-detail").innerHTML = `<span class="reload-flash">Checked at ${esc(clockText(new Date()))}.</span> ${isNewScan ? "This pulled in a newer published scan." : "The published scan has not changed since the last reload."} Tracker is frozen. This button reloads the last published scan — it does not call Twilio.`;
         } catch (error) {
           button.textContent = "Reload failed";
           showError(error);
@@ -313,7 +314,7 @@
         $("missing").textContent = missing.toLocaleString();
         $("approved-sub").textContent = `${Math.round(approved / data.total * 100)}% approved`;
         $("freshness-title").textContent = `Last updated: ${dateText(data.generatedAt)}`;
-        $("freshness-detail").textContent = "Twilio is queried every 15 minutes. This button reloads the last published scan — it does not call Twilio.";
+        $("freshness-detail").textContent = "Tracker is frozen. This button reloads the last published scan — it does not call Twilio.";
         $("notice").innerHTML = `<span>●</span><div><strong>${data.oxpClientCount.toLocaleString()} OXP Submitted clients reconciled.</strong> ${data.oxpClientsAlreadyInOriginalCohort.toLocaleString()} were already in the property cohort; ${data.oxpNetNewClientCount.toLocaleString()} are net-new. ${data.oxpNotOnOriginalMigrationCount.toLocaleString()} were marked as not on the original migration list. ${data.unmappedClients.length.toLocaleString()} could not be confidently mapped to a Twilio subaccount.</div>`;
         const bucketCounts = data.confidenceBucketSummary || {};
         $("bucket-fix-confident").textContent = Number(bucketCounts.fix_confident || 0).toLocaleString();

@@ -1,0 +1,8 @@
+{
+  "frozen": true,
+  "frozenAt": "2026-09-18T18:53:00Z",
+  "frozenBy": "Brandon Bayles",
+  "reason": "Do not add campaigns or auto-refresh Twilio status unless Brandon asks.",
+  "campaignCountAtFreeze": 2084,
+  "unfreeze": "Only when Brandon says to add campaigns or refresh. Then set CAMPAIGN_TRACKER_UNFREEZE=1 for one run and leave freeze.json frozen=true until he says otherwise."
+}

@@ -1,9 +1,8 @@
 name: Update A2P campaign status
 
 on:
-  # Offset minutes avoid GitHub's high-load */15 / :00 slots, which can delay or drop runs.
-  schedule:
-    - cron: "8,23,38,53 * * * *"
+  # Tracker frozen 2026-09-18. Do not restore schedule unless Brandon asks
+  # to add campaigns or unfreeze. Manual dispatch still no-ops while freeze.json is on.
   workflow_dispatch:
   repository_dispatch:
     types: [refresh-campaign-status]

@@ -7,6 +7,7 @@ import base64
 import json
 import os
 import re
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -397,6 +398,15 @@ def fetch_inventory(item: tuple[str, dict]) -> tuple[str, tuple[str, str], list[
 
 
 def main() -> None:
+    freeze_path = ROOT / "freeze.json"
+    if freeze_path.exists() and os.environ.get("CAMPAIGN_TRACKER_UNFREEZE") != "1":
+        freeze = json.loads(freeze_path.read_text())
+        if freeze.get("frozen"):
+            print(
+                "FROZEN: refusing to refresh or add campaigns. "
+                "Brandon must ask to add campaigns, then set CAMPAIGN_TRACKER_UNFREEZE=1."
+            )
+            sys.exit(0)
     source = json.loads(SOURCE_PATH.read_text())
     oxp_source = json.loads(OXP_SOURCE_PATH.read_text())
     rows = source["rows"]

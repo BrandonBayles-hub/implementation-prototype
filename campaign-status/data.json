@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T19:59:14.225499+00:00",
+  "generatedAt": "2026-09-22T22:54:55.451950+00:00",
   "sourceWorkbook": "Campaign Reistration Draft + Eli+ OXP Reconciliation",
   "sourceTab": "campaign_submission_candidates_revised_colleen_v5_with_prospect_portal",
   "sourceGid": "1226632250",
@@ -101,11 +101,11 @@
   "excludedCount": 41,
   "summary": {
     "VERIFIED": 1870,
-    "FAILED": 176,
+    "FAILED": 166,
     "NO_CAMPAIGN": 13,
     "NO_SERVICE": 1,
     "SERVICE_NOT_FOUND": 3,
-    "IN_PROGRESS": 21
+    "IN_PROGRESS": 31
   },
   "failureActionSummary": {
     "Entrata \u2014 wrong URL registered": 34,
@@ -113,13 +113,13 @@
     "Client \u2014 privacy policy wording": 42,
     "Unknown \u2014 needs triage": 22,
     "Carrier \u2014 contradicted by evidence": 28,
-    "Client \u2014 website": 38,
+    "Client \u2014 website": 28,
     "Entrata \u2014 website publishing": 1
   },
   "confidenceBucketSummary": {
     "fix_confident": 0,
     "fix_will_still_fail": 46,
-    "client_blocked": 92,
+    "client_blocked": 82,
     "needs_triage": 38
   },
   "confidenceBucketLabels": {
@@ -157,8 +157,8 @@
     }
   ],
   "templateAVerdict": {
-    "failedUsingTemplateA": 135,
-    "knownWebsiteOrUrlPrimary": 44,
+    "failedUsingTemplateA": 125,
+    "knownWebsiteOrUrlPrimary": 34,
     "needsUrlTriage": 20,
     "contentErrorRows": 10
   },
@@ -573,12 +573,12 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -613,20 +613,20 @@
       "dateUpdated": "2026-09-11T21:53:54Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -661,16 +661,16 @@
       "dateUpdated": "2026-09-11T21:53:57Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -745,12 +745,12 @@
       "dateUpdated": "2026-09-11T21:53:59Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -785,20 +785,20 @@
       "dateUpdated": "2026-09-11T21:54:07Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
-        },
-        {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         }
       ],
       "usesTemplateA": false,
@@ -921,8 +921,8 @@
       "dateUpdated": "2026-09-11T21:54:20Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
           "code": 30896,
@@ -933,8 +933,8 @@
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -969,12 +969,12 @@
       "dateUpdated": "2026-09-11T21:54:17Z",
       "errors": [
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1009,12 +1009,12 @@
       "dateUpdated": "2026-09-11T21:54:29Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": false,
@@ -1049,20 +1049,20 @@
       "dateUpdated": "2026-09-11T21:54:31Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -1101,16 +1101,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1193,16 +1193,16 @@
       "dateUpdated": "2026-09-11T21:54:40Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1349,16 +1349,16 @@
           "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         },
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1393,12 +1393,12 @@
       "dateUpdated": "2026-09-11T21:54:48Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1509,12 +1509,12 @@
       "dateUpdated": "2026-09-11T21:54:57Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30909,
           "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": false,
@@ -1673,20 +1673,20 @@
       "dateUpdated": "2026-09-11T21:55:06Z",
       "errors": [
         {
-          "code": 30886,
-          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         },
         {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         },
         {
-          "code": 30909,
-          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
+          "code": 30886,
+          "description": "The campaign submission has been reviewed and it was rejected because of invalid campaign description."
         },
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+          "code": 30909,
+          "description": "The campaign submission has been reviewed and rejected due to issues verifying the Call to Action (CTA) provided for the campaign."
         }
       ],
       "usesTemplateA": false,
@@ -5127,12 +5127,12 @@
       "dateUpdated": "2026-09-14T17:23:32Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -25786,12 +25786,12 @@
       "dateUpdated": "2026-09-15T16:54:35Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -26585,12 +26585,12 @@
       "dateUpdated": "2026-09-15T16:54:41Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -26662,12 +26662,12 @@
       "dateUpdated": "2026-09-15T16:54:43Z",
       "errors": [
         {
-          "code": 30891,
-          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30891,
+          "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
         }
       ],
       "usesTemplateA": true,
@@ -26804,12 +26804,12 @@
       "dateUpdated": "2026-09-15T16:54:24Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30922,
           "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -26954,12 +26954,12 @@
       "dateUpdated": "2026-09-15T16:54:49Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -27208,12 +27208,12 @@
       "dateUpdated": "2026-09-15T16:54:19Z",
       "errors": [
         {
-          "code": 30922,
-          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
-        },
-        {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
+        },
+        {
+          "code": 30922,
+          "description": "The campaign submission has been reviewed and rejected because the provided website does not meet validation requirements."
         }
       ],
       "usesTemplateA": true,
@@ -27523,12 +27523,12 @@
       "dateUpdated": "2026-09-15T16:54:36Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30891,
           "description": "The campaign submission has been reviewed and it was rejected because of unverifiable website."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -39196,24 +39196,19 @@
       "serviceSid": "MGb953d14819f00344c186dfc883be5604",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:30Z",
-      "dateUpdated": "2026-09-21T16:29:30Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:04Z",
+      "dateUpdated": "2026-09-22T21:38:04Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39321,24 +39316,19 @@
       "serviceSid": "MGed343680cb26f8c20fe04c4d1bfb2485",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:38Z",
-      "dateUpdated": "2026-09-21T16:29:38Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:17Z",
+      "dateUpdated": "2026-09-22T21:38:17Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39388,24 +39378,19 @@
       "serviceSid": "MGa13b2ce903d806b62482a4def37a5890",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:40Z",
-      "dateUpdated": "2026-09-21T16:29:40Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:06Z",
+      "dateUpdated": "2026-09-22T21:38:06Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39513,24 +39498,19 @@
       "serviceSid": "MGcec56ae191c43cd4cfc4957140a185f2",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:45Z",
-      "dateUpdated": "2026-09-21T16:29:45Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:11Z",
+      "dateUpdated": "2026-09-22T21:38:11Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39580,24 +39560,19 @@
       "serviceSid": "MGaa74a3de15a0835c57568134df189e1e",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:48Z",
-      "dateUpdated": "2026-09-21T16:29:48Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:15Z",
+      "dateUpdated": "2026-09-22T21:38:15Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39616,19 +39591,24 @@
       "serviceSid": "MG88dc374043738218a1e3840e9e562302",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-21T16:29:49Z",
       "dateUpdated": "2026-09-21T16:29:49Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
+      "confidenceBucket": "client_blocked",
+      "confidenceBucketLabel": "Blocked on client",
+      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
     },
     {
       "company": "Palisade Property Management",
@@ -39736,24 +39716,19 @@
       "serviceSid": "MG04a6c019d5f4f4fd789c6b5d2504187b",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:56Z",
-      "dateUpdated": "2026-09-21T16:29:56Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:26Z",
+      "dateUpdated": "2026-09-22T21:38:26Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39799,24 +39774,19 @@
       "serviceSid": "MG19232c8585aa88ff4f33608c7646bf83",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:29:59Z",
-      "dateUpdated": "2026-09-21T16:29:59Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:20Z",
+      "dateUpdated": "2026-09-22T21:38:20Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39862,24 +39832,19 @@
       "serviceSid": "MGbe26ddd3d30873d63753987c9568050f",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:03Z",
-      "dateUpdated": "2026-09-21T16:30:03Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:29Z",
+      "dateUpdated": "2026-09-22T21:38:29Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39925,24 +39890,19 @@
       "serviceSid": "MG6243d369ca466ed3f1f60131db1c9fdc",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:07Z",
-      "dateUpdated": "2026-09-21T16:30:07Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:31Z",
+      "dateUpdated": "2026-09-22T21:38:31Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39961,24 +39921,19 @@
       "serviceSid": "MG50ef4be953cec30e7f98aa32972be2d0",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:09Z",
-      "dateUpdated": "2026-09-21T16:30:09Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:46Z",
+      "dateUpdated": "2026-09-22T21:38:46Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -39997,19 +39952,24 @@
       "serviceSid": "MG386bbc40177bb97b963c25cbd8ab1b18",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-21T16:30:10Z",
       "dateUpdated": "2026-09-21T16:30:10Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
+      "confidenceBucket": "client_blocked",
+      "confidenceBucketLabel": "Blocked on client",
+      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
     },
     {
       "company": "Palisade Property Management",
@@ -40055,24 +40015,19 @@
       "serviceSid": "MG2192cb6c5721a1f2e063187f0b90cde2",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:16Z",
-      "dateUpdated": "2026-09-21T16:30:16Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:40Z",
+      "dateUpdated": "2026-09-22T21:38:40Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -40122,19 +40077,24 @@
       "serviceSid": "MG93afe7021bc3570fd53e153ad34f750d",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-21T16:30:18Z",
       "dateUpdated": "2026-09-21T16:30:18Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
+      "confidenceBucket": "client_blocked",
+      "confidenceBucketLabel": "Blocked on client",
+      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
     },
     {
       "company": "Palisade Property Management",
@@ -40153,24 +40113,19 @@
       "serviceSid": "MG1c05563a14fa9634f8197f5a7371954a",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:19Z",
-      "dateUpdated": "2026-09-21T16:30:19Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:42Z",
+      "dateUpdated": "2026-09-22T21:38:42Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -40274,24 +40229,19 @@
       "serviceSid": "MGfc276c994efea7a2d92edbf7ecbd2850",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:31Z",
-      "dateUpdated": "2026-09-21T16:30:31Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:56Z",
+      "dateUpdated": "2026-09-22T21:38:56Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -40310,24 +40260,19 @@
       "serviceSid": "MG10c402f2fbb2c25285f23208be52c959",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "FAILED",
+      "liveStatus": "IN_PROGRESS",
       "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:32Z",
-      "dateUpdated": "2026-09-21T16:30:32Z",
-      "errors": [
-        {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
-        }
-      ],
+      "dateCreated": "2026-09-22T21:38:54Z",
+      "dateUpdated": "2026-09-22T21:38:54Z",
+      "errors": [],
       "usesTemplateA": true,
-      "actionCategory": "Client \u2014 website",
-      "actionOwner": "Client",
-      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
-      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
-      "confidenceBucket": "client_blocked",
-      "confidenceBucketLabel": "Blocked on client",
-      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -40539,19 +40484,24 @@
       "serviceSid": "MG47b435bbe9c4267f1f91e301210cf8bd",
       "duplicateServiceCount": 1,
       "submitted": true,
-      "liveStatus": "IN_PROGRESS",
+      "liveStatus": "FAILED",
       "tcrCampaignId": null,
       "dateCreated": "2026-09-21T16:30:24Z",
       "dateUpdated": "2026-09-21T16:30:24Z",
-      "errors": [],
+      "errors": [
+        {
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+        }
+      ],
       "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+      "actionCategory": "Client \u2014 website",
+      "actionOwner": "Client",
+      "actionItem": "Client must publish public text-messaging Terms & Conditions.",
+      "actionDetail": "Please publish a Terms & Conditions page linked from https://palisadeproperty.com that opens without a login. It must name the company sending texts, describe the messages, state expected frequency, say that message and data rates may apply, explain HELP and STOP, and link to the Privacy Policy. The reviewer looked for these terms and could not verify them. Send Paige or Brandon the final public URL; Entrata will verify it and resubmit for carrier review.",
+      "confidenceBucket": "client_blocked",
+      "confidenceBucketLabel": "Blocked on client",
+      "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
     },
     {
       "company": "Palisade Property Management",
@@ -40568,6 +40518,37 @@
       "serviceName": "Entrata_17329_1062807",
       "serviceCreated": "2026-09-11T21:27:26Z",
       "serviceSid": "MGc219a9af295c72b0eca26c4fa7d297cd",
+      "duplicateServiceCount": 1,
+      "submitted": true,
+      "liveStatus": "IN_PROGRESS",
+      "tcrCampaignId": null,
+      "dateCreated": "2026-09-22T21:38:49Z",
+      "dateUpdated": "2026-09-22T21:38:49Z",
+      "errors": [],
+      "usesTemplateA": true,
+      "actionCategory": "Twilio/Carrier \u2014 waiting",
+      "actionOwner": "Twilio/Carrier",
+      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
+      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
+      "confidenceBucket": "fix_will_still_fail",
+      "confidenceBucketLabel": "Fix now, but will still fail",
+      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
+    },
+    {
+      "company": "Palisade Property Management",
+      "cid": "17329",
+      "property": "Property 1062808",
+      "propertyId": "1062808",
+      "serviceNameMatch": "Entrata_17329_1062808",
+      "paigeStatus": "OXP Submitted",
+      "sourceDisposition": "client_level_expansion",
+      "cohortOrigins": [
+        "OXP submitted client list"
+      ],
+      "notOnOriginalMigration": false,
+      "serviceName": "Entrata_17329_1062808",
+      "serviceCreated": "2026-09-11T21:27:26Z",
+      "serviceSid": "MGd4b07f4598a589b4c6a123a2df09a5cf",
       "duplicateServiceCount": 1,
       "submitted": true,
       "liveStatus": "FAILED",
@@ -40588,37 +40569,6 @@
       "confidenceBucket": "client_blocked",
       "confidenceBucketLabel": "Blocked on client",
       "confidenceBucketDetail": "The carrier found a defect in the client's public website: access, business information, Privacy Policy, or Terms. Nothing changed only in Twilio can make that evidence valid."
-    },
-    {
-      "company": "Palisade Property Management",
-      "cid": "17329",
-      "property": "Property 1062808",
-      "propertyId": "1062808",
-      "serviceNameMatch": "Entrata_17329_1062808",
-      "paigeStatus": "OXP Submitted",
-      "sourceDisposition": "client_level_expansion",
-      "cohortOrigins": [
-        "OXP submitted client list"
-      ],
-      "notOnOriginalMigration": false,
-      "serviceName": "Entrata_17329_1062808",
-      "serviceCreated": "2026-09-11T21:27:26Z",
-      "serviceSid": "MGd4b07f4598a589b4c6a123a2df09a5cf",
-      "duplicateServiceCount": 1,
-      "submitted": true,
-      "liveStatus": "IN_PROGRESS",
-      "tcrCampaignId": null,
-      "dateCreated": "2026-09-21T16:30:29Z",
-      "dateUpdated": "2026-09-21T16:30:29Z",
-      "errors": [],
-      "usesTemplateA": true,
-      "actionCategory": "Twilio/Carrier \u2014 waiting",
-      "actionOwner": "Twilio/Carrier",
-      "actionItem": "Nothing to do \u2014 carrier review is still in progress.",
-      "actionDetail": "No correction is requested. The registration has been submitted and is waiting for the mobile carriers' reviewer. Do not resubmit or edit it while review is open.",
-      "confidenceBucket": "fix_will_still_fail",
-      "confidenceBucketLabel": "Fix now, but will still fail",
-      "confidenceBucketDetail": "Entrata can correct rejected submission text, but the live target did not pass the full HTTPS + Privacy + Terms + claimed opt-in-control verification. Fixing copy alone is unsafe."
     },
     {
       "company": "Palisade Property Management",
@@ -46933,12 +46883,12 @@
       "dateUpdated": "2026-09-15T17:49:54Z",
       "errors": [
         {
-          "code": 30908,
-          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
-        },
-        {
           "code": 30896,
           "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+        },
+        {
+          "code": 30908,
+          "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         }
       ],
       "usesTemplateA": true,
@@ -51960,16 +51910,16 @@
       "dateUpdated": "2026-09-15T18:00:40Z",
       "errors": [
         {
-          "code": 30896,
-          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
+          "code": 30882,
+          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
         },
         {
           "code": 30908,
           "description": "The campaign submission has been reviewed and rejected because a compliant privacy policy can not be verified."
         },
         {
-          "code": 30882,
-          "description": "The campaign submission has been reviewed and it was rejected due to Terms and Conditions issues."
+          "code": 30896,
+          "description": "The campaign submission has been reviewed and it was rejected because of provided Opt-in information."
         }
       ],
       "usesTemplateA": true,

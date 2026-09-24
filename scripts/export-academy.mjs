@@ -23,7 +23,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const protoRoot = path.resolve(__dirname, "..");
-const srcRoot = "/Users/bbayles/Developer/entrata-product/entrata-3.0-my-team";
+const srcRoot = "/Users/bbayles/Developer/entrata-product/entrata-3.0-add-content-formats";
 const destDir = path.join(protoRoot, "academy");
 const stashSuffix = ".academy-export-stash";
 const apiDir = path.join(srcRoot, "app", "api");
@@ -177,6 +177,7 @@ Not the previous Vite toy slice.
 
 - **My Team** — Regional + 2027 seeded on first open. Remind is local-only.
 - **Add course** — SCORM / PDF / Video / Job aid / Link. Format follows uploadKind.
+- Edit locks package structure (zip is not SCORM). Title/description stay on the same version; a package change can create a draft v2 while v1 stays published.
 
 Demo data. Remind does not send email. Files are filenames only.
 Sidebar links to other Max pages 404 in this slim export — use

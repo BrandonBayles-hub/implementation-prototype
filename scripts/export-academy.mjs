@@ -94,13 +94,12 @@ function walk(dir, out = []) {
 
 function isPageFile(file) {
   const base = path.basename(file);
+  // Do not stash app/api route.ts here — the whole api dir is moved aside.
   return (
     base === "page.tsx" ||
     base === "page.ts" ||
     base === "page.jsx" ||
-    base === "page.js" ||
-    base === "route.ts" ||
-    base === "route.js"
+    base === "page.js"
   );
 }
 

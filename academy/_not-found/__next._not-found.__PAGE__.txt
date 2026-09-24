@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[21130,["130","static/chunks/130-29297e73675e3e4e.js","345","static/chunks/app/not-found-ad350aed51753768.js"],""]
+3:I[84538,[],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex min-h-[40vh] flex-col items-center justify-center gap-4","children":[["$","p",null,{"className":"text-[length:var(--text-body)] font-medium text-foreground","children":"This page could not be found."}],["$","$L2",null,{"href":"/","className":"text-[length:var(--text-body)] font-medium text-foreground underline hover:no-underline","children":"Go to home"}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"qgIDlE3QVfI3cUyutIKVA"}
+5:null

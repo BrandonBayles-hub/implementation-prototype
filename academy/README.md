@@ -1,12 +1,13 @@
-# Academy updates (shareable)
+# Academy (Max)
 
 Live: https://brandonbayles-hub.github.io/implementation-prototype/academy/
 
+Real `EntrataAcademy` + Max app shell (PageTop, sidebar, brand-v4, Inter).
+Not the previous Vite toy slice.
+
+- **My Team** — Regional + 2027 seeded on first open. Remind is local-only.
+- **Add course** — SCORM / PDF / Video / Job aid / Link. Format follows uploadKind.
+
 Demo data. Remind does not send email. Files are filenames only.
-
-## Clicks
-
-1. **My Team** — Overdue / Not started filters. Open a person → **Remind**. Edit Email Message, **Copy**, toggle In-app to see the system-alert preview. **Record reminder** (local only).
-2. **Add course** — **Add course**. Switch Content type: SCORM / PDF / Video / Job aid / Link. Player format follows the type (`pdf` is `format: "pdf"`, not SCORM). Save as Draft or Publish.
-
-Academy Elite is on by default (header toggle).
+Sidebar links to other Max pages 404 in this slim export — use
+[getting-started](https://brandonbayles-hub.github.io/implementation-prototype/eli-plus-go-live/agent-studio/getting-started/?tab=eli-plus) for the rest of the product.

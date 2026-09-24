@@ -166,6 +166,7 @@ try {
 
   rmSync(destDir, { recursive: true, force: true });
   cpSync(outDir, destDir, { recursive: true });
+  writeFileSync(path.join(destDir, ".nojekyll"), "");
   writeFileSync(
     path.join(destDir, "README.md"),
     `# Academy (Max)
